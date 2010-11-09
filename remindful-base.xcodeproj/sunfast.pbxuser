@@ -1,0 +1,164 @@
+// !$*UTF8*$!
+{
+	C68F5B7F1285C406006F4528 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = C6903001128758FF00A6E6AE /* remindful-base */;
+		activeTarget = C68F5B8C1285C406006F4528 /* remindful-base */;
+		addToTargets = (
+			C68F5B8C1285C406006F4528 /* remindful-base */,
+		);
+		codeSenseManager = C690300F1287591F00A6E6AE /* Code sense */;
+		executables = (
+			C6903001128758FF00A6E6AE /* remindful-base */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					393,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					301,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 310862139;
+			PBXWorkspaceStateSaveDate = 310862139;
+		};
+		perUserProjectItems = {
+			C6F3B76A128762E100F11F57 /* PBXBookmark */ = C6F3B76A128762E100F11F57 /* PBXBookmark */;
+			C6F3B76B128762E100F11F57 /* PBXBookmark */ = C6F3B76B128762E100F11F57 /* PBXBookmark */;
+			C6F3B76C128762E100F11F57 /* PBXBookmark */ = C6F3B76C128762E100F11F57 /* PBXBookmark */;
+			C6F3B7851287649F00F11F57 /* PBXBookmark */ = C6F3B7851287649F00F11F57 /* PBXBookmark */;
+		};
+		sourceControlManager = C690300E1287591F00A6E6AE /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	C68F5B8C1285C406006F4528 /* remindful-base */ = {
+		activeExec = 0;
+		executables = (
+			C6903001128758FF00A6E6AE /* remindful-base */,
+		);
+	};
+	C68F5B991285C406006F4528 /* remindful_base_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 245}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 368}";
+		};
+	};
+	C68F5BA81285C406006F4528 /* MainViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1797, 3536}}";
+			sepNavSelRange = "{223, 0}";
+			sepNavVisRange = "{0, 572}";
+		};
+	};
+	C6903001128758FF00A6E6AE /* remindful-base */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "remindful-base";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	C690300E1287591F00A6E6AE /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	C690300F1287591F00A6E6AE /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C6F3B76A128762E100F11F57 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C68F5BF2128607BD006F4528 /* 199-DownloadButton.png */;
+	};
+	C6F3B76B128762E100F11F57 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C68F5BEE128606BA006F4528 /* 147-Expand.png */;
+	};
+	C6F3B76C128762E100F11F57 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C68F5BCD1285D8F5006F4528 /* 001-Home@2x.png */;
+	};
+	C6F3B7851287649F00F11F57 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C68F5BCD1285D8F5006F4528 /* 001-Home@2x.png */;
+	};
+}

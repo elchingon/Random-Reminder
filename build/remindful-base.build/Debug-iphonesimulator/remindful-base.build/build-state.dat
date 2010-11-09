@@ -1,0 +1,1334 @@
+Tremindful-base
+v7
+r0
+t310862670.794316
+cCheck dependencies
+cProcessInfoPlistFile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/Info.plist remindful_base-Info.plist
+cProcessPCH /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch.gch remindful_base_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelCompile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful_base.mom /Users/sunfast/remindful-base/remindful_base.xcdatamodel
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/main.o /Users/sunfast/remindful-base/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/remindful_baseAppDelegate.o /Users/sunfast/remindful-base/Classes/remindful_baseAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MainViewController.o /Users/sunfast/remindful-base/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/FlipsideViewController.o /Users/sunfast/remindful-base/Classes/FlipsideViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterEngine.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngine.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterHTTPURLConnection.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterHTTPURLConnection.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSData+Base64.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSData+Base64.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSString+UUID.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSString+UUID.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterController.o /Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterEngine.o /Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base normal i386
+cGenerateDSYMFile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app.dSYM /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base
+cCopyStringsFile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+cCompileXIB /Users/sunfast/remindful-base/en.lproj/MainWindow.xib
+cCompileXIB /Users/sunfast/remindful-base/MainView.xib
+cCompileXIB /Users/sunfast/remindful-base/FlipsideView.xib
+cCpResource build/Debug-iphonesimulator/remindful-base.app/facebook.png facebook.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/settings.png settings.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/twitter.png twitter.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/facebook_16.png facebook_16.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/001-Home@2x.png 001-Home@2x.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/001-Home.png 001-Home.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/072-Settings.png 072-Settings.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/101-Twitter.png 101-Twitter.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/102-Facebook.png 102-Facebook.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/147-Expand.png 147-Expand.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/148-Shrink.png 148-Shrink.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/199-DownloadButton.png 199-DownloadButton.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/reminders_bg.png reminders_bg.png
+cCpResource build/Debug-iphonesimulator/remindful-base.app/reminders_button.png reminders_button.png
+cTouch /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk
+c000000004C6C30170000000000000110
+t1282158615
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c000000004C5A4E0B00000000001D2EC0
+t1280986635
+s1912512
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
+c000000004C5A4DED000000000000046B
+t1280986605
+s1131
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004C5A4DB60000000000295900
+t1280986550
+s2709760
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C5A4DB0000000000029D580
+t1280986544
+s2741632
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C5A4DA10000000000001466
+t1280986529
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004C5A505200000000000000C4
+t1280987218
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C6241ED00000000000009CD
+t1281507821
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C6242840000000001E228C0
+t1281507972
+s31598784
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/Availability.h
+c000000004C57A0390000000000001A5C
+t1280811065
+s6748
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2/libxml/xmlreader.h
+c000000004C5A4D3F0000000000003107
+t1280986431
+s12551
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/lib/libxml2.dylib
+c000000004C5A4D400000000000122A80
+t1280986432
+s1190528
+
+N/Users/sunfast/remindful-base/001-Home.png
+c000000004CCAFD34000000000000023B
+t1288371508
+s571
+
+N/Users/sunfast/remindful-base/001-Home@2x.png
+c000000004CCAF0940000000000000409
+t1288368276
+s1033
+
+N/Users/sunfast/remindful-base/072-Settings.png
+c000000004CCDF3C400000000000007AD
+t1288565700
+s1965
+
+N/Users/sunfast/remindful-base/101-Twitter.png
+c000000004CCDF3C400000000000006B2
+t1288565700
+s1714
+
+N/Users/sunfast/remindful-base/102-Facebook.png
+c000000004CCDF3C40000000000000684
+t1288565700
+s1668
+
+N/Users/sunfast/remindful-base/147-Expand.png
+c000000004CCDF3C400000000000007A2
+t1288565700
+s1954
+
+N/Users/sunfast/remindful-base/148-Shrink.png
+c000000004CCDF3C400000000000007A0
+t1288565700
+s1952
+
+N/Users/sunfast/remindful-base/199-DownloadButton.png
+c000000004CCDF3C40000000000000842
+t1288565700
+s2114
+
+N/Users/sunfast/remindful-base/Classes/FlipsideViewController.h
+c000000004CD6B87B0000000000000297
+t1289140347
+s663
+i<UIKit/UIKit.h>
+
+N/Users/sunfast/remindful-base/Classes/FlipsideViewController.m
+c000000004CD6B86D0000000000000471
+t1289140333
+s1137
+i"FlipsideViewController.h"
+
+N/Users/sunfast/remindful-base/Classes/MainViewController.h
+c000000004CD6E5E200000000000004A8
+t1289151970
+s1192
+i"FlipsideViewController.h"
+i<CoreData/CoreData.h>
+
+N/Users/sunfast/remindful-base/Classes/MainViewController.m
+c000000004CD722E8000000000000235F
+t1289167592
+s9055
+i"MainViewController.h"
+
+N/Users/sunfast/remindful-base/Classes/remindful_baseAppDelegate.h
+c000000004CD6B68300000000000003CE
+t1289139843
+s974
+i<UIKit/UIKit.h>
+
+N/Users/sunfast/remindful-base/Classes/remindful_baseAppDelegate.m
+c000000004CD6EA910000000000001944
+t1289153169
+s6468
+i"remindful_baseAppDelegate.h"
+i"MainViewController.h"
+i"FlipsideViewController.h"
+
+N/Users/sunfast/remindful-base/FlipsideView.xib
+c000000004CD6F0380000000000002522
+t1289154616
+s9506
+
+N/Users/sunfast/remindful-base/MainView.xib
+c000000004CD6D83D000000000000495B
+t1289148477
+s18779
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/NSMutableURLRequest+Parameters.h
+c000000004C8E6CC900000000000005AB
+t1284402377
+s1451
+i<Foundation/Foundation.h>
+i"OARequestParameter.h"
+i"NSURL+Base.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/NSString+URLEncoding.h
+c000000004C8E6CC9000000000000055D
+t1284402377
+s1373
+i<Foundation/Foundation.h>
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/NSURL+Base.h
+c000000004C8E6CC90000000000000540
+t1284402377
+s1344
+i<Foundation/Foundation.h>
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/OAConsumer.h
+c000000004C8E6CC900000000000005CF
+t1284402377
+s1487
+i<Foundation/Foundation.h>
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/OADataFetcher.h
+c000000004C8E6CC900000000000006D6
+t1284402377
+s1750
+i<Foundation/Foundation.h>
+i"OAMutableURLRequest.h"
+i"OAServiceTicket.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/OAHMAC_SHA1SignatureProvider.h
+c000000004C8E6CC90000000000000573
+t1284402377
+s1395
+i<Foundation/Foundation.h>
+i"OASignatureProviding.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/OAMutableURLRequest.h
+c000000004C8E6CC900000000000008EF
+t1284402377
+s2287
+i<Foundation/Foundation.h>
+i"OAConsumer.h"
+i"OAToken.h"
+i"OAHMAC_SHA1SignatureProvider.h"
+i"OASignatureProviding.h"
+i"NSMutableURLRequest+Parameters.h"
+i"NSURL+Base.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/OARequestParameter.h
+c000000004C8E6CC900000000000006B5
+t1284402377
+s1717
+i<Foundation/Foundation.h>
+i"NSString+URLEncoding.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/OAServiceTicket.h
+c000000004C8E6CC90000000000000695
+t1284402377
+s1685
+i<Foundation/Foundation.h>
+i"OAMutableURLRequest.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/OASignatureProviding.h
+c000000004C8E6CC9000000000000057A
+t1284402377
+s1402
+i<Foundation/Foundation.h>
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/Libraries & Headers/OAuthConsumer/OAToken.h
+c000000004C8E6CC90000000000000753
+t1284402377
+s1875
+i<Foundation/Foundation.h>
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngine.h
+c000000004C8FF6260000000000002139
+t1284503078
+s8505
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterEngineDelegate.h"
+i"MGTwitterParserDelegate.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngine.m
+c000000004C8E6CC9000000000000D21D
+t1284402377
+s53789
+i"MGTwitterEngine.h"
+i"MGTwitterHTTPURLConnection.h"
+i"NSData+Base64.h"
+i"MGTwitterStatusesYAJLParser.h"
+i"MGTwitterMessagesYAJLParser.h"
+i"MGTwitterUsersYAJLParser.h"
+i"MGTwitterMiscYAJLParser.h"
+i"MGTwitterSearchYAJLParser.h"
+i"MGTwitterStatusesLibXMLParser.h"
+i"MGTwitterMessagesLibXMLParser.h"
+i"MGTwitterUsersLibXMLParser.h"
+i"MGTwitterMiscLibXMLParser.h"
+i"MGTwitterStatusesParser.h"
+i"MGTwitterUsersParser.h"
+i"MGTwitterMessagesParser.h"
+i"MGTwitterMiscParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngineDelegate.h
+c000000004C8E6CC900000000000008CF
+t1284402377
+s2255
+i"MGTwitterEngineGlobalHeader.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngineGlobalHeader.h
+c000000004C8E6CC900000000000007EC
+t1284402377
+s2028
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<Cocoa/Cocoa.h>
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterHTTPURLConnection.h
+c000000004C8E6CC90000000000000485
+t1284402377
+s1157
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterRequestTypes.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterHTTPURLConnection.m
+c000000004C8E6CC9000000000000065A
+t1284402377
+s1626
+i"MGTwitterHTTPURLConnection.h"
+i"NSString+UUID.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterLibXMLParser.h
+c000000004C8E6CC90000000000000600
+t1284402377
+s1536
+i"MGTwitterEngineGlobalHeader.h"
+i<libxml/xmlreader.h>
+i"MGTwitterParserDelegate.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterLibXMLParser.m
+c000000004C8E6CC90000000000002684
+t1284402377
+s9860
+i"MGTwitterLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesLibXMLParser.h
+c000000004C8E6CC9000000000000012A
+t1284402377
+s298
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesLibXMLParser.m
+c000000004C8E6CC90000000000000CD2
+t1284402377
+s3282
+i"MGTwitterMessagesLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.h
+c000000004C8E6CC90000000000000122
+t1284402377
+s290
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterStatusesParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m
+c000000004C8E6CC9000000000000076B
+t1284402377
+s1899
+i"MGTwitterMessagesParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscLibXMLParser.h
+c000000004C8E6CC90000000000000122
+t1284402377
+s290
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscLibXMLParser.m
+c000000004C8E6CC90000000000000527
+t1284402377
+s1319
+i"MGTwitterMiscLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.h
+c000000004C8E6CC90000000000000130
+t1284402377
+s304
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterStatusesParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m
+c000000004C8E6CC9000000000000056A
+t1284402377
+s1386
+i"MGTwitterMiscParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterParserDelegate.h
+c000000004C8E6CC90000000000000330
+t1284402377
+s816
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterRequestTypes.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterRequestTypes.h
+c000000004C8E6CC9000000000000105F
+t1284402377
+s4191
+i"MGTwitterEngineGlobalHeader.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesLibXMLParser.h
+c000000004C8E6CC9000000000000012A
+t1284402377
+s298
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesLibXMLParser.m
+c000000004C8E6CC900000000000003A3
+t1284402377
+s931
+i"MGTwitterStatusesLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.h
+c000000004C8E6CC90000000000000118
+t1284402377
+s280
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m
+c000000004C8E6CC9000000000000084B
+t1284402377
+s2123
+i"MGTwitterStatusesParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersLibXMLParser.h
+c000000004C8E6CC90000000000000124
+t1284402377
+s292
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersLibXMLParser.m
+c000000004C8E6CC90000000000000392
+t1284402377
+s914
+i"MGTwitterUsersLibXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.h
+c000000004C8E6CC9000000000000011C
+t1284402377
+s284
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterStatusesParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m
+c000000004C8E6CC900000000000006F2
+t1284402377
+s1778
+i"MGTwitterUsersParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.h
+c000000004C8E6CC90000000000000459
+t1284402377
+s1113
+i"MGTwitterEngineGlobalHeader.h"
+i"MGTwitterParserDelegate.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m
+c000000004C8E6CC9000000000000131F
+t1284402377
+s4895
+i"MGTwitterXMLParser.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSData+Base64.h
+c000000004C8E6CC90000000000000602
+t1284402377
+s1538
+i"MGTwitterEngineGlobalHeader.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSData+Base64.m
+c000000004C8E6CC90000000000000F65
+t1284402377
+s3941
+i"NSData+Base64.h"
+i<Foundation/Foundation.h>
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSString+UUID.h
+c000000004C8E6CC900000000000000ED
+t1284402377
+s237
+i"MGTwitterEngineGlobalHeader.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSString+UUID.m
+c000000004C8E6CC900000000000001E3
+t1284402377
+s483
+i"NSString+UUID.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.h
+c000000004C8E6CC9000000000000077A
+t1284402377
+s1914
+i<UIKit/UIKit.h>
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m
+c000000004C90080900000000000036B0
+t1284507657
+s14000
+i<UIKit/UIKit.h>
+i<QuartzCore/QuartzCore.h>
+i"SA_OAuthTwitterEngine.h"
+i"SA_OAuthTwitterController.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.h
+c000000004C8E6CC9000000000000073C
+t1284402377
+s1852
+i"MGTwitterEngine.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m
+c000000004C8E6CC900000000000039BA
+t1284402377
+s14778
+i"MGTwitterHTTPURLConnection.h"
+i"OAConsumer.h"
+i"OAMutableURLRequest.h"
+i"OADataFetcher.h"
+i"SA_OAuthTwitterEngine.h"
+
+N/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/libOAuth.a
+c000000004C8E6CC9000000000008DF6C
+t1284402377
+s581484
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app
+t1289169843
+s782
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app.dSYM
+t1289169843
+s102
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/001-Home.png
+t1289167335
+s571
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/001-Home@2x.png
+t1289167335
+s1033
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/072-Settings.png
+t1289167335
+s1965
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/101-Twitter.png
+t1289167335
+s1714
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/102-Facebook.png
+t1289167335
+s1668
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/147-Expand.png
+t1289167335
+s1954
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/148-Shrink.png
+t1289167335
+s1952
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/199-DownloadButton.png
+t1289167335
+s2114
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/FlipsideView.nib
+t1289167335
+s3905
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/Info.plist
+t1289167332
+s601
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/MainView.nib
+t1289167335
+s5708
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/PkgInfo
+t1289167332
+s8
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/en.lproj/InfoPlist.strings
+t1289167335
+s126
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/en.lproj/MainWindow.nib
+t1289167335
+s1716
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/facebook.png
+t1289167335
+s1398
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/facebook_16.png
+t1289167335
+s502
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/reminders_bg.png
+t1289167335
+s89012
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/reminders_button.png
+t1289167335
+s2903
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base
+t1289169843
+s217416
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful_base.mom
+t1289167333
+s488
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/settings.png
+t1289167335
+s22113
+
+N/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/twitter.png
+t1289167335
+s1457
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/FlipsideViewController.o
+t1289169773
+s39016
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterEngine.o
+t1289169773
+s100252
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterHTTPURLConnection.o
+t1289169773
+s17004
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterLibXMLParser.o
+t1289169774
+s32924
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesLibXMLParser.o
+t1289169774
+s15536
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesParser.o
+t1289169774
+s13216
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscLibXMLParser.o
+t1289169774
+s11988
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscParser.o
+t1289169774
+s12724
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesLibXMLParser.o
+t1289169774
+s10752
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesParser.o
+t1289169774
+s13876
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersLibXMLParser.o
+t1289169774
+s10700
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersParser.o
+t1289169774
+s12952
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterXMLParser.o
+t1289169774
+s23264
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MainViewController.o
+t1289169773
+s73084
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSData+Base64.o
+t1289169774
+s11784
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSString+UUID.o
+t1289169774
+s6700
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterController.o
+t1289169774
+s83240
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterEngine.o
+t1289169774
+s46652
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/main.o
+t1289169773
+s6284
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/remindful-base.LinkFileList
+c000000004CD728910000000000000B3B
+t1289169041
+s2875
+
+N/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/remindful_baseAppDelegate.o
+t1289169773
+s61068
+
+N/Users/sunfast/remindful-base/en.lproj/InfoPlist.strings
+c000000004CD58C860000000000000066
+t1289063558
+s102
+
+N/Users/sunfast/remindful-base/en.lproj/MainWindow.xib
+c000000004CD58C8600000000000050B4
+t1289063558
+s20660
+
+N/Users/sunfast/remindful-base/facebook.png
+c000000004CD384F60000000000000576
+t1288930550
+s1398
+
+N/Users/sunfast/remindful-base/facebook_16.png
+c000000004A41B40200000000000001F6
+t1245819906
+s502
+
+N/Users/sunfast/remindful-base/main.m
+c000000004CD58C86000000000000016F
+t1289063558
+s367
+i<UIKit/UIKit.h>
+
+N/Users/sunfast/remindful-base/reminders_bg.png
+c000000004CA66BC10000000000015BB4
+t1285974977
+s89012
+
+N/Users/sunfast/remindful-base/reminders_button.png
+c000000004CA77C7D0000000000000B57
+t1286044797
+s2903
+
+N/Users/sunfast/remindful-base/remindful_base.xcdatamodel
+c000000004C5FA9390000000000000088
+t1281337657
+s136
+
+N/Users/sunfast/remindful-base/remindful_base_Prefix.pch
+c000000004CD58C860000000000000170
+t1289063558
+s368
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+i<CoreData/CoreData.h>
+
+N/Users/sunfast/remindful-base/settings.png
+c000000004CD37FD60000000000005661
+t1288929238
+s22113
+
+N/Users/sunfast/remindful-base/twitter.png
+c000000004CD3851000000000000005B1
+t1288930576
+s1457
+
+N/var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-blggtwsvsvbuahgelpxxqlhzghsg/remindful_base_Prefix.pch.gch
+t1289169044
+s16121648
+
+N/var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-bpzdvlwjyzaioebhugcezwsmbimj/remindful_base_Prefix.pch.gch
+t1289167333
+s16121648
+
+N/var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch.gch
+t1289169773
+s16121648
+
+Nremindful_base-Info.plist
+c000000004CD58C8600000000000003C5
+t1289063558
+s965
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies310862670#310862670#0(0"0(0#1#0"8594194976#0"0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/FlipsideViewController.o /Users/sunfast/remindful-base/Classes/FlipsideViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862573.655737
+e310862573.747045
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/FlipsideViewController.o
+x/Users/sunfast/remindful-base/Classes/FlipsideViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@70"Compile /Users/sunfast/remindful-base/Classes/FlipsideViewController.m310862573#310862573#0(0"0(0#0#62"/Users/sunfast/remindful-base/Classes/FlipsideViewController.m8590798144#2115"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Classes/FlipsideViewController.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/FlipsideViewController.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterEngine.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngine.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862573.728392
+e310862573.955322
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterEngine.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngine.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngine.m310862573#310862573#0(0"0(0#0#77"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngine.m8612721728#2123"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterEngine.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterEngine.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterHTTPURLConnection.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterHTTPURLConnection.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862573.747150
+e310862573.814757
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterHTTPURLConnection.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterHTTPURLConnection.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@96"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterHTTPURLConnection.m310862573#310862573#0(0"0(0#0#88"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterHTTPURLConnection.m8611854592#2145"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterHTTPURLConnection.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterHTTPURLConnection.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862573.814858
+e310862574.049983
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterLibXMLParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterLibXMLParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@91"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterLibXMLParser.m310862573#310862574#0(0"0(0#0#83"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterLibXMLParser.m8596982624#2135"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterLibXMLParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterLibXMLParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862573.955424
+e310862574.060479
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesLibXMLParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesLibXMLParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@99"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesLibXMLParser.m310862573#310862574#0(0"0(0#0#91"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesLibXMLParser.m8612586848#2151"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesLibXMLParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesLibXMLParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.050087
+e310862574.129957
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m: In function '-[MGTwitterMessagesParser parser:didEndElement:namespaceURI:qualifiedName:]':
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m:45: warning: 'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m:45: warning: (Messages without a matching method signature
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m:45: warning: will be assumed to return 'id' and accept
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m:45: warning: '...' as arguments.)
+lSLF07#2@93"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m310862574#310862574#0(780"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m: In function '-[MGTwitterMessagesParser parser:didEndElement:namespaceURI:qualifiedName:]':/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m:45: warning: 'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m:45: warning: (Messages without a matching method signature/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m:45: warning: will be assumed to return 'id' and accept/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m:45: warning: '...' as arguments.)2(22@96"'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'310862574#178#196#0(6@85"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m306095177#45#0#45#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)310862574#374#145#0(6@85"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m306095177#45#0#45#0#0"0(0#0#85"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m8611067584#2139"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMessagesParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMessagesParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.060582
+e310862574.171962
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscLibXMLParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscLibXMLParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscLibXMLParser.m310862574#310862574#0(0"0(0#0#87"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscLibXMLParser.m8599141024#2143"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscLibXMLParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscLibXMLParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.130132
+e310862574.196553
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m: In function '-[MGTwitterMiscParser parser:didEndElement:namespaceURI:qualifiedName:]':
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m:39: warning: 'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m:39: warning: (Messages without a matching method signature
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m:39: warning: will be assumed to return 'id' and accept
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m:39: warning: '...' as arguments.)
+lSLF07#2@89"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m310862574#310862574#0(756"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m: In function '-[MGTwitterMiscParser parser:didEndElement:namespaceURI:qualifiedName:]':/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m:39: warning: 'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m:39: warning: (Messages without a matching method signature/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m:39: warning: will be assumed to return 'id' and accept/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m:39: warning: '...' as arguments.)2(22@96"'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'310862574#170#192#0(6@81"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m306095177#39#0#39#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)310862574#362#141#0(6@81"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m306095177#39#0#39#0#0"0(0#0#81"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m8612508128#2131"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterMiscParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterMiscParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.172072
+e310862574.293375
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesLibXMLParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesLibXMLParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@99"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesLibXMLParser.m310862574#310862574#0(0"0(0#0#91"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesLibXMLParser.m8610082176#2151"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesLibXMLParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesLibXMLParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.196653
+e310862574.263069
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m: In function '-[MGTwitterStatusesParser parser:didEndElement:namespaceURI:qualifiedName:]':
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m:55: warning: 'MGTwitterXMLParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m:55: warning: (Messages without a matching method signature
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m:55: warning: will be assumed to return 'id' and accept
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m:55: warning: '...' as arguments.)
+lSLF07#2@93"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m310862574#310862574#0(775"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m: In function '-[MGTwitterStatusesParser parser:didEndElement:namespaceURI:qualifiedName:]':/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m:55: warning: 'MGTwitterXMLParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m:55: warning: (Messages without a matching method signature/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m:55: warning: will be assumed to return 'id' and accept/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m:55: warning: '...' as arguments.)2(22@91"'MGTwitterXMLParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'310862574#178#191#0(6@85"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m306095177#55#0#55#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)310862574#369#145#0(6@85"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m306095177#55#0#55#0#0"0(0#0#85"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m8597488064#2139"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterStatusesParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterStatusesParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersLibXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersLibXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.263171
+e310862574.371915
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersLibXMLParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersLibXMLParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@96"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersLibXMLParser.m310862574#310862574#0(0"0(0#0#88"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersLibXMLParser.m8595136576#2145"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersLibXMLParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersLibXMLParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.293473
+e310862574.362464
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m: In function '-[MGTwitterUsersParser parser:didEndElement:namespaceURI:qualifiedName:]':
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m:45: warning: 'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m:45: warning: (Messages without a matching method signature
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m:45: warning: will be assumed to return 'id' and accept
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m:45: warning: '...' as arguments.)
+lSLF07#2@90"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m310862574#310862574#0(762"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m: In function '-[MGTwitterUsersParser parser:didEndElement:namespaceURI:qualifiedName:]':/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m:45: warning: 'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m:45: warning: (Messages without a matching method signature/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m:45: warning: will be assumed to return 'id' and accept/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m:45: warning: '...' as arguments.)2(22@96"'MGTwitterStatusesParser' may not respond to '-parser:didEndElement:namespaceURI:qualifiedName:'310862574#172#193#0(6@82"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m306095177#45#0#45#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)310862574#365#142#0(6@82"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m306095177#45#0#45#0#0"0(0#0#82"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m8614967200#2133"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterUsersParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterUsersParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterXMLParser.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.362585
+e310862574.465358
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterXMLParser.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m: In function '-[MGTwitterXMLParser initWithXML:delegate:connectionIdentifier:requestType:responseType:]':
+o/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m:45: warning: class 'MGTwitterXMLParser' does not implement the 'NSXMLParserDelegate' protocol
+lSLF07#2@88"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m310862574#310862574#0(362"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m: In function '-[MGTwitterXMLParser initWithXML:delegate:connectionIdentifier:requestType:responseType:]':/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m:45: warning: class 'MGTwitterXMLParser' does not implement the 'NSXMLParserDelegate' protocol1(22@80"Class 'MGTwitterXMLParser' does not implement the 'NSXMLParserDelegate' protocol310862574#187#175#0(6@80"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m306095177#45#0#45#0#45"class '*' does not implement the '*' protocol0(0#0#80"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m8612261088#2129"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/MGTwitterXMLParser.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MGTwitterXMLParser.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MainViewController.o /Users/sunfast/remindful-base/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862573.570612
+e310862573.728289
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MainViewController.o
+x/Users/sunfast/remindful-base/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/sunfast/remindful-base/Classes/MainViewController.m: In function '-[MainViewController setReminder:]':
+o/Users/sunfast/remindful-base/Classes/MainViewController.m:134: warning: unused variable 'mySecond'
+o/Users/sunfast/remindful-base/Classes/MainViewController.m:133: warning: unused variable 'myMinute'
+lSLF07#2@66"Compile /Users/sunfast/remindful-base/Classes/MainViewController.m310862573#310862573#0(310"/Users/sunfast/remindful-base/Classes/MainViewController.m: In function '-[MainViewController setReminder:]':/Users/sunfast/remindful-base/Classes/MainViewController.m:134: warning: unused variable 'mySecond'/Users/sunfast/remindful-base/Classes/MainViewController.m:133: warning: unused variable 'myMinute'2(22@26"Unused variable 'mySecond'310862573#110#100#0(6@58"/Users/sunfast/remindful-base/Classes/MainViewController.m310860392#134#0#134#0#19"unused variable '*'0(22@26"Unused variable 'myMinute'310862573#210#100#0(6@58"/Users/sunfast/remindful-base/Classes/MainViewController.m310860392#133#0#133#0#19"unused variable '*'0(0#0#58"/Users/sunfast/remindful-base/Classes/MainViewController.m8614966880#2107"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Classes/MainViewController.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/MainViewController.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSData+Base64.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSData+Base64.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.372014
+e310862574.464142
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSData+Base64.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSData+Base64.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSData+Base64.m310862574#310862574#0(0"0(0#0#75"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSData+Base64.m8599166560#2119"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSData+Base64.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSData+Base64.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSString+UUID.o /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSString+UUID.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.464240
+e310862574.522365
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSString+UUID.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSString+UUID.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSString+UUID.m310862574#310862574#0(0"0(0#0#75"/Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSString+UUID.m8615057760#2119"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/MGTwitterEngine/NSString+UUID.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/NSString+UUID.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterController.o /Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.465435
+e310862574.660933
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterController.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@100"Compile /Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m310862574#310862574#0(0"0(0#0#92"/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m8614748384#2148"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterController.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterEngine.o /Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862574.522461
+e310862574.646877
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterEngine.o
+x/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@96"Compile /Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m310862574#310862574#0(0"0(0#0#88"/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m8612358464#2140"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/SA_OAuthTwitterEngine.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/main.o /Users/sunfast/remindful-base/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862573.509336
+e310862573.570504
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/main.o
+x/Users/sunfast/remindful-base/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@44"Compile /Users/sunfast/remindful-base/main.m310862573#310862573#0(0"0(0#0#36"/Users/sunfast/remindful-base/main.m8611240960#2071"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/main.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/main.o0#
+
+CCompileC build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/remindful_baseAppDelegate.o /Users/sunfast/remindful-base/Classes/remindful_baseAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862573.510623
+e310862573.655608
+r1
+xCompileC
+xbuild/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/remindful_baseAppDelegate.o
+x/Users/sunfast/remindful-base/Classes/remindful_baseAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/sunfast/remindful-base/Classes/remindful_baseAppDelegate.m310862573#310862573#0(0"0(0#0#65"/Users/sunfast/remindful-base/Classes/remindful_baseAppDelegate.m8615646944#2121"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -include /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch -c /Users/sunfast/remindful-base/Classes/remindful_baseAppDelegate.m -o /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/remindful_baseAppDelegate.o0#
+
+CCompileXIB /Users/sunfast/remindful-base/FlipsideView.xib
+s310860135.137933
+e310860135.639088
+r1
+xCompileXIB
+x/Users/sunfast/remindful-base/FlipsideView.xib
+o/* com.apple.ibtool.document.warnings */
+o/Users/sunfast/remindful-base/FlipsideView.xib:50: warning: The 'Touch Up Inside' event of 'Rounded Rect Button' is connected to the 'done:' selector of 'File's Owner', but 'done:' is no longer defined on 'FlipsideViewController'.
+o/Users/sunfast/remindful-base/FlipsideView.xib:-1: warning: The 'reminderAction' outlet of 'File's Owner' is connected to 'Label (be re-mindful)' but 'reminderAction' is no longer defined on FlipsideViewController.
+o/Users/sunfast/remindful-base/FlipsideView.xib:-1: warning: The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on FlipsideViewController.
+lSLF07#2@27"CompileXIB FlipsideView.xib310860135#310860135#0(665"/* com.apple.ibtool.document.warnings *//Users/sunfast/remindful-base/FlipsideView.xib:50: warning: The 'Touch Up Inside' event of 'Rounded Rect Button' is connected to the 'done:' selector of 'File's Owner', but 'done:' is no longer defined on 'FlipsideViewController'./Users/sunfast/remindful-base/FlipsideView.xib:-1: warning: The 'reminderAction' outlet of 'File's Owner' is connected to 'Label (be re-mindful)' but 'reminderAction' is no longer defined on FlipsideViewController./Users/sunfast/remindful-base/FlipsideView.xib:-1: warning: The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on FlipsideViewController.3(22@170"The 'Touch Up Inside' event of 'Rounded Rect Button' is connected to the 'done:' selector of 'File's Owner', but 'done:' is no longer defined on 'FlipsideViewController'.310860135#18446744073709551615#0#0(6@46"/Users/sunfast/remindful-base/FlipsideView.xib310847416#50#0#50#0#0"0(22@154"The 'reminderAction' outlet of 'File's Owner' is connected to 'Label (be re-mindful)' but 'reminderAction' is no longer defined on FlipsideViewController.310860135#18446744073709551615#0#0(6@46"/Users/sunfast/remindful-base/FlipsideView.xib310847416#18446744073709551615#0#18446744073709551615#0#0"0(22@117"The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on FlipsideViewController.310860135#18446744073709551615#0#0(6@46"/Users/sunfast/remindful-base/FlipsideView.xib310847416#18446744073709551615#0#18446744073709551615#0#0"0(0#0#46"/Users/sunfast/remindful-base/FlipsideView.xib8612210240#554"    cd /Users/sunfast/remindful-base    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/FlipsideView.nib /Users/sunfast/remindful-base/FlipsideView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/sunfast/remindful-base/MainView.xib
+s310860135.022724
+e310860135.683596
+r1
+xCompileXIB
+x/Users/sunfast/remindful-base/MainView.xib
+lSLF07#2@23"CompileXIB MainView.xib310860135#310860135#0(0"0(0#0#42"/Users/sunfast/remindful-base/MainView.xib8612467008#546"    cd /Users/sunfast/remindful-base    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/MainView.nib /Users/sunfast/remindful-base/MainView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/sunfast/remindful-base/en.lproj/MainWindow.xib
+s310860134.491879
+e310860135.137849
+r1
+xCompileXIB
+x/Users/sunfast/remindful-base/en.lproj/MainWindow.xib
+lSLF07#2@34"CompileXIB en.lproj/MainWindow.xib310860134#310860135#0(0"0(0#0#53"/Users/sunfast/remindful-base/en.lproj/MainWindow.xib8612516288#568"    cd /Users/sunfast/remindful-base    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/en.lproj/MainWindow.nib /Users/sunfast/remindful-base/en.lproj/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCopyStringsFile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+s310860134.491100
+e310860135.022635
+r1
+xCopyStringsFile
+x/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/en.lproj/InfoPlist.strings
+xen.lproj/InfoPlist.strings
+lSLF07#2@31"Copy en.lproj/InfoPlist.strings310860134#310860135#0(0"0(0#0#56"/Users/sunfast/remindful-base/en.lproj/InfoPlist.strings8603386976#472"    cd /Users/sunfast/remindful-base    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary en.lproj/InfoPlist.strings --outdir /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/en.lproj0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/001-Home.png 001-Home.png
+s310860135.644456
+e310860135.742716
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/001-Home.png
+x001-Home.png
+lSLF07#2@17"Copy 001-Home.png310860135#310860135#0(0"0(0#0#42"/Users/sunfast/remindful-base/001-Home.png8594552896#436"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/001-Home.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/001-Home@2x.png 001-Home@2x.png
+s310860135.643325
+e310860135.689197
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/001-Home@2x.png
+x001-Home@2x.png
+lSLF07#2@20"Copy 001-Home@2x.png310860135#310860135#0(0"0(0#0#45"/Users/sunfast/remindful-base/001-Home@2x.png8602635552#439"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/001-Home@2x.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/072-Settings.png 072-Settings.png
+s310860135.645338
+e310860135.782302
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/072-Settings.png
+x072-Settings.png
+lSLF07#2@21"Copy 072-Settings.png310860135#310860135#0(0"0(0#0#46"/Users/sunfast/remindful-base/072-Settings.png8603255744#440"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/072-Settings.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/101-Twitter.png 101-Twitter.png
+s310860135.646767
+e310860135.782458
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/101-Twitter.png
+x101-Twitter.png
+lSLF07#2@20"Copy 101-Twitter.png310860135#310860135#0(0"0(0#0#45"/Users/sunfast/remindful-base/101-Twitter.png8596863648#439"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/101-Twitter.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/102-Facebook.png 102-Facebook.png
+s310860135.647374
+e310860135.772945
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/102-Facebook.png
+x102-Facebook.png
+lSLF07#2@21"Copy 102-Facebook.png310860135#310860135#0(0"0(0#0#46"/Users/sunfast/remindful-base/102-Facebook.png8612357952#440"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/102-Facebook.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/147-Expand.png 147-Expand.png
+s310860135.683688
+e310860135.758940
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/147-Expand.png
+x147-Expand.png
+lSLF07#2@19"Copy 147-Expand.png310860135#310860135#0(0"0(0#0#44"/Users/sunfast/remindful-base/147-Expand.png29555340712673392#438"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/147-Expand.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/148-Shrink.png 148-Shrink.png
+s310860135.689278
+e310860135.759134
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/148-Shrink.png
+x148-Shrink.png
+lSLF07#2@19"Copy 148-Shrink.png310860135#310860135#0(0"0(0#0#44"/Users/sunfast/remindful-base/148-Shrink.png8607091168#438"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/148-Shrink.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/199-DownloadButton.png 199-DownloadButton.png
+s310860135.698618
+e310860135.809370
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/199-DownloadButton.png
+x199-DownloadButton.png
+lSLF07#2@27"Copy 199-DownloadButton.png310860135#310860135#0(0"0(0#0#52"/Users/sunfast/remindful-base/199-DownloadButton.png8603291744#446"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/199-DownloadButton.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/facebook.png facebook.png
+s310860135.639180
+e310860135.715066
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/facebook.png
+xfacebook.png
+lSLF07#2@17"Copy facebook.png310860135#310860135#0(0"0(0#0#42"/Users/sunfast/remindful-base/facebook.png8603348960#436"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/facebook.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/facebook_16.png facebook_16.png
+s310860135.641846
+e310860135.698533
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/facebook_16.png
+xfacebook_16.png
+lSLF07#2@20"Copy facebook_16.png310860135#310860135#0(0"0(0#0#45"/Users/sunfast/remindful-base/facebook_16.png8606535616#439"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/facebook_16.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/reminders_bg.png reminders_bg.png
+s310860135.715247
+e310860135.872365
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/reminders_bg.png
+xreminders_bg.png
+lSLF07#2@21"Copy reminders_bg.png310860135#310860135#0(0"0(0#0#46"/Users/sunfast/remindful-base/reminders_bg.png8612192960#440"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/reminders_bg.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/reminders_button.png reminders_button.png
+s310860135.715884
+e310860135.817589
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/reminders_button.png
+xreminders_button.png
+lSLF07#2@25"Copy reminders_button.png310860135#310860135#0(0"0(0#0#50"/Users/sunfast/remindful-base/reminders_button.png8612179520#444"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/reminders_button.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/settings.png settings.png
+s310860135.640085
+e310860135.715177
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/settings.png
+xsettings.png
+lSLF07#2@17"Copy settings.png310860135#310860135#0(0"0(0#0#42"/Users/sunfast/remindful-base/settings.png8612440896#436"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/settings.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CCpResource build/Debug-iphonesimulator/remindful-base.app/twitter.png twitter.png
+s310860135.641155
+e310860135.716500
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/remindful-base.app/twitter.png
+xtwitter.png
+lSLF07#2@16"Copy twitter.png310860135#310860135#0(0"0(0#0#41"/Users/sunfast/remindful-base/twitter.png8612190016#435"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/sunfast/remindful-base/twitter.png /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
+CDataModelCompile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful_base.mom /Users/sunfast/remindful-base/remindful_base.xcdatamodel
+s310860133.803285
+e310860133.973572
+r1
+xDataModelCompile
+x/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful_base.mom
+x/Users/sunfast/remindful-base/remindful_base.xcdatamodel
+lSLF07#2@64"Compile /Users/sunfast/remindful-base/remindful_base.xcdatamodel310860133#310860133#0(0"0(0#0#56"/Users/sunfast/remindful-base/remindful_base.xcdatamodel8612387264#378"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Users/sunfast/remindful-base/remindful_base.xcdatamodel /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful_base.mom0#
+
+CGenerateDSYMFile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app.dSYM /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base
+s310862643.701607
+e310862643.786403
+r1
+xGenerateDSYMFile
+x/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app.dSYM
+x/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base
+lSLF07#2@130"GenerateDSYMFile build/Debug-iphonesimulator/remindful-base.app.dSYM build/Debug-iphonesimulator/remindful-base.app/remindful-base310862643#310862643#0(0"0(0#0#91"/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base8594702240#377"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base -o /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app.dSYM0#
+
+CLd /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base normal i386
+s310862643.651362
+e310862643.701489
+r1
+xLd
+x/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base
+xnormal
+xi386
+lSLF07#2@96"Link /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base310862643#310862643#0(0"0(0#0#0"8597853248#1091"    cd /Users/sunfast/remindful-base    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -L/Users/sunfast/remindful-base/build/Debug-iphonesimulator -L/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine -L/Users/sunfast/remindful-base/Twitter+OAuth/SAOAuthTwitterEngine -L/Users/sunfast/remindful-base -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -filelist /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/Objects-normal/i386/remindful-base.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework UIKit -framework Foundation -framework CoreGraphics -framework CoreData -lOAuth -lxml2 -o /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/remindful-base0#
+
+CProcessInfoPlistFile /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/Info.plist remindful_base-Info.plist
+s310860132.675095
+e310860132.691239
+r1
+xProcessInfoPlistFile
+x/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/Info.plist
+xremindful_base-Info.plist
+lSLF07#2@33"Process remindful_base-Info.plist310860132#310860132#0(0"0(0#0#55"/Users/sunfast/remindful-base/remindful_base-Info.plist32651513917341812#473"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility remindful_base-Info.plist -genpkginfo /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app/Info.plist0#
+
+CProcessPCH /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-blggtwsvsvbuahgelpxxqlhzghsg/remindful_base_Prefix.pch.gch remindful_base_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s310861841.733195
+e310861844.225168
+r1
+xProcessPCH
+x/var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-blggtwsvsvbuahgelpxxqlhzghsg/remindful_base_Prefix.pch.gch
+xremindful_base_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@36"Precompile remindful_base_Prefix.pch310861841#310861844#0(0"0(0#0#55"/Users/sunfast/remindful-base/remindful_base_Prefix.pch6875999813719975936#1859"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -c /Users/sunfast/remindful-base/remindful_base_Prefix.pch -o /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-blggtwsvsvbuahgelpxxqlhzghsg/remindful_base_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-bpzdvlwjyzaioebhugcezwsmbimj/remindful_base_Prefix.pch.gch remindful_base_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s310860132.691367
+e310860133.803190
+r1
+xProcessPCH
+x/var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-bpzdvlwjyzaioebhugcezwsmbimj/remindful_base_Prefix.pch.gch
+xremindful_base_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@36"Precompile remindful_base_Prefix.pch310860132#310860133#0(0"0(0#0#55"/Users/sunfast/remindful-base/remindful_base_Prefix.pch8602789728#1970"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -iquote/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -c /Users/sunfast/remindful-base/remindful_base_Prefix.pch -o /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-bpzdvlwjyzaioebhugcezwsmbimj/remindful_base_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch.gch remindful_base_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s310862572.615945
+e310862573.509071
+r1
+xProcessPCH
+x/var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch.gch
+xremindful_base_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@36"Precompile remindful_base_Prefix.pch310862572#310862573#0(0"0(0#0#55"/Users/sunfast/remindful-base/remindful_base_Prefix.pch8615552576#1965"    cd /Users/sunfast/remindful-base    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-generated-files.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-own-target-headers.hmap -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-all-target-headers.hmap -iquote /Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/remindful-base-project-headers.hmap -F/Users/sunfast/remindful-base/build/Debug-iphonesimulator -I/Users/sunfast/remindful-base/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/libxml2 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources/i386 -I/Users/sunfast/remindful-base/build/remindful-base.build/Debug-iphonesimulator/remindful-base.build/DerivedSources -c /Users/sunfast/remindful-base/remindful_base_Prefix.pch -o /var/folders/uL/uLD2X3BsHQaUIMtocEJicU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/remindful_base_Prefix-cbjibgaioqcvezgmphfoftyuvmbn/remindful_base_Prefix.pch.gch0#
+
+CTouch /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app
+s310862643.787585
+e310862643.790481
+r1
+xTouch
+x/Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app
+lSLF07#2@82"Touch /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app310862643#310862643#0(0"0(0#0#0"8613538016#267"    cd /Users/sunfast/remindful-base    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/sunfast/remindful-base/build/Debug-iphonesimulator/remindful-base.app0#
+
