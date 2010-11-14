@@ -115,6 +115,7 @@
 - (NSString *)getUserInformationFor:(NSString *)usernameOrID; // users/show
 - (NSString *)getUserInformationForEmail:(NSString *)email; // users/show
 
+
 // Direct Message methods
 
 - (NSString *)getDirectMessagesSinceID:(unsigned long)sinceID startingAtPage:(int)pageNum; // direct_messages
@@ -126,11 +127,13 @@
 - (NSString *)sendDirectMessage:(NSString *)message to:(NSString *)username; // direct_messages/new
 - (NSString *)deleteDirectMessage:(unsigned long)updateID;// direct_messages/destroy
 
+
 // Friendship methods
 
 - (NSString *)enableUpdatesFor:(NSString *)username; // friendships/create (follow username)
 - (NSString *)disableUpdatesFor:(NSString *)username; // friendships/destroy (unfollow username)
 - (NSString *)isUser:(NSString *)username1 receivingUpdatesFor:(NSString *)username2; // friendships/exists (test if username1 follows username2)
+
 
 // Account methods
 
