@@ -17,6 +17,64 @@
 static NSString* kAppId = @"173331372680031";
 
 
+
+- (IBAction)configTwitter:(id)sender {
+    
+    
+	_engine = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate:self];
+	_engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
+	_engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
+    
+	UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
+  
+    [self presentModalViewController: controller animated: YES];
+
+}
+
+
+-(IBAction)updateStream:(id)sender {
+    
+}
+
+-(IBAction)tweet:(id)sender {
+    
+}
+
+#pragma mark SA_OAuthTwitterEngineDelegate
+
+- (void) storeCachedTwitterOAuthData: (NSString *) data forUsername: (NSString *) username {
+    
+	NSUserDefaults	*defaults = [NSUserDefaults standardUserDefaults];
+    
+	[defaults setObject: data forKey: @"authData"];
+	[defaults synchronize];
+}
+
+- (NSString *) cachedTwitterOAuthDataForUsername: (NSString *) username {
+    
+	return [[NSUserDefaults standardUserDefaults] objectForKey: @"authData"];
+}
+
+#pragma mark SA_OAuthTwitterController Delegate
+
+- (void) OAuthTwitterController: (SA_OAuthTwitterController *) controller authenticatedWithUsername: (NSString *) username {
+    
+	NSLog(@"Authenticated with user %@", username);
+    
+	tweets = [[NSMutableArray alloc] init];
+	[self updateStream:nil];
+}
+
+- (void) OAuthTwitterControllerFailed: (SA_OAuthTwitterController *) controller {
+    
+	NSLog(@"Authentication Failure");
+}
+
+- (void) OAuthTwitterControllerCanceled: (SA_OAuthTwitterController *) controller {
+    
+	NSLog(@"Authentication Canceled");
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     reminderTypes = [[NSArray alloc] initWithObjects:@"breathe", @"smile", @"be Grateful", @"laugh", @"dream", @"eat healthy", nil];
@@ -282,18 +340,7 @@ static NSString* kAppId = @"173331372680031";
 }
 
 
-- (IBAction)configTwitter:(id)sender {
-    if(_engine) return;
-    
-	_engine = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate:self];
-	_engine.consumerKey = @"78sCV35ELAwRyrM5PHjlHg";
-	_engine.consumerSecret = @"1Wx2vDj0mBvNLiU2x8rE2UJVtL5C8OIyZ4MSwb5NSBk";
-    
-	UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
-    
-	
-		[self presentModalViewController: controller animated: YES];
-	}
+
 
 - (IBAction)showReminder:(NSString *)reminderText {
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
