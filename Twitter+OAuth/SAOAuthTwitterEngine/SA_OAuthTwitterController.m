@@ -321,6 +321,25 @@ Ugly. I apologize for its inelegance. Bleah.
 	return _pinCopyPromptBar;
 }
 
+
+
+//removed since Twitter changed the page format
+//- (void) performInjection {
+//	if (_loading) return;
+//	
+//	NSError					*error;
+//	NSString				*filename = UIInterfaceOrientationIsLandscape(self.orientation ) ? @"jQueryInjectLandscape" : @"jQueryInject";
+//	NSString				*path = [[NSBundle mainBundle] pathForResource: filename ofType: @"txt"];
+//	
+//    NSString *dataSource = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+//	
+//    if (dataSource == nil) {
+//        NSLog(@"An error occured while processing the jQueryInject file");
+//    }
+//	
+//	[_webView stringByEvaluatingJavaScriptFromString:dataSource]; //This line injects the jQuery to make it look better	
+//}
+
 - (void) webViewDidStartLoad: (UIWebView *) webView {
 	//[_activityIndicator startAnimating];
 	_loading = YES;
