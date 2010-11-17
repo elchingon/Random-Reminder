@@ -11,7 +11,7 @@
 #import "SA_OAuthTwitterEngine.h"
 #import "SA_OAuthTwitterController.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBSessionDelegate, SA_OAuthTwitterControllerDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBSessionDelegate, SA_OAuthTwitterControllerDelegate, UIActionSheetDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
@@ -39,10 +39,12 @@
 - (IBAction)setReminder:(id)sender;
 // twitter actions
 - (IBAction)configTwitter:(id)sender;
+- (IBAction)configTwitter;
 - (IBAction)updateStream:(id)sender;
 - (IBAction)tweet:(id)sender;
 // facebook actions
 - (IBAction)configFaceBook:(id)sender;
+- (IBAction)configFaceBook;
 - (IBAction)logoutFaceBook:(id)sender;
 // picker actions
 - (IBAction)togglePicker:(id)sender;

@@ -31,6 +31,18 @@ static NSString* kAppId = @"173331372680031";
 
 }
 
+- (IBAction)configTwitter {
+    
+    
+	_engine = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate:self];
+	_engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
+	_engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
+    
+	UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
+    
+    [self presentModalViewController: controller animated: YES];
+    
+}
 
 -(IBAction)updateStream:(id)sender {
     
@@ -286,6 +298,15 @@ static NSString* kAppId = @"173331372680031";
        
 }
 
+- (IBAction)showReminder:(NSString *)reminderText {
+    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
+	controller.delegate = self;
+	
+	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	[self presentModalViewController:controller animated:YES];
+	[controller.reminderAction setText:reminderText];
+	[controller release];
+}
 
 
 
@@ -296,15 +317,38 @@ static NSString* kAppId = @"173331372680031";
 
 
 - (IBAction)showInfo:(id)sender {    
+    UIActionSheet *shareOptions = [[UIActionSheet alloc]initWithTitle:@"Sharing Options" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Set Up Facebook", @"Set Up Twitter", nil];
+    
+    [shareOptions showInView:self.view];
 	
-	FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
-	controller.delegate = self;
-	
-	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[self presentModalViewController:controller animated:YES];
-	
-	[controller release];
 }
+
+#pragma mark -
+#pragma mark UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)modalView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // Change the navigation bar style, also make the status bar match with it
+    switch (buttonIndex)
+    {
+        case 0:
+        {
+            [self configFaceBook];
+            break;
+        }
+        case 1:
+        {
+            [self configTwitter];
+            break;
+        }
+        case 2:
+        {
+            
+            break;
+        }
+    }
+}
+
 
 - (IBAction)configFaceBook:(id)sender {
     permissions =  [[NSArray arrayWithObjects: 
@@ -313,6 +357,15 @@ static NSString* kAppId = @"173331372680031";
     
     [facebook authorize:kAppId permissions:permissions delegate:self];
 }
+
+- (IBAction)configFaceBook {
+    permissions =  [[NSArray arrayWithObjects: 
+                     @"publish_stream",@"read_stream", @"offline_access",nil] retain];
+    
+    
+    [facebook authorize:kAppId permissions:permissions delegate:self];
+}
+
 
 - (IBAction)logoutFaceBook:(id)sender {
     [facebook logout:self];
@@ -342,15 +395,6 @@ static NSString* kAppId = @"173331372680031";
 
 
 
-- (IBAction)showReminder:(NSString *)reminderText {
-    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
-	controller.delegate = self;
-	
-	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[self presentModalViewController:controller animated:YES];
-	[controller.reminderAction setText:reminderText];
-	[controller release];
-}
 
 
 - (void)didReceiveMemoryWarning {

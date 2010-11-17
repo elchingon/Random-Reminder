@@ -19,7 +19,7 @@
     self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor]; 
     
     //set font on card
-    [reminderAction setFont:[UIFont fontWithName:@"Helvetica" size:48]];
+    //[reminderAction setFont:[UIFont fontWithName:@"Helvetica" size:48]];
 }
 
 
