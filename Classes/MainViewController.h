@@ -23,6 +23,7 @@
     NSManagedObjectContext *managedObjectContext;
     IBOutlet UIPickerView *reminderPicker;
     IBOutlet UILabel *remindfulAction;
+    UIActionSheet *shareOptions;
     
     // facebook
     Facebook *facebook;
@@ -57,5 +58,6 @@
 @property (nonatomic, retain) NSString *fromTime;
 @property (nonatomic, retain) NSString *toTime;
 @property (nonatomic, retain) NSString *verb;
+@property (nonatomic, retain) UIActionSheet *shareOptions;
 
 @end

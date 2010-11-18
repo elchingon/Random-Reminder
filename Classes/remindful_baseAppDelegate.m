@@ -52,6 +52,8 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
         // Application was in the background when notification
         // was delivered.
         NSLog(@"Recieved Notification while in background... %@",notification);
+        
+        
        
         NSString *reminderText = [notification.userInfo 
                                   objectForKey:@"name"];
@@ -62,7 +64,7 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
        
         NSString *reminderText = [notification.userInfo 
                                   objectForKey:@"name"];
-        [mainViewController showReminder:reminderText];
+                [mainViewController showReminder:reminderText];
     }
 }
 

@@ -286,7 +286,7 @@ static NSString* kAppId = @"173331372680031";
     NSLog(@"userInfo equals %@", newNotification.userInfo);
     
     // Schedule the notification
-    //[[UIApplication sharedApplication] cancelLocalNotification:newNotification];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     [[UIApplication sharedApplication] scheduleLocalNotification:newNotification];
     
     // log
@@ -299,6 +299,15 @@ static NSString* kAppId = @"173331372680031";
 }
 
 - (IBAction)showReminder:(NSString *)reminderText {
+    BOOL visible = [self.modalViewController isViewLoaded];
+    NSLog(@"visible: %d", visible );
+    NSLog(@"current modal view: %@", self.modalViewController);
+    NSLog(@"share is vis:", [shareOptions isVisible]);
+    if ([shareOptions isVisible]) {
+        [shareOptions setHidden:YES];
+    }
+    
+    
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
 	controller.delegate = self;
 	
@@ -317,7 +326,7 @@ static NSString* kAppId = @"173331372680031";
 
 
 - (IBAction)showInfo:(id)sender {    
-    UIActionSheet *shareOptions = [[UIActionSheet alloc]initWithTitle:@"Sharing Options" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Set Up Facebook", @"Set Up Twitter", nil];
+    shareOptions = [[UIActionSheet alloc]initWithTitle:@"Sharing Options" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Set Up Facebook", @"Set Up Twitter", nil];
     
     [shareOptions showInView:self.view];
 	
