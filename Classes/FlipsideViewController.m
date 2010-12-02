@@ -27,6 +27,14 @@
 	[self.delegate flipsideViewControllerDidFinish:self];	
 }
 
+- (IBAction)shareReminder:(id)sender {
+    NSMutableDictionary *reminder = [NSMutableDictionary dictionaryWithObjectsAndKeys:reminderAction.text, @"message", nil];
+    
+    
+    [self.delegate shareReminder:reminder closeCard:self];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "Reminder.h"
 
 @implementation MainViewController
 
@@ -31,26 +32,7 @@ static NSString* kAppId = @"173331372680031";
 
 }
 
-- (IBAction)configTwitter {
-    
-    
-	_engine = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate:self];
-	_engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
-	_engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
-    
-	UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
-    
-    [self presentModalViewController: controller animated: YES];
-    
-}
 
--(IBAction)updateStream:(id)sender {
-    
-}
-
--(IBAction)tweet:(id)sender {
-    
-}
 
 #pragma mark SA_OAuthTwitterEngineDelegate
 
@@ -73,8 +55,7 @@ static NSString* kAppId = @"173331372680031";
     
 	NSLog(@"Authenticated with user %@", username);
     
-	tweets = [[NSMutableArray alloc] init];
-	[self updateStream:nil];
+	
 }
 
 - (void) OAuthTwitterControllerFailed: (SA_OAuthTwitterController *) controller {
@@ -99,7 +80,7 @@ static NSString* kAppId = @"173331372680031";
     toTime = @"time";
     //facebook
     facebook = [[Facebook alloc] init];
-
+    
 	[super viewDidLoad];
 }
 
@@ -117,6 +98,7 @@ static NSString* kAppId = @"173331372680031";
     [reminderPicker selectRow:3 inComponent:0 animated:YES];
     [reminderPicker selectRow:8 inComponent:1 animated:YES];
     [reminderPicker selectRow:16 inComponent:2 animated:YES];
+    
 }
 
 // set nimber of rows per component
@@ -302,11 +284,7 @@ static NSString* kAppId = @"173331372680031";
     BOOL visible = [self.modalViewController isViewLoaded];
     NSLog(@"visible: %d", visible );
     NSLog(@"current modal view: %@", self.modalViewController);
-    NSLog(@"share is vis:", [shareOptions isVisible]);
-    if ([shareOptions isVisible]) {
-        [shareOptions setHidden:YES];
-    }
-    
+        
     
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
 	controller.delegate = self;
@@ -325,38 +303,53 @@ static NSString* kAppId = @"173331372680031";
 }
 
 
-- (IBAction)showInfo:(id)sender {    
-    shareOptions = [[UIActionSheet alloc]initWithTitle:@"Sharing Options" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Set Up Facebook", @"Set Up Twitter", nil];
-    
-    [shareOptions showInView:self.view];
-	
+- (void)shareReminder:(NSMutableDictionary *)reminder closeCard:(FlipsideViewController *)controller {
+    //[facebook requestWithGraphPath:@"me" andDelegate:self];
+    [reminder setObject:kAppId forKey:@"api_key"];
+    [facebook requestWithGraphPath:@"me" andParams:reminder andHttpMethod:@"POST" andDelegate:self];
+    [self dismissModalViewControllerAnimated:YES];
 }
 
-#pragma mark -
-#pragma mark UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)modalView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    // Change the navigation bar style, also make the status bar match with it
-    switch (buttonIndex)
-    {
-        case 0:
-        {
-            [self configFaceBook];
-            break;
-        }
-        case 1:
-        {
-            [self configTwitter];
-            break;
-        }
-        case 2:
-        {
-            
-            break;
-        }
-    }
+/**
+ * Called just before the request is sent to the server.
+ */
+- (void)requestLoading:(FBRequest*)request {
+    NSLog(@"request loading %@", request);
 }
+
+/**
+ * Called when the server responds and begins to send back data.
+ */
+- (void)request:(FBRequest*)request didReceiveResponse:(NSURLResponse*)response {
+    NSLog(@"did recieve response %@", response);
+}
+
+/**
+ * Called when an error prevents the request from completing successfully.
+ */
+- (void)request:(FBRequest*)request didFailWithError:(NSError*)error {
+    NSLog(@"did fail with error %@", error);
+}
+
+/**
+ * Called when a request returns and its response has been parsed into an object.
+ *
+ * The resulting object may be a dictionary, an array, a string, or a number, depending
+ * on thee format of the API response.
+ */
+- (void)request:(FBRequest*)request didLoad:(id)result {
+    NSLog(@"did load %@", result);
+}
+
+/**
+ * Called when a request returns a response.
+ *
+ * The result object is the raw response from the server of type NSData
+ */
+- (void)request:(FBRequest*)request didLoadRawResponse:(NSData*)data {
+    NSLog(@"did load raw respose %@", data);
+}
+
 
 
 - (IBAction)configFaceBook:(id)sender {
@@ -367,13 +360,6 @@ static NSString* kAppId = @"173331372680031";
     [facebook authorize:kAppId permissions:permissions delegate:self];
 }
 
-- (IBAction)configFaceBook {
-    permissions =  [[NSArray arrayWithObjects: 
-                     @"publish_stream",@"read_stream", @"offline_access",nil] retain];
-    
-    
-    [facebook authorize:kAppId permissions:permissions delegate:self];
-}
 
 
 - (IBAction)logoutFaceBook:(id)sender {
@@ -385,6 +371,38 @@ static NSString* kAppId = @"173331372680031";
  */ 
 -(void) fbDidLogin {
     NSLog(@"did login");
+    
+    NSLog(@"access token: %@", facebook.accessToken);
+    
+    SBJSON *jsonWriter = [[SBJSON new] autorelease];
+    
+    NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
+                                                           @"Remindful App",@"text",@"http://remindful.com/",@"href", nil], nil];
+    
+    NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+    NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
+                                @"Remindful App", @"name",
+                                @"The Action is breathe", @"caption",
+                                @"this is the message", @"message",
+                                @"be remindful.", @"description",
+                                @"http://remindful.com/", @"href", nil];
+    NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+    NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   kAppId, @"api_key",
+                                   facebook.accessToken, @"access_token",
+                                   actionLinksStr, @"action_links",
+                                   attachmentStr, @"attachment",
+                                   nil];
+
+    
+    //NSMutableDictionary *reminder = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"re-mindful", @"message", @"name of person", @"name", @"breathe", @"description", nil];
+    
+    [facebook requestWithGraphPath:@"me/feed:" andParams:params andHttpMethod:@"Post" andDelegate:self];
+
+    //[facebook dialog: @"stream.publish"
+      //      andParams: params
+        //  andDelegate:self];
+    
 }
 
 /**

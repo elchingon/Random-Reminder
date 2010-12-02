@@ -18,9 +18,11 @@
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
 @property (nonatomic, retain) UILabel *reminderAction;
 - (IBAction)done:(id)sender;
+- (IBAction)shareReminder:(id)sender;
 @end
 
 
 @protocol FlipsideViewControllerDelegate
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
+- (void)shareReminder:(NSMutableDictionary *)reminder closeCard:(FlipsideViewController *)controller;
 @end
