@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect
+END
+FBFeedDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBFeedDialog.h
+END
+FBSession.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBSession.h
+END
+FBLoginButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBLoginButton.h
+END
+FBLoginDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBLoginDialog.h
+END
+FBRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBRequest.h
+END
+FBPermissionDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBPermissionDialog.h
+END
+FBConnect.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBConnect.h
+END
+FBConnectGlobal.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBConnectGlobal.h
+END
+FBStreamDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBStreamDialog.h
+END
+FBDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/xutils/FacebookAgent/src/FBConnect/FBDialog.h
+END
