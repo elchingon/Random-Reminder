@@ -120,7 +120,6 @@
 						<string key="NSFrame">{{124, 415}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -303,24 +302,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">configFaceBook:</string>
-						<reference key="source" ref="1044044599"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">109</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">configTwitter:</string>
-						<reference key="source" ref="440543626"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">110</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">logoutFaceBook:</string>
 						<reference key="source" ref="70496258"/>
 						<reference key="destination" ref="372490531"/>
@@ -439,9 +420,6 @@
 					<string key="className">MainViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="configFaceBook:">id</string>
-						<string key="configTwitter:">id</string>
-						<string key="logoutFaceBook:">id</string>
 						<string key="setReminder:">id</string>
 						<string key="showReminder:">id</string>
 						<string key="togglePicker:">id</string>

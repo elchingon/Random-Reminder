@@ -7,11 +7,9 @@
 //
 
 #import "FlipsideViewController.h"
-#import "FBConnect.h"
-#import "SA_OAuthTwitterEngine.h"
-#import "SA_OAuthTwitterController.h"
+#import "FacebookAgent.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBSessionDelegate, FBRequestDelegate, FBDialogDelegate, SA_OAuthTwitterControllerDelegate, UIActionSheetDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
@@ -24,23 +22,12 @@
     IBOutlet UIPickerView *reminderPicker;
     IBOutlet UILabel *remindfulAction;
     
-    
-    // facebook
-    Facebook *facebook;
-    NSArray *permissions;
-    
-    //twitter
-    SA_OAuthTwitterEngine *_engine;
 }
 
 
 - (IBAction)showReminder:(NSString *)reminderText;
 - (IBAction)setReminder:(id)sender;
-// twitter actions
-- (IBAction)configTwitter:(id)sender;
-// facebook actions
-- (IBAction)configFaceBook:(id)sender;
-- (IBAction)logoutFaceBook:(id)sender;
+
 // picker actions
 - (IBAction)togglePicker:(id)sender;
 - (void)setUpPicker;
