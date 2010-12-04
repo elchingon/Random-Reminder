@@ -137,6 +137,7 @@
     Reminder *reminder = [[Reminder alloc] init];   
     NSDate *reminderDate = [reminder scheduleReminder:reminder action:action startTime:startTime endTime:endTime];
     NSLog(@"date of reminder: %@", reminderDate);
+    [reminder release];
     
     // show Reminder
     [self showReminder:action];
