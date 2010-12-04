@@ -12,5 +12,6 @@
 @interface Reminder : NSObject {
 
 }
-
+// public methods
+- (NSDate *)scheduleReminder:(Reminder *)reminder action:(NSString *)action startTime:(int)startTime endTime:(int)endTime; 
 @end

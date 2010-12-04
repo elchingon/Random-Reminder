@@ -15,17 +15,18 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+    
+    // pickerView Data
     reminderTypes = [[NSArray alloc] initWithObjects:@"breathe", @"smile", @"be Grateful", @"laugh", @"dream", @"eat healthy", nil];
     
     reminderStart = [[NSArray alloc] initWithObjects:@"12am",@"1am", @"2am", @"3am", @"4am", @"5am", @"6am", @"7am", @"8am",@"9am", @"10am", @"11am", @"12pm", @"1pm", @"2pm", @"3pm", @"4pm", @"5pm", @"6pm", @"7pm", @"8pm",@"9pm", @"10pm", @"11pm",  nil];
     
     reminderFinish = [[NSArray alloc] initWithObjects:@"12am",@"1am", @"2am", @"3am", @"4am", @"5am", @"6am", @"7am", @"8am",@"9am", @"10am", @"11am", @"12pm", @"1pm", @"2pm", @"3pm", @"4pm", @"5pm", @"6pm", @"7pm", @"8pm",@"9pm", @"10pm", @"11pm",  nil];
     
+    // action Label vars
     fromTime = @"time";
     toTime = @"time";
-    //facebook
-    facebook = [[Facebook alloc] init];
-    
+     
 	[super viewDidLoad];
 }
 
@@ -129,100 +130,16 @@
 // set reminders
 - (IBAction)setReminder:(id)sender {
       
-    //set up date components for notification
+    //set up vars for notification from reminderPicker
     int startTime = [reminderPicker selectedRowInComponent:1];
     int endTime = [reminderPicker selectedRowInComponent:2];
-    int myHour;
-    int myMinute = (arc4random() % 60);
-    int mySecond = (arc4random() % 60);
-    int range = endTime - startTime;
+    NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    Reminder *reminder = [[Reminder alloc] init];   
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:action startTime:startTime endTime:endTime];
+    NSLog(@"date of reminder: %@", reminderDate);
     
-    NSLog(@"start time = integer: %d", startTime);
-    NSLog(@"end time = integer: %d", endTime);
-    
-    if (startTime == endTime) {
-        
-        myHour = (arc4random() % 24);
-        
-    }else if (startTime < endTime) {
-        
-        myHour = (arc4random() % range) + startTime;
-        
-    }else if (startTime > endTime) {
-        
-        int theDecider = (arc4random()% 2);
-        NSLog(@"the Decider is = integer: %d", theDecider);
-        
-        if (theDecider == 1) {
-            int partRange = 24 - startTime;
-            myHour = (arc4random() % partRange) + startTime;            
-        } else {
-            int partRange = 0 + endTime;
-            myHour = (arc4random() % partRange); 
-            
-        }
-        
-        
-    }
-    
-    NSLog(@"my hour = integer: %d", myHour);
-    
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDate *date = [NSDate date];
-    NSLog(@"creation date equals %@", date);
-    NSDateComponents *comps = [calendar components:unitFlags fromDate:date];
-    //[comps setHour:myHour];
-    //[comps setMinute:myMinute];
-    [comps setMinute:comps.minute + 1];
-    //[comps setSecond:mySecond];
-    [comps setTimeZone:[NSTimeZone systemTimeZone]];
-    NSLog(@"comps time zone equals %@", comps.timeZone);
-    NSLog(@"comps hour equals %d", comps.hour);
-    date = [calendar dateFromComponents:comps];
-    
-    
-    NSLog(@"fire date equals %@", date);
-    
-    // create the notification
-    UILocalNotification *newNotification = [[UILocalNotification alloc] init];
-    if (newNotification)
-        
-    // set the fireDate and the timezone,    
-    newNotification.fireDate = date;
-    newNotification.timeZone = [NSTimeZone defaultTimeZone];
-    NSLog(@"time zone equals %@", newNotification.timeZone);
-    
-    // Notification details
-    newNotification.alertBody = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
-    NSLog(@"alertBody equals %@", newNotification.alertBody);
-    
-    // Set the action button
-    newNotification.alertAction = @"View";
-    
-    // set the sound
-    newNotification.soundName = UILocalNotificationDefaultSoundName;
-    
-    // set the badgeNumber
-    newNotification.applicationIconBadgeNumber = 1;
-    
-    // Specify custom data for the notification
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:newNotification.alertBody forKey:@"name"];
-    newNotification.userInfo = infoDict;
-    NSLog(@"userInfo equals %@", newNotification.userInfo);
-    
-    // Schedule the notification
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    [[UIApplication sharedApplication] scheduleLocalNotification:newNotification];
-    
-    // log
-    NSLog(@"Sent Notification %@",newNotification);
-    [self showReminder:newNotification.alertBody];
-    
-    [newNotification release];
-
-       
+    // show Reminder
+    [self showReminder:action];
 }
 
 - (IBAction)showReminder:(NSString *)reminderText {

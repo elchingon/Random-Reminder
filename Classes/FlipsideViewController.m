@@ -28,10 +28,7 @@
 }
 
 - (IBAction)shareReminder:(id)sender {
-    NSMutableDictionary *reminder = [NSMutableDictionary dictionaryWithObjectsAndKeys:reminderAction.text, @"message", nil];
-    
-    
-    [self.delegate shareReminder:reminder closeCard:self];
+   
 }
 
 

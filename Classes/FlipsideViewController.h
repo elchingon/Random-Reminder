@@ -24,5 +24,4 @@
 
 @protocol FlipsideViewControllerDelegate
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
-- (void)shareReminder:(NSMutableDictionary *)reminder closeCard:(FlipsideViewController *)controller;
 @end
