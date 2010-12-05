@@ -26,8 +26,35 @@ static NSString* kAppId = @"173331372680031";
     
     if ([facebook isSessionValid]) {
         NSLog(@"session was valid");
+        [facebook logout:self];
+    }else {
+        NSLog(@"session was NOT valid");
+        [facebook authorize:kAppId permissions:permissions delegate:self];
+    }
+    
+}
+
+- (void)shareReminder {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    facebook = [[Facebook alloc] init];
+    facebook.accessToken = [defaults objectForKey:@"FBAccessToken"];
+    facebook.expirationDate = [defaults objectForKey:@"FBSessionExpires"];
+    
+    if ([facebook isSessionValid]) {
+        NSLog(@"session was valid");
         //[facebook logout:self];
-        [facebook requestWithGraphPath:@"me" andDelegate:self];
+        NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                       @"I am being remindful",@"message",
+                                       @"Remindful",@"name",
+                                       @"http://www.randomappsofkindness/", @"link",
+                                       @"http://www.randomappsofkindness/blank.JPG", @"picture",
+                                       nil];
+        
+        [facebook requestWithGraphPath:@"me/feed"   // or use page ID instead of 'me'
+                              andParams:params
+                          andHttpMethod:@"POST"
+                            andDelegate:self];
     }else {
         NSLog(@"session was NOT valid");
         [facebook authorize:kAppId permissions:permissions delegate:self];
@@ -123,23 +150,31 @@ static NSString* kAppId = @"173331372680031";
  * on thee format of the API response.
  */
 - (void)request:(FBRequest*)request didLoad:(id)result {
-    NSLog(@"did load %@", result);
-    NSLog(@"name: %@", [result objectForKey:@"name"]);
-    NSLog(@"first name: %@", [result objectForKey:@"first_name"]);
-    NSLog(@"last name: %@", [result objectForKey:@"last_name"]);
-    NSLog(@"id: %@", [result objectForKey:@"id"]);
-    NSLog(@"link: %@", [result objectForKey:@"link"]);
-    NSLog(@"locale: %@", [result objectForKey:@"locale"]);
-    NSLog(@"timezone: %@", [result objectForKey:@"timezone"]);
+    if ([result objectForKey:@"name"] == nil) {
+        NSLog(@"posted to wall");
+        NSLog(@"did load %@", result);
+        
+        
+    } else {
+        NSLog(@"did load %@", result);
+        NSLog(@"name: %@", [result objectForKey:@"name"]);
+        NSLog(@"first name: %@", [result objectForKey:@"first_name"]);
+        NSLog(@"last name: %@", [result objectForKey:@"last_name"]);
+        NSLog(@"id: %@", [result objectForKey:@"id"]);
+        NSLog(@"link: %@", [result objectForKey:@"link"]);
+        NSLog(@"locale: %@", [result objectForKey:@"locale"]);
+        NSLog(@"timezone: %@", [result objectForKey:@"timezone"]);
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[result objectForKey:@"name"] forKey:@"FBname"];
+        [defaults setObject:[result objectForKey:@"first_name"] forKey:@"FBfirst_name"];
+        [defaults setObject:[result objectForKey:@"last_name"] forKey:@"FBlast_name"];
+        [defaults setObject:[result objectForKey:@"id"] forKey:@"FBid"];
+        [defaults setObject:[result objectForKey:@"link"] forKey:@"FBlink"];
+        [defaults setObject:[result objectForKey:@"locale"] forKey:@"FBlocale"];
+        [defaults setObject:[result objectForKey:@"timezone"] forKey:@"FBtimezone"];
+    }
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[result objectForKey:@"name"] forKey:@"FBname"];
-    [defaults setObject:[result objectForKey:@"first_name"] forKey:@"FBfirst_name"];
-    [defaults setObject:[result objectForKey:@"last_name"] forKey:@"FBlast_name"];
-    [defaults setObject:[result objectForKey:@"id"] forKey:@"FBid"];
-    [defaults setObject:[result objectForKey:@"link"] forKey:@"FBlink"];
-    [defaults setObject:[result objectForKey:@"locale"] forKey:@"FBlocale"];
-    [defaults setObject:[result objectForKey:@"timezone"] forKey:@"FBtimezone"];
 }
 
 /**

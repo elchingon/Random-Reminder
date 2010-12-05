@@ -28,7 +28,8 @@
 }
 
 - (IBAction)shareReminder:(id)sender {
-   
+    Session *facebookSession = [[Session alloc] init];
+    [facebookSession shareReminder];
 }
 
 

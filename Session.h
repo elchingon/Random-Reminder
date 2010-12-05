@@ -19,5 +19,6 @@
 }
 
 - (void)login;
+- (void)shareReminder;
 
 @end

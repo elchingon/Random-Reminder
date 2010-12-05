@@ -6,6 +6,7 @@
 //  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import "Session.h"
 #import <UIKit/UIKit.h>
 
 @protocol FlipsideViewControllerDelegate;
