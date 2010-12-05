@@ -13,10 +13,6 @@
 
 @synthesize managedObjectContext, reminderPicker, remindfulAction, facebookButton, fromTime, toTime, verb;
 
-// Your Facebook App Id must be set before running this example
-// See http://www.facebook.com/developers/createapp.php
-static NSString* kAppId = @"173331372680031";
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
@@ -33,20 +29,7 @@ static NSString* kAppId = @"173331372680031";
      
 	[super viewDidLoad];
     
-    // Facebook
-    permissions =  [[NSArray arrayWithObjects: 
-                      @"publish_stream",@"read_stream", @"offline_access",nil] retain];
     
-    facebook = [[Facebook alloc] init];
-    
-    if ([facebook isSessionValid]) {
-        NSLog(@"session was valid");
-        [facebookButton setHighlighted:NO];
-    }else {
-        [facebookButton setHighlighted:YES];
-        NSLog(@"session was NOT valid");
-    }
-
 }
 
 
@@ -209,7 +192,6 @@ static NSString* kAppId = @"173331372680031";
 */
 
 - (void)dealloc {
-    [facebook release];
     [reminderStart release];
     [reminderFinish release];
     [reminderTypes release];
@@ -223,88 +205,10 @@ static NSString* kAppId = @"173331372680031";
  * FBAuth
  */ 
 - (IBAction)login:(id)sender {
-    
-    if ([facebook isSessionValid]) {
-        NSLog(@"session was valid");
-        [facebook logout:self];
-    }else {
-        [facebook authorize:kAppId permissions:permissions delegate:self];
-        NSLog(@"session was NOT valid");
-    }
+    Session *facebookSession = [[Session alloc] init];
+    [facebookSession login];
 }
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
-// Facebook Session Delegates
-
-/**
- * Called when the dialog successful log in the user
- */
-- (void)fbDidLogin {
-    NSLog(@"user did login");
-    [facebookButton setHighlighted:NO];
-    [facebook requestWithGraphPath:@"me" andDelegate:self];
-    [facebook requestWithGraphPath:@"me/friends" andDelegate:self];
-}
-
-/**
- * Called when the user dismiss the dialog without login
- */
-- (void)fbDidNotLogin:(BOOL)cancelled {
-    NSLog(@"user CANCELLED login");
-    [facebookButton setHighlighted:YES];
-}
-
-/**
- * Called when the user is logged out
- */
-- (void)fbDidLogout {
-    NSLog(@"user did LOGOUT");
-    // does not fire? is session still valid on view did load?
-    [facebookButton setHighlighted:YES];
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-// Facebook Request Delegates
-
-/**
- * Called just before the request is sent to the server.
- */
-- (void)requestLoading:(FBRequest*)request {
-    NSLog(@"request loading %@", request);
-}
-
-/**
- * Called when the server responds and begins to send back data.
- */
-- (void)request:(FBRequest*)request didReceiveResponse:(NSURLResponse*)response {
-    NSLog(@"did recieve response %@", response);
-}
-
-/**
- * Called when an error prevents the request from completing successfully.
- */
-- (void)request:(FBRequest*)request didFailWithError:(NSError*)error {
-    NSLog(@"did fail with error %@", error);
-}
-
-/**
- * Called when a request returns and its response has been parsed into an object.
- *
- * The resulting object may be a dictionary, an array, a string, or a number, depending
- * on thee format of the API response.
- */
-- (void)request:(FBRequest*)request didLoad:(id)result {
-    NSLog(@"did load %@", result);
-}
-
-/**
- * Called when a request returns a response.
- *
- * The result object is the raw response from the server of type NSData
- */
-- (void)request:(FBRequest*)request didLoadRawResponse:(NSData*)data {
-    NSLog(@"did load raw respose %@", data);
-}
 
 @end

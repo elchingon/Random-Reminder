@@ -8,10 +8,9 @@
 
 #import "FlipsideViewController.h"
 #import "Reminder.h"
-#import "FBConnect.h"
 #import "Session.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBSessionDelegate, FBRequestDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
@@ -24,11 +23,7 @@
     IBOutlet UIPickerView *reminderPicker;
     IBOutlet UILabel *remindfulAction;
     // Facebook
-    Facebook *facebook;
-    Session *session;
-    NSArray *permissions;
     IBOutlet UIButton *facebookButton;
-    
 }
 
 //login to Facebook
