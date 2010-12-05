@@ -243,8 +243,22 @@ static NSString* kAppId = @"173331372680031";
 - (void)fbDidLogin {
     NSLog(@"user did login");
     [facebookButton setHighlighted:NO];
+    // get user info
     [facebook requestWithGraphPath:@"me" andDelegate:self];
+    // get friends
     [facebook requestWithGraphPath:@"me/friends" andDelegate:self];
+    // post to wall
+    NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   @"Message will be here",@"message",
+                                   @"Name will be here",@"name",
+                                   @"http://www.randomappsofkindness.com/", @"link",
+                                   @"http://www.randomappsofkindness.com/blank.JPG", @"picture",
+                                   nil];
+    
+    [facebook requestWithGraphPath:@"me/feed"   // or use page ID instead of 'me'
+                          andParams:params
+                      andHttpMethod:@"POST"
+                        andDelegate:self];
 }
 
 /**
