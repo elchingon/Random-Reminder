@@ -47,6 +47,7 @@
 		C69B012D1288DC8F007A5549 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C69B01211288DC8F007A5549 /* SBJsonParser.m */; };
 		C69B012E1288DC8F007A5549 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C69B01231288DC8F007A5549 /* SBJsonWriter.m */; };
 		C69B014A1288F549007A5549 /* 106-RemoveUser.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B01491288F549007A5549 /* 106-RemoveUser.png */; };
+		C6E8BAC512ABDDC300C24C84 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E8BAC412ABDDC300C24C84 /* Session.m */; };
 		C6EDD94112A220F3001002DB /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDD94012A220F3001002DB /* Reminder.m */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,8 @@
 		C69B01221288DC8F007A5549 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		C69B01231288DC8F007A5549 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		C69B01491288F549007A5549 /* 106-RemoveUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "106-RemoveUser.png"; sourceTree = "<group>"; };
+		C6E8BAC312ABDDC300C24C84 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = ../Session.h; sourceTree = "<group>"; };
+		C6E8BAC412ABDDC300C24C84 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = ../Session.m; sourceTree = "<group>"; };
 		C6EDD93F12A220F3001002DB /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reminder.h; path = ../Reminder.h; sourceTree = "<group>"; };
 		C6EDD94012A220F3001002DB /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reminder.m; path = ../Reminder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +156,8 @@
 		C68F5B851285C406006F4528 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C6E8BAC312ABDDC300C24C84 /* Session.h */,
+				C6E8BAC412ABDDC300C24C84 /* Session.m */,
 				C6EDD93F12A220F3001002DB /* Reminder.h */,
 				C6EDD94012A220F3001002DB /* Reminder.m */,
 				C68F5B9F1285C406006F4528 /* remindful_baseAppDelegate.h */,
@@ -355,6 +360,7 @@
 				C69B012D1288DC8F007A5549 /* SBJsonParser.m in Sources */,
 				C69B012E1288DC8F007A5549 /* SBJsonWriter.m in Sources */,
 				C6EDD94112A220F3001002DB /* Reminder.m in Sources */,
+				C6E8BAC512ABDDC300C24C84 /* Session.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

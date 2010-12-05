@@ -8,8 +8,10 @@
 
 #import "FlipsideViewController.h"
 #import "Reminder.h"
+#import "FBConnect.h"
+#import "Session.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBSessionDelegate, FBRequestDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
@@ -21,10 +23,18 @@
     NSManagedObjectContext *managedObjectContext;
     IBOutlet UIPickerView *reminderPicker;
     IBOutlet UILabel *remindfulAction;
+    // Facebook
+    Facebook *facebook;
+    Session *session;
+    NSArray *permissions;
+    IBOutlet UIButton *facebookButton;
     
 }
 
+//login to Facebook
+- (IBAction)login:(id)sender;
 
+// reminders
 - (IBAction)showReminder:(NSString *)reminderText;
 - (IBAction)setReminder:(id)sender;
 
@@ -36,6 +46,7 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) UIPickerView *reminderPicker;
 @property (nonatomic, retain) UILabel *remindfulAction;
+@property (nonatomic, retain) UIButton *facebookButton;
 @property (nonatomic, retain) NSString *fromTime;
 @property (nonatomic, retain) NSString *toTime;
 @property (nonatomic, retain) NSString *verb;
