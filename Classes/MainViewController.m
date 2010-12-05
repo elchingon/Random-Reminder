@@ -190,7 +190,9 @@
 */
 
 - (void)dealloc {
-
+    [reminderStart release];
+    [reminderFinish release];
+    [reminderTypes release];
     [managedObjectContext release];
     [super dealloc];
 }
