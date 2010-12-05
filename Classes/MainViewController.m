@@ -373,7 +373,19 @@ static NSString* kAppId = @"173331372680031";
     NSLog(@"did login");
     
     NSLog(@"access token: %@", facebook.accessToken);
+   
+    NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   @"Test message from app",@"message",
+                                   @"be Remindful!",@"name",
+                                   @"http://randomappsofkindness.com/", @"link",
+                                   nil];
     
+    [facebook requestWithGraphPath:@"/me/feed"   // or use page ID instead of 'me'
+                          andParams:params
+                      andHttpMethod:@"POST"
+                        andDelegate:self];
+    
+    /* 
     SBJSON *jsonWriter = [[SBJSON new] autorelease];
     
     NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
@@ -397,11 +409,12 @@ static NSString* kAppId = @"173331372680031";
     
     //NSMutableDictionary *reminder = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"re-mindful", @"message", @"name of person", @"name", @"breathe", @"description", nil];
     
-    [facebook requestWithGraphPath:@"me/feed:" andParams:params andHttpMethod:@"Post" andDelegate:self];
+    [facebook requestWithGraphPath:@"/me/feed" andParams:params andHttpMethod:@"Post" andDelegate:self];
 
     //[facebook dialog: @"stream.publish"
       //      andParams: params
         //  andDelegate:self];
+    */
     
 }
 
