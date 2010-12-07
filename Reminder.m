@@ -11,8 +11,21 @@
 
 @implementation Reminder
 
+- (void)cancelAllReminders {
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+}
+
+- (void)getAllReminders {
+    NSArray *reminders = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    
+    NSLog(@"current reminders: %@", reminders);
+}
+
 - (NSDate *)scheduleReminder:(Reminder *)reminder action:(NSString *)action startTime:(int)startTime endTime:(int)endTime {
-   
+    [self getAllReminders];
+    [self cancelAllReminders];
+    [self getAllReminders];
+    
     int myHour;
     int myMinute = (arc4random() % 60);
     int mySecond = (arc4random() % 60);
@@ -73,6 +86,9 @@
     // set the fireDate   
     newNotification.fireDate = date;
     
+    // set the repeat interval
+    newNotification.repeatInterval = NSDayCalendarUnit;
+    
     // set the timeZone
     newNotification.timeZone = [NSTimeZone defaultTimeZone];
     NSLog(@"time zone equals %@", newNotification.timeZone);
@@ -96,7 +112,6 @@
     NSLog(@"userInfo equals %@", newNotification.userInfo);
     
     // Schedule the notification
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     [[UIApplication sharedApplication] scheduleLocalNotification:newNotification];
     
     // log

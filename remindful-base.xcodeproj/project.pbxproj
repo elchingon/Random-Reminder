@@ -427,10 +427,7 @@
 				GCC_PREFIX_HEADER = remindful_base_Prefix.pch;
 				INFOPLIST_FILE = "remindful_base-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
-				"LIBRARY_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Twitter+OAuth/Libraries & Headers\"",
-				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				PRODUCT_NAME = "remindful-base";
 				WRAPPER_EXTENSION = app;
 			};
@@ -445,10 +442,7 @@
 				GCC_PREFIX_HEADER = remindful_base_Prefix.pch;
 				INFOPLIST_FILE = "remindful_base-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
-				"LIBRARY_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Twitter+OAuth/Libraries & Headers\"",
-				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				PRODUCT_NAME = "remindful-base";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;

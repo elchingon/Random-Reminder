@@ -14,4 +14,6 @@
 }
 // public methods
 - (NSDate *)scheduleReminder:(Reminder *)reminder action:(NSString *)action startTime:(int)startTime endTime:(int)endTime; 
+- (void)cancelAllReminders;
+- (void)getAllReminders;
 @end
