@@ -7,6 +7,7 @@
 //
 
 #import "Session.h"
+#import "Reminder.h"
 #import <UIKit/UIKit.h>
 
 @protocol FlipsideViewControllerDelegate;

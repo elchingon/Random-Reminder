@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "Reminder.h"
 
 @implementation MainViewController
 
@@ -16,6 +15,8 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
+    [super viewDidLoad];
+    
     // pickerView Data
     reminderTypes = [[NSArray alloc] initWithObjects:@"breathe", @"smile", @"be Grateful", @"laugh", @"dream", @"eat healthy", nil];
     
@@ -23,13 +24,45 @@
     
     reminderFinish = [[NSArray alloc] initWithObjects:@"12am",@"1am", @"2am", @"3am", @"4am", @"5am", @"6am", @"7am", @"8am",@"9am", @"10am", @"11am", @"12pm", @"1pm", @"2pm", @"3pm", @"4pm", @"5pm", @"6pm", @"7pm", @"8pm",@"9pm", @"10pm", @"11pm",  nil];
     
+    // get user defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[defaults removeObjectForKey:@"remindful_action"];
+    //[defaults removeObjectForKey:@"start_time"];
+    //[defaults removeObjectForKey:@"end_time"];
+    //[defaults synchronize];
+
+    
+    // facebook status
+    if ([defaults objectForKey:@"FBAccessToken"] == nil) {
+        [facebookButton setHighlighted:YES];
+    } else {
+        [facebookButton setHighlighted:NO];
+    }
+    
     // action Label vars
-    fromTime = @"time";
-    toTime = @"time";
-     
-	[super viewDidLoad];
+    if ([defaults integerForKey:@"start_time"]) {
+        fromTime = [reminderStart objectAtIndex:[defaults integerForKey:@"start_time"]];
+    } else {
+        fromTime = @"9am";
+    }
+    
+    if ([defaults integerForKey:@"end_time"]) {
+        toTime = [reminderFinish objectAtIndex:[defaults integerForKey:@"end_time"]];
+    } else {
+        toTime = @"5pm";
+    }
+    
+    NSString *action;
+    
+    if ([defaults objectForKey:@"remindful_action"]) {
+        action = [defaults objectForKey:@"remindful_action"];
+    } else {
+        action = @"smile";
+    }
     
     
+    NSString *sentence = [NSString stringWithFormat:@"%@ from %@ to %@", action, fromTime, toTime];
+    [remindfulAction setText:sentence];
 }
 
 
@@ -43,9 +76,26 @@
 }
 
 - (void)setUpPicker {
-    [reminderPicker selectRow:3 inComponent:0 animated:YES];
-    [reminderPicker selectRow:8 inComponent:1 animated:YES];
-    [reminderPicker selectRow:16 inComponent:2 animated:YES];
+    // get user defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([defaults objectForKey:@"remindful_action"]) {
+        [reminderPicker selectRow:[reminderTypes indexOfObject:[defaults objectForKey:@"remindful_action"]] inComponent:0 animated:YES];
+    } else {
+        [reminderPicker selectRow:1 inComponent:0 animated:YES];
+    }
+
+    if ([defaults integerForKey:@"start_time"]) {
+        [reminderPicker selectRow:[defaults integerForKey:@"start_time"] inComponent:1 animated:YES];
+    } else {
+        [reminderPicker selectRow:9 inComponent:1 animated:YES];
+    }
+    
+    if ([defaults integerForKey:@"end_time"]) {
+        [reminderPicker selectRow:[defaults integerForKey:@"end_time"] inComponent:2 animated:YES];
+    } else {
+        [reminderPicker selectRow:17 inComponent:2 animated:YES];
+    }
     
 }
 
@@ -141,6 +191,12 @@
     NSLog(@"date of reminder: %@", reminderDate);
     [reminder release];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:startTime forKey:@"start_time"];
+    [defaults setInteger:endTime forKey:@"end_time"];
+    [defaults setObject:action forKey:@"remindful_action"];
+    [defaults synchronize];
+
     // show Reminder
     [self showReminder:action];
 }

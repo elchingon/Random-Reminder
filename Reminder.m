@@ -21,8 +21,6 @@
     NSLog(@"start time = integer: %d", startTime);
     NSLog(@"end time = integer: %d", endTime);
     
-
-    
     if (startTime == endTime) {
         
         myHour = (arc4random() % 24);

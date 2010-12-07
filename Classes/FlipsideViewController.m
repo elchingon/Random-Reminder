@@ -8,7 +8,6 @@
 
 #import "FlipsideViewController.h"
 
-
 @implementation FlipsideViewController
 
 @synthesize delegate, reminderAction;
@@ -24,6 +23,16 @@
 
 
 - (IBAction)done:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    Reminder *reminder = [[Reminder alloc] init];
+    
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:reminderAction.text startTime:[defaults integerForKey:@"start_time"] endTime:[defaults integerForKey:@"end_time"]];
+    
+    NSLog(@"date of reminder: %@", reminderDate);
+    
+    [reminder release];
+
 	[self.delegate flipsideViewControllerDidFinish:self];	
 }
 
