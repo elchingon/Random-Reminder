@@ -18,7 +18,7 @@ static NSString* kAppId = @"173331372680031";
 
 - (void)login {
     permissions =  [[NSArray arrayWithObjects: 
-                     @"publish_stream",@"read_stream", @"offline_access",nil] retain];
+                     @"publish_stream",@"read_stream", @"offline_access", @"publish_checkins",nil] retain];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     facebook = [[Facebook alloc] init];
     facebook.accessToken = [defaults objectForKey:@"FBAccessToken"];
@@ -41,14 +41,18 @@ static NSString* kAppId = @"173331372680031";
     facebook.accessToken = [defaults objectForKey:@"FBAccessToken"];
     facebook.expirationDate = [defaults objectForKey:@"FBSessionExpires"];
     
+    NSString *message = [NSString stringWithFormat:@"The message is: %@", [defaults objectForKey:@"remindful_action"]];
+    
     if ([facebook isSessionValid]) {
         NSLog(@"session was valid");
         //[facebook logout:self];
         NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                       @"I am being remindful",@"message",
+                                       message,@"message",
                                        @"Remindful",@"name",
                                        @"http://www.randomappsofkindness/", @"link",
-                                       @"http://www.randomappsofkindness/blank.JPG", @"picture",
+                                       @"this is the link caption", @"caption",
+                                       @"this is the description, which is also related to the link", @"description",
+                                       @"[{\"name\":\"Get Remindful!\",\"link\":\"http://www.randomappsofkindness/\"}]",@"actions",
                                        nil];
         
         [facebook requestWithGraphPath:@"me/feed"   // or use page ID instead of 'me'
@@ -58,6 +62,10 @@ static NSString* kAppId = @"173331372680031";
     }else {
         NSLog(@"session was NOT valid");
         [facebook authorize:kAppId permissions:permissions delegate:self];
+        /*
+         What do we do if user is not logged in?
+         ?set flag and reprocess call if not logged in?
+         */
     }
     
 }

@@ -22,9 +22,9 @@
 }
 
 - (NSDate *)scheduleReminder:(Reminder *)reminder action:(NSString *)action startTime:(int)startTime endTime:(int)endTime {
-    [self getAllReminders];
+    //[self getAllReminders];
     [self cancelAllReminders];
-    [self getAllReminders];
+    //[self getAllReminders];
     
     int myHour;
     int myMinute = (arc4random() % 60);
