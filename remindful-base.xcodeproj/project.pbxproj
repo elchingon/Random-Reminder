@@ -10,6 +10,7 @@
 		C602D604128633F0005A8622 /* reminders_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C602D603128633F0005A8622 /* reminders_bg.png */; };
 		C602D6371287275D005A8622 /* reminders_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C602D6361287275D005A8622 /* reminders_button.png */; };
 		C60C2B6B128A1E8B001D51FC /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = C60C2B6A128A1E8B001D51FC /* card.png */; };
+		C67039AB12AF2E29009CF842 /* PopOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C67039AA12AF2E29009CF842 /* PopOverView.m */; };
 		C6707FA212AA798000181E81 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6707FA112AA798000181E81 /* CoreData.framework */; };
 		C68F5B911285C406006F4528 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68F5B901285C406006F4528 /* UIKit.framework */; };
 		C68F5B931285C406006F4528 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68F5B921285C406006F4528 /* Foundation.framework */; };
@@ -55,6 +56,8 @@
 		C602D603128633F0005A8622 /* reminders_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminders_bg.png; sourceTree = "<group>"; };
 		C602D6361287275D005A8622 /* reminders_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminders_button.png; sourceTree = "<group>"; };
 		C60C2B6A128A1E8B001D51FC /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card.png; sourceTree = "<group>"; };
+		C67039A912AF2E29009CF842 /* PopOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOverView.h; sourceTree = "<group>"; };
+		C67039AA12AF2E29009CF842 /* PopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOverView.m; sourceTree = "<group>"; };
 		C6707FA112AA798000181E81 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C68F5B8D1285C406006F4528 /* remindful-base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "remindful-base.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68F5B901285C406006F4528 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -138,6 +141,8 @@
 				C6707FA112AA798000181E81 /* CoreData.framework */,
 				C68F5B841285C406006F4528 /* Models */,
 				C68F5B851285C406006F4528 /* Classes */,
+				C67039A912AF2E29009CF842 /* PopOverView.h */,
+				C67039AA12AF2E29009CF842 /* PopOverView.m */,
 				C68F5B861285C406006F4528 /* Other Sources */,
 				C68F5B871285C406006F4528 /* Resources */,
 				C68F5B881285C406006F4528 /* Frameworks */,
@@ -361,6 +366,7 @@
 				C69B012E1288DC8F007A5549 /* SBJsonWriter.m in Sources */,
 				C6EDD94112A220F3001002DB /* Reminder.m in Sources */,
 				C6E8BAC512ABDDC300C24C84 /* Session.m in Sources */,
+				C67039AB12AF2E29009CF842 /* PopOverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

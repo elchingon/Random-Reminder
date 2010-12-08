@@ -65,6 +65,12 @@
     [remindfulAction setText:sentence];
 }
 
+- (void)presentIntroduction {
+    
+    PopOverView *introView = [[PopOverView alloc] initWithURL:@"http://randomappsofkindness.com" params:nil delegate:self]; 
+    [introView show];
+
+}
 
 //
 // pickerView datasource methods
@@ -96,6 +102,9 @@
     } else {
         [reminderPicker selectRow:17 inComponent:2 animated:YES];
     }
+
+    
+       [self performSelector:@selector(presentIntroduction) withObject:nil afterDelay:0.8];
     
 }
 

@@ -9,8 +9,9 @@
 #import "FlipsideViewController.h"
 #import "Reminder.h"
 #import "Session.h"
+#import "PopOverView.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
