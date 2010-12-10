@@ -19,9 +19,12 @@
     NSURL* _loadingURL;
     UIWebView* _webView;
     UIActivityIndicatorView* _spinner;
-    UIImageView* _iconView;
+    //UIImageView* _iconView;
     UILabel* _titleLabel;
+    UILabel* _footerLabel;
     UIButton* _closeButton;
+    UIButton* _retainButton;
+    UISwitch* _switch;
     UIDeviceOrientation _orientation;
     BOOL _showingKeyboard;
 

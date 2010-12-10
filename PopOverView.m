@@ -21,7 +21,7 @@ static CGFloat kBorderBlue[4] = {107.0/255, 142.0/255, 35.0/255, 1.0};
 
 static CGFloat kTransitionDuration = 0.3;
 
-static CGFloat kTitleMarginX = 8;
+static CGFloat kTitleMarginX = 20;
 static CGFloat kTitleMarginY = 4;
 static CGFloat kPadding = 10;
 static CGFloat kBorderWidth = 8;
@@ -296,13 +296,27 @@ params   = _params;
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.contentMode = UIViewContentModeRedraw;
         
-        UIImage* iconImage = [UIImage imageNamed:@"FBDialog.bundle/images/fbicon.png"];
         UIImage* closeImage = [UIImage imageNamed:@"FBDialog.bundle/images/close.png"];
         
-        _iconView = [[UIImageView alloc] initWithImage:iconImage];
-        [self addSubview:_iconView];
+        // info button
+        _retainButton = [[UIButton buttonWithType:UIButtonTypeInfoLight] retain];
+        [_retainButton addTarget:self action:@selector(retainIntroPage) forControlEvents:UIControlEventTouchUpInside];
         
-        UIColor* color = [UIColor colorWithRed:167.0/255 green:184.0/255 blue:216.0/255 alpha:1];
+        // To be compatible with OS 2.x
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_2_2
+        _retainButton.font = [UIFont boldSystemFontOfSize:12];
+#else
+        _retainButton.titleLabel.font = [UIFont boldSystemFontOfSize:12];
+#endif
+        
+        _retainButton.showsTouchWhenHighlighted = YES;
+        _retainButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin
+        | UIViewAutoresizingFlexibleBottomMargin;
+        [self addSubview:_retainButton];
+
+        
+        // close button
+        UIColor* color = [UIColor colorWithRed:255.0/255 green:255.0/255 blue:255.0/255 alpha:1];
         _closeButton = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
         [_closeButton setImage:closeImage forState:UIControlStateNormal];
         [_closeButton setTitleColor:color forState:UIControlStateNormal];
@@ -322,7 +336,8 @@ params   = _params;
         | UIViewAutoresizingFlexibleBottomMargin;
         [self addSubview:_closeButton];
         
-        CGFloat titleLabelFontSize = (IsDeviceIPad() ? 18 : 14);
+        // header title
+        CGFloat titleLabelFontSize = (IsDeviceIPad() ? 18 : 16);
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _titleLabel.text = kDefaultTitle;
         _titleLabel.backgroundColor = [UIColor clearColor];
@@ -332,11 +347,30 @@ params   = _params;
         | UIViewAutoresizingFlexibleBottomMargin;
         [self addSubview:_titleLabel];
         
+        // footer title
+        CGFloat footerLabelFontSize = (IsDeviceIPad() ? 18 : 14);
+        _footerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _footerLabel.text = @"Show instructions on start";
+        _footerLabel.backgroundColor = [UIColor clearColor];
+        _footerLabel.textColor = [UIColor whiteColor];
+        _footerLabel.font = [UIFont boldSystemFontOfSize:footerLabelFontSize];
+        _footerLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin
+        | UIViewAutoresizingFlexibleBottomMargin;
+        [self addSubview:_footerLabel];
+        
+        // web view
         _webView = [[UIWebView alloc] initWithFrame:CGRectMake(kPadding, kPadding, 480, 480)];
         _webView.delegate = self;
         _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self addSubview:_webView];
         
+        // switch
+        CGRect switchRect = CGRectMake(100, 100, 100, 100);
+        _switch = [[UISwitch alloc] initWithFrame:switchRect];
+        [_switch setOn:YES];
+        [self addSubview:_switch];
+
+        // spinner
         _spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
                     UIActivityIndicatorViewStyleWhiteLarge];
         _spinner.autoresizingMask =
@@ -354,8 +388,10 @@ params   = _params;
     [_serverURL release];
     [_spinner release];
     [_titleLabel release];
-    [_iconView release];
+    [_footerLabel release];
     [_closeButton release];
+    [_retainButton release];
+    [_switch release];
     [_loadingURL release];
     [super dealloc];
 }
@@ -373,10 +409,13 @@ params   = _params;
     [self drawRect:headerRect fill:kFacebookBlue radius:0];
     [self strokeLines:headerRect stroke:kBorderBlue];
     
+   
+    
     CGRect webRect = CGRectMake(
                                 ceil(rect.origin.x + kBorderWidth), headerRect.origin.y + headerRect.size.height,
                                 rect.size.width - kBorderWidth*2, _webView.frame.size.height+1);
     [self strokeLines:webRect stroke:kBorderBlack];
+    
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -530,34 +569,41 @@ params   = _params;
     [self sizeToFitOrientation:NO];
     
     CGFloat innerWidth = self.frame.size.width - (kBorderWidth+1)*2;  
-    [_iconView sizeToFit];
     [_titleLabel sizeToFit];
+    [_footerLabel sizeToFit];
     [_closeButton sizeToFit];
+    [_retainButton sizeToFit];
+    [_switch sizeToFit];
     
     _titleLabel.frame = CGRectMake(
-                                   kBorderWidth + kTitleMarginX + _iconView.frame.size.width + kTitleMarginX,
-                                   kBorderWidth,
-                                   innerWidth - (_titleLabel.frame.size.height + _iconView.frame.size.width + kTitleMarginX*2),
-                                   _titleLabel.frame.size.height + kTitleMarginY*2);
+                                   44,
+                                   8,
+                                   240,
+                                   28);
     
-    _iconView.frame = CGRectMake(
-                                 kBorderWidth + kTitleMarginX,
-                                 kBorderWidth + floor(_titleLabel.frame.size.height/2 - _iconView.frame.size.height/2),
-                                 _iconView.frame.size.width,
-                                 _iconView.frame.size.height);
-    
+       
     _closeButton.frame = CGRectMake(
                                     self.frame.size.width - (_titleLabel.frame.size.height + kBorderWidth),
                                     kBorderWidth,
                                     _titleLabel.frame.size.height,
                                     _titleLabel.frame.size.height);
     
+    _retainButton.frame = CGRectMake(14,10,24,24);
+        
     _webView.frame = CGRectMake(
                                 kBorderWidth+1,
                                 kBorderWidth + _titleLabel.frame.size.height,
                                 innerWidth,
-                                self.frame.size.height - (_titleLabel.frame.size.height + 1 + kBorderWidth*2));
+                                self.frame.size.height- 30 - (_titleLabel.frame.size.height + 1 + kBorderWidth*2));
+    _switch.frame = CGRectMake(
+                               self.frame.size.width - 100,
+                               _webView.frame.size.height + 40,
+                               100,
+                               40);
     
+    _footerLabel.frame = CGRectMake(10, _webView.frame.size.height + 34, 200, 40);
+    
+
     [_spinner sizeToFit];
     [_spinner startAnimating];
     _spinner.center = _webView.center;
