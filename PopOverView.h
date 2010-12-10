@@ -30,6 +30,9 @@
 
 
 }
+
+- (void)aboutUs;
+
 /**
  * The delegate.
  */

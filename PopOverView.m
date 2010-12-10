@@ -300,7 +300,7 @@ params   = _params;
         
         // info button
         _retainButton = [[UIButton buttonWithType:UIButtonTypeInfoLight] retain];
-        [_retainButton addTarget:self action:@selector(retainIntroPage) forControlEvents:UIControlEventTouchUpInside];
+        [_retainButton addTarget:self action:@selector(aboutUs) forControlEvents:UIControlEventTouchUpInside];
         
         // To be compatible with OS 2.x
 #if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_2_2
@@ -342,6 +342,7 @@ params   = _params;
         _titleLabel.text = kDefaultTitle;
         _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.textAlignment = UITextAlignmentCenter;
         _titleLabel.font = [UIFont boldSystemFontOfSize:titleLabelFontSize];
         _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin
         | UIViewAutoresizingFlexibleBottomMargin;
@@ -513,6 +514,10 @@ params   = _params;
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // public
 
+- (void)aboutUs {
+    [self loadURL:@"http://google.com" get:nil];
+}
+
 /**
  * Find a specific parameter from the url
  */
@@ -578,7 +583,7 @@ params   = _params;
     _titleLabel.frame = CGRectMake(
                                    44,
                                    8,
-                                   240,
+                                   220,
                                    28);
     
        
