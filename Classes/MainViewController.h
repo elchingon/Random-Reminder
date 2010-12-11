@@ -10,8 +10,11 @@
 #import "Reminder.h"
 #import "Session.h"
 #import "PopOverView.h"
+#import "SA_OAuthTwitterEngine.h"
+#import "SA_OAuthTwitterController.h"
+#import "Tweet.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate, SA_OAuthTwitterEngineDelegate, SA_OAuthTwitterControllerDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
@@ -25,10 +28,19 @@
     IBOutlet UILabel *remindfulAction;
     // Facebook
     IBOutlet UIButton *facebookButton;
+    // twitter
+    SA_OAuthTwitterEngine *_engine;
+	NSMutableArray *tweets;
+
 }
 
 //login to Facebook
 - (IBAction)login:(id)sender;
+
+// login to twitter
+- (IBAction)loginTwitter:(id)sender;
+-(IBAction)updateStream:(id)sender;
+-(IBAction)tweet:(id)sender;
 
 // reminders
 - (IBAction)showReminder:(NSString *)reminderText;

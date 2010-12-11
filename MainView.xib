@@ -35,6 +35,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 460}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="826437002"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -48,6 +49,7 @@
 						<int key="NSvFlags">290</int>
 						<string key="NSFrame">{{0, 138}, {320, 216}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="828677071"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIShowsSelectionIndicator">YES</bool>
@@ -57,6 +59,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 109}, {280, 21}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="988940499"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -83,6 +86,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{290, 349}, {30, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="537703237"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -115,6 +119,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{124, 415}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="70496258"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -135,6 +140,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{155, 370}, {44, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="440543626"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -157,6 +163,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{207, 370}, {40, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="394162781"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -179,6 +186,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{32, 377}, {115, 21}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1044044599"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -201,6 +209,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{234, 415}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -208,7 +217,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="649259075"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">lo/fb</string>
+						<string key="IBUINormalTitle">tweet</string>
 						<reference key="IBUIHighlightedTitleColor" ref="758333490"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -219,6 +228,7 @@
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="481718363"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -308,6 +318,24 @@
 						<reference key="destination" ref="1044044599"/>
 					</object>
 					<int key="connectionID">125</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">loginTwitter:</string>
+						<reference key="source" ref="440543626"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">127</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">tweet:</string>
+						<reference key="source" ref="70496258"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">128</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -412,9 +440,34 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">125</int>
+			<int key="maxID">128</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">MainViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="login:">id</string>
+						<string key="loginTwitter:">id</string>
+						<string key="setReminder:">id</string>
+						<string key="showReminder:">id</string>
+						<string key="togglePicker:">id</string>
+						<string key="tweet:">id</string>
+						<string key="updateStream:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="facebookButton">UIButton</string>
+						<string key="reminderPicker">UIPickerView</string>
+						<string key="remindfulAction">UILabel</string>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./classes-xjh84/MainViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

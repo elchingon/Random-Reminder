@@ -274,6 +274,117 @@
     [facebookSession login];
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Twitter 
+// tweet
+-(IBAction)tweet:(id)sender {
+    _engine = [SA_OAuthTwitterEngine OAuthTwitterEngineWithDelegate:self];
+	_engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
+	_engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";    
+    
+    if([_engine isAuthorized]) {
+        NSLog(@"authorized");
+        [_engine sendUpdate: [NSString stringWithFormat: @"Already Updated. %@", [NSDate date]]];
+    }else{
+        NSLog(@"not authed");
+    }
+    
+    //[_engine sendUpdate: [NSString stringWithFormat: @"Already Updated. %@", [NSDate date]]];
+}
+
+
+// login action
+- (IBAction)loginTwitter:(id)sender {
+    
+     
+
+   _engine = [SA_OAuthTwitterEngine OAuthTwitterEngineWithDelegate:self];
+    [_engine clearAccessToken];
+	_engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
+	_engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
+    
+	UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
+    
+    [self presentModalViewController: controller animated: YES];
+    
+}
+
+
+// store auth data
+- (void) storeCachedTwitterOAuthData: (NSString *) data forUsername: (NSString *) username {
+    NSLog(@"called");
+    
+    NSUserDefaults	*defaults = [NSUserDefaults standardUserDefaults];
+    
+	[defaults setObject: data forKey: @"authData"];
+	[defaults synchronize];
+}
+
+//implement these methods to store off the creds returned by Twitter
+- (NSString *) cachedTwitterOAuthDataForUsername: (NSString *) username {
+    return [[NSUserDefaults standardUserDefaults] objectForKey: @"authData"];
+}
+
+//if you don't do this, the user will have to re-authenticate every time they run
+- (void) twitterOAuthConnectionFailedWithData: (NSData *) data {
+    
+}
+
+// controller delegates
+- (void) OAuthTwitterController: (SA_OAuthTwitterController *) controller authenticatedWithUsername: (NSString *) username {
+    NSLog(@"Authenticated with user %@", username);
+}
+
+- (void) OAuthTwitterControllerFailed: (SA_OAuthTwitterController *) controller {
+    NSLog(@"Authentication Failure");
+}
+
+- (void) OAuthTwitterControllerCanceled: (SA_OAuthTwitterController *) controller {
+    NSLog(@"Authentication Canceled");
+}
+
+
+#pragma mark MGTwitterEngineDelegate Methods
+
+- (void)requestSucceeded:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Request Suceeded: %@", connectionIdentifier);
+}
+
+- (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier {
+    
+	tweets = [[NSMutableArray alloc] init];
+    
+	for(NSDictionary *d in statuses) {
+        
+		NSLog(@"See dictionary: %@", d);
+        
+		Tweet *tweet = [[Tweet alloc] initWithTweetDictionary:d];
+		[tweets addObject:tweet];
+		[tweet release];
+	}
+    
+}
+
+- (void)receivedObject:(NSDictionary *)dictionary forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Recieved Object: %@", dictionary);
+}
+
+- (void)directMessagesReceived:(NSArray *)messages forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Direct Messages Received: %@", messages);
+}
+
+- (void)userInfoReceived:(NSArray *)userInfo forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"User Info Received: %@", userInfo);
+}
+
+- (void)miscInfoReceived:(NSArray *)miscInfo forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Misc Info Received: %@", miscInfo);
+}
 
 
 @end

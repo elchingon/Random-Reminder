@@ -19,10 +19,7 @@ static CGFloat kBorderBlack[4] = {139.0/255, 69.0/255, 19.0/255, 1.0};
 static CGFloat kBorderBlue[4] = {107.0/255, 142.0/255, 35.0/255, 1.0};
 //107-142-35 green	
 
-static CGFloat kTransitionDuration = 0.3;
-
-static CGFloat kTitleMarginX = 20;
-static CGFloat kTitleMarginY = 4;
+static CGFloat kTransitionDuration = 0.5;
 static CGFloat kPadding = 10;
 static CGFloat kBorderWidth = 8;
 
