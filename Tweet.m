@@ -10,24 +10,86 @@
 
 
 @implementation Tweet
--(id)initWithTweetDictionary:(NSDictionary*)_contents {
+
+- (void)tweet:(NSString *)message {
+    _engine = [SA_OAuthTwitterEngine OAuthTwitterEngineWithDelegate:self];
+	_engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
+	_engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
+    //[_engine ];    
+    if([_engine isAuthorized]) {
+        NSLog(@"authorized");
+        [_engine sendUpdate:message];
+    }else{
+        NSLog(@"not authed");
+    }
+
+}
+
+// controller delegates
+- (void) OAuthTwitterController: (SA_OAuthTwitterController *) controller authenticatedWithUsername: (NSString *) username {
+    NSLog(@"Authenticated with user %@", username);
+}
+
+- (void) OAuthTwitterControllerFailed: (SA_OAuthTwitterController *) controller {
+    NSLog(@"Authentication Failure");
+}
+
+- (void) OAuthTwitterControllerCanceled: (SA_OAuthTwitterController *) controller {
+    NSLog(@"Authentication Canceled");
+}
+
+
+// store auth data
+- (void) storeCachedTwitterOAuthData: (NSString *) data forUsername: (NSString *) username {
+    NSLog(@"called");
     
-	if(self = [super init]) {
+    NSUserDefaults	*defaults = [NSUserDefaults standardUserDefaults];
+    
+	[defaults setObject: data forKey: @"authData"];
+	[defaults synchronize];
+}
+
+//implement these methods to store off the creds returned by Twitter
+- (NSString *) cachedTwitterOAuthDataForUsername: (NSString *) username {
+    return [[NSUserDefaults standardUserDefaults] objectForKey: @"authData"];
+}
+
+//if you don't do this, the user will have to re-authenticate every time they run
+- (void) twitterOAuthConnectionFailedWithData: (NSData *) data {
+    
+}
+
+
+#pragma mark MGTwitterEngineDelegate Methods
+
+- (void)requestSucceeded:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Request Suceeded: %@", connectionIdentifier);
+}
+
+- (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier {
         
-		contents = _contents;
-		[contents retain];
-	}
-    
-	return self;
 }
 
--(NSString*)tweet {
+- (void)receivedObject:(NSDictionary *)dictionary forRequest:(NSString *)connectionIdentifier {
     
-	return [contents objectForKey:@"text"];
+	NSLog(@"Recieved Object: %@", dictionary);
 }
 
--(NSString*)author {
+- (void)directMessagesReceived:(NSArray *)messages forRequest:(NSString *)connectionIdentifier {
     
-	return [[contents objectForKey:@"user"] objectForKey:@"screen_name"];
+	NSLog(@"Direct Messages Received: %@", messages);
 }
+
+- (void)userInfoReceived:(NSArray *)userInfo forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"User Info Received: %@", userInfo);
+}
+
+- (void)miscInfoReceived:(NSArray *)miscInfo forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Misc Info Received: %@", miscInfo);
+}
+
+
 @end

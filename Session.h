@@ -7,6 +7,7 @@
 //
 
 #import "FBConnect.h"
+#import "Tweet.h"
 #import <Foundation/Foundation.h>
 
 

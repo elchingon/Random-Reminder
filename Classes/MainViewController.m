@@ -275,23 +275,7 @@
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Twitter 
-// tweet
--(IBAction)tweet:(id)sender {
-    _engine = [SA_OAuthTwitterEngine OAuthTwitterEngineWithDelegate:self];
-	_engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
-	_engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";    
-    
-    if([_engine isAuthorized]) {
-        NSLog(@"authorized");
-        [_engine sendUpdate: [NSString stringWithFormat: @"Already Updated. %@", [NSDate date]]];
-    }else{
-        NSLog(@"not authed");
-    }
-    
-    //[_engine sendUpdate: [NSString stringWithFormat: @"Already Updated. %@", [NSDate date]]];
-}
-
+// Twitter login
 
 // login action
 - (IBAction)loginTwitter:(id)sender {
@@ -344,47 +328,6 @@
 }
 
 
-#pragma mark MGTwitterEngineDelegate Methods
-
-- (void)requestSucceeded:(NSString *)connectionIdentifier {
-    
-	NSLog(@"Request Suceeded: %@", connectionIdentifier);
-}
-
-- (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier {
-    
-	tweets = [[NSMutableArray alloc] init];
-    
-	for(NSDictionary *d in statuses) {
-        
-		NSLog(@"See dictionary: %@", d);
-        
-		Tweet *tweet = [[Tweet alloc] initWithTweetDictionary:d];
-		[tweets addObject:tweet];
-		[tweet release];
-	}
-    
-}
-
-- (void)receivedObject:(NSDictionary *)dictionary forRequest:(NSString *)connectionIdentifier {
-    
-	NSLog(@"Recieved Object: %@", dictionary);
-}
-
-- (void)directMessagesReceived:(NSArray *)messages forRequest:(NSString *)connectionIdentifier {
-    
-	NSLog(@"Direct Messages Received: %@", messages);
-}
-
-- (void)userInfoReceived:(NSArray *)userInfo forRequest:(NSString *)connectionIdentifier {
-    
-	NSLog(@"User Info Received: %@", userInfo);
-}
-
-- (void)miscInfoReceived:(NSArray *)miscInfo forRequest:(NSString *)connectionIdentifier {
-    
-	NSLog(@"Misc Info Received: %@", miscInfo);
-}
 
 
 @end

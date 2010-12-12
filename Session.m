@@ -68,6 +68,9 @@ static NSString* kAppId = @"173331372680031";
          */
     }
     
+    Tweet *tweet = [[Tweet alloc] init];
+    [tweet tweet:message];
+    
 }
 
 

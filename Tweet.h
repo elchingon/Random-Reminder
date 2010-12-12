@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SA_OAuthTwitterEngine.h"
+#import "SA_OAuthTwitterController.h"
 
 
-@interface Tweet : NSObject {
-    NSDictionary *contents;
+@interface Tweet : NSObject <SA_OAuthTwitterEngineDelegate>{
+    SA_OAuthTwitterEngine *_engine;
 }
--(id)initWithTweetDictionary:(NSDictionary*)_contents;
--(NSString*)tweet;
--(NSString*)author;
+
+- (void)tweet:(NSString *)message;
+
 @end
