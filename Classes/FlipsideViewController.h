@@ -6,16 +6,25 @@
 //  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "Session.h"
 #import "Reminder.h"
+#import "FBConnect.h"
+#import "SA_OAuthTwitterEngine.h"
 #import <UIKit/UIKit.h>
 
 @protocol FlipsideViewControllerDelegate;
 
-@interface FlipsideViewController : UIViewController {
+@interface FlipsideViewController : UIViewController <FBRequestDelegate, SA_OAuthTwitterEngineDelegate> {
 	id <FlipsideViewControllerDelegate> delegate;
     IBOutlet UILabel *reminderAction;
+    // Facebook
+    IBOutlet UIButton *facebookButton;
+    Facebook *facebook;
+    // twitter
+    IBOutlet UIButton *twitterButton;
+    SA_OAuthTwitterEngine *_engine;
 }
+
+- (void)refreshButtons;
 
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
 @property (nonatomic, retain) UILabel *reminderAction;

@@ -10,20 +10,25 @@
 
 @implementation MainViewController
 
-@synthesize managedObjectContext, reminderPicker, remindfulAction, facebookButton, fromTime, toTime, verb;
+// Your Facebook App Id must be set before running this example
+// See http://www.facebook.com/developers/createapp.php
+static NSString* kAppId = @"173331372680031";
+
+
+@synthesize managedObjectContext, reminderPicker, remindfulAction, facebookButton, twitterButton, fromTime, toTime, verb;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+    //////////////////////////////////////////////////////////////////////////////////////
     // pickerView Data
     reminderTypes = [[NSArray alloc] initWithObjects:@"breathe", @"smile", @"be Grateful", @"laugh", @"dream", @"eat healthy", nil];
     
     reminderStart = [[NSArray alloc] initWithObjects:@"12am",@"1am", @"2am", @"3am", @"4am", @"5am", @"6am", @"7am", @"8am",@"9am", @"10am", @"11am", @"12pm", @"1pm", @"2pm", @"3pm", @"4pm", @"5pm", @"6pm", @"7pm", @"8pm",@"9pm", @"10pm", @"11pm",  nil];
     
     reminderFinish = [[NSArray alloc] initWithObjects:@"12am",@"1am", @"2am", @"3am", @"4am", @"5am", @"6am", @"7am", @"8am",@"9am", @"10am", @"11am", @"12pm", @"1pm", @"2pm", @"3pm", @"4pm", @"5pm", @"6pm", @"7pm", @"8pm",@"9pm", @"10pm", @"11pm",  nil];
-    
+    ////////////////////////////////////////////////////////////////////////////////////////
     // get user defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //[defaults removeObjectForKey:@"remindful_action"];
@@ -31,13 +36,7 @@
     //[defaults removeObjectForKey:@"end_time"];
     //[defaults synchronize];
 
-    
-    // facebook status
-    if ([defaults objectForKey:@"FBAccessToken"] == nil) {
-        [facebookButton setHighlighted:YES];
-    } else {
-        [facebookButton setHighlighted:NO];
-    }
+    [self refreshButtons];
     
     // action Label vars
     if ([defaults integerForKey:@"start_time"]) {
@@ -71,6 +70,42 @@
     [introView show];
 
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)refreshButtons {
+    ////////////////////////////////////////////////////////////////////////////////////////
+    // get user defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[defaults removeObjectForKey:@"remindful_action"];
+    //[defaults removeObjectForKey:@"start_time"];
+    //[defaults removeObjectForKey:@"end_time"];
+    //[defaults synchronize];
+
+    ////////////////////////////////////////////////////////////////////////////////////////
+    // facebook status
+    if ([defaults objectForKey:@"FBAccessToken"]) {
+        NSLog(@"facebook is authorized");
+        [facebookButton setImage:[UIImage imageNamed:@"facebook_alt.png"] forState:UIControlStateNormal];
+        //[facebookButton setEnabled:NO];
+    } else {
+        NSLog(@"facebook is NOT authorized");
+        [facebookButton setImage:[UIImage imageNamed:@"facebook.png"] forState:UIControlStateNormal];
+        //[facebookButton setEnabled:YES];
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // twitter status
+    if([defaults objectForKey:@"authData"]) {
+        NSLog(@"twitter is authorized");
+        [twitterButton setImage:[UIImage imageNamed:@"twitter_alt.png"] forState:UIControlStateNormal];
+        //[twitterButton setEnabled:NO];
+    }else{
+        NSLog(@"twitter is NOT authorized");
+        [twitterButton setImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal];
+        //[twitterButton setEnabled:YES];
+    }
+
+}
+
 
 //
 // pickerView datasource methods
@@ -260,6 +295,8 @@
     [reminderStart release];
     [reminderFinish release];
     [reminderTypes release];
+    [facebook release];
+    [permissions release];
     [managedObjectContext release];
     [super dealloc];
 }
@@ -270,9 +307,82 @@
  * FBAuth
  */ 
 - (IBAction)login:(id)sender {
-    Session *facebookSession = [[Session alloc] init];
-    [facebookSession login];
+    permissions =  [[NSArray arrayWithObjects: 
+                     @"publish_stream",@"read_stream", @"offline_access", @"publish_checkins",nil] retain];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    facebook = [[Facebook alloc] init];
+    facebook.accessToken = [defaults objectForKey:@"FBAccessToken"];
+    facebook.expirationDate = [defaults objectForKey:@"FBSessionExpires"];
+    
+    if ([facebook isSessionValid]) {
+        NSLog(@"session was valid");
+        [facebook logout:self];
+    }else {
+        NSLog(@"session was NOT valid");
+        [facebook authorize:kAppId permissions:permissions delegate:self];
+    }
+
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Facebook Session Delegates
+
+/**
+ * Called when the dialog successful log in the user
+ */
+- (void)fbDidLogin {
+    NSLog(@"user did login");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *access_token = facebook.accessToken;
+    if ((access_token != (NSString *) [NSNull null]) && (access_token.length > 0)) {
+        [defaults setObject:access_token forKey:@"FBAccessToken"];
+    } else {
+        [defaults removeObjectForKey:@"FBAccessToken"];
+    }
+    
+    NSDate *expirationDate = facebook.expirationDate;  
+    if (expirationDate) {
+        [defaults setObject:expirationDate forKey:@"FBSessionExpires"];
+    } else {
+        [defaults removeObjectForKey:@"FBSessionExpires"];
+    }
+    
+    [defaults synchronize];
+    
+    [self refreshButtons];
+    
+    NSLog(@"userDefaults: %@", [defaults objectForKey:@"FBAccessToken"]);
+    NSLog(@"userDefaults: %@", [defaults objectForKey:@"FBSessionExpires"]);
+    
+    //[facebook requestWithGraphPath:@"me" andDelegate:self];
+    
+}
+
+/**
+ * Called when the user dismiss the dialog without login
+ */
+- (void)fbDidNotLogin:(BOOL)cancelled {
+    NSLog(@"user CANCELLED login");
+   
+}
+
+/**
+ * Called when the user is logged out
+ */
+- (void)fbDidLogout {
+    NSLog(@"user did LOGOUT");
+    // does not fire? is session still valid on view did load?
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults removeObjectForKey:@"FBAccessToken"];
+    [defaults removeObjectForKey:@"FBSessionExpires"];
+    
+    [defaults synchronize]; 
+    [self refreshButtons];
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Twitter login
@@ -280,17 +390,30 @@
 // login action
 - (IBAction)loginTwitter:(id)sender {
     
-     
+    // get user defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if([defaults objectForKey:@"authData"]) {
+        NSLog(@"twitter is authorized");
+        [defaults removeObjectForKey:@"authData"];
+        [defaults synchronize];
+        [self refreshButtons];
+        
+    }else{
+        NSLog(@"twitter is NOT authorized");
+        
+        // login
+        _engine = [SA_OAuthTwitterEngine OAuthTwitterEngineWithDelegate:self];
+        _engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
+        _engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
+        
+        UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
+        
+        [self presentModalViewController: controller animated: YES];
+                
+    }
 
-   _engine = [SA_OAuthTwitterEngine OAuthTwitterEngineWithDelegate:self];
-    [_engine clearAccessToken];
-	_engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
-	_engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
-    
-	UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
-    
-    [self presentModalViewController: controller animated: YES];
-    
+       
 }
 
 
@@ -301,6 +424,7 @@
     NSUserDefaults	*defaults = [NSUserDefaults standardUserDefaults];
     
 	[defaults setObject: data forKey: @"authData"];
+    NSLog(@"auth Data: %@", [defaults objectForKey:@"authData"]);
 	[defaults synchronize];
 }
 
@@ -317,16 +441,49 @@
 // controller delegates
 - (void) OAuthTwitterController: (SA_OAuthTwitterController *) controller authenticatedWithUsername: (NSString *) username {
     NSLog(@"Authenticated with user %@", username);
+    [self refreshButtons];
 }
 
 - (void) OAuthTwitterControllerFailed: (SA_OAuthTwitterController *) controller {
     NSLog(@"Authentication Failure");
+    [self refreshButtons];
 }
 
 - (void) OAuthTwitterControllerCanceled: (SA_OAuthTwitterController *) controller {
     NSLog(@"Authentication Canceled");
+    
 }
 
+#pragma mark MGTwitterEngineDelegate Methods
+
+- (void)requestSucceeded:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Request Suceeded: %@", connectionIdentifier);
+}
+
+- (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier {
+    
+}
+
+- (void)receivedObject:(NSDictionary *)dictionary forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Recieved Object: %@", dictionary);
+}
+
+- (void)directMessagesReceived:(NSArray *)messages forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Direct Messages Received: %@", messages);
+}
+
+- (void)userInfoReceived:(NSArray *)userInfo forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"User Info Received: %@", userInfo);
+}
+
+- (void)miscInfoReceived:(NSArray *)miscInfo forRequest:(NSString *)connectionIdentifier {
+    
+	NSLog(@"Misc Info Received: %@", miscInfo);
+}
 
 
 
