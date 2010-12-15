@@ -35,7 +35,7 @@
         NSLog(@"Recieved Notification %@",notification);
         
         NSString *reminderText = [notification.userInfo 
-                                  objectForKey:@"name"];
+                                  objectForKey:@"action"];
         [mainViewController showReminder:reminderText];
         
     }
@@ -56,14 +56,14 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
         
        
         NSString *reminderText = [notification.userInfo 
-                                  objectForKey:@"name"];
+                                  objectForKey:@"action"];
         [mainViewController showReminder:reminderText];
                
     }else{
         NSLog(@"Recieved Notification while Active! %@",notification);
        
         NSString *reminderText = [notification.userInfo 
-                                  objectForKey:@"name"];
+                                  objectForKey:@"action"];
                 [mainViewController showReminder:reminderText];
     }
 }

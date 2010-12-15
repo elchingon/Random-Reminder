@@ -13,7 +13,7 @@
 
 }
 // public methods
-- (NSDate *)scheduleReminder:(Reminder *)reminder action:(NSString *)action startTime:(int)startTime endTime:(int)endTime; 
+- (NSDate *)scheduleReminder:(Reminder *)reminder action:(NSString *)action startTime:(int)startTime endTime:(int)endTime repeat:(BOOL)repeat; 
 - (void)cancelAllReminders;
 - (void)getAllReminders;
 @end

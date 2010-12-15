@@ -39,14 +39,17 @@ static NSString* kAppId = @"173331372680031";
     [self refreshButtons];
     
     // action Label vars
-    if ([defaults integerForKey:@"start_time"]) {
-        fromTime = [reminderStart objectAtIndex:[defaults integerForKey:@"start_time"]];
+    NSNumber *start = [defaults objectForKey:@"start_time"];
+    NSNumber *end = [defaults objectForKey:@"end_time"];
+    
+    if ([defaults objectForKey:@"start_time"]) {
+        fromTime = [reminderStart objectAtIndex:[start intValue]];
     } else {
         fromTime = @"9am";
     }
     
-    if ([defaults integerForKey:@"end_time"]) {
-        toTime = [reminderFinish objectAtIndex:[defaults integerForKey:@"end_time"]];
+    if ([defaults objectForKey:@"end_time"]) {
+        toTime = [reminderFinish objectAtIndex:[end intValue]];
     } else {
         toTime = @"5pm";
     }
@@ -119,6 +122,8 @@ static NSString* kAppId = @"173331372680031";
 - (void)setUpPicker {
     // get user defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *start = [defaults objectForKey:@"start_time"];
+    NSNumber *end = [defaults objectForKey:@"end_time"];
     
     if ([defaults objectForKey:@"remindful_action"]) {
         [reminderPicker selectRow:[reminderTypes indexOfObject:[defaults objectForKey:@"remindful_action"]] inComponent:0 animated:YES];
@@ -126,14 +131,14 @@ static NSString* kAppId = @"173331372680031";
         [reminderPicker selectRow:1 inComponent:0 animated:YES];
     }
 
-    if ([defaults integerForKey:@"start_time"]) {
-        [reminderPicker selectRow:[defaults integerForKey:@"start_time"] inComponent:1 animated:YES];
+    if ([defaults objectForKey:@"start_time"]) {
+        [reminderPicker selectRow:[start intValue] inComponent:1 animated:YES];
     } else {
         [reminderPicker selectRow:9 inComponent:1 animated:YES];
     }
     
-    if ([defaults integerForKey:@"end_time"]) {
-        [reminderPicker selectRow:[defaults integerForKey:@"end_time"] inComponent:2 animated:YES];
+    if ([defaults objectForKey:@"end_time"]) {
+        [reminderPicker selectRow:[end intValue] inComponent:2 animated:YES];
     } else {
         [reminderPicker selectRow:17 inComponent:2 animated:YES];
     }
@@ -225,24 +230,39 @@ static NSString* kAppId = @"173331372680031";
 
 // set reminders
 - (IBAction)setReminder:(id)sender {
-      
+    NSDate *now = [NSDate date];
     //set up vars for notification from reminderPicker
     int startTime = [reminderPicker selectedRowInComponent:1];
     int endTime = [reminderPicker selectedRowInComponent:2];
     NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
-    Reminder *reminder = [[Reminder alloc] init];   
-    NSDate *reminderDate = [reminder scheduleReminder:reminder action:action startTime:startTime endTime:endTime];
+    Reminder *reminder = [[Reminder alloc] init];
+    [reminder cancelAllReminders];
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:action startTime:startTime endTime:endTime repeat:YES];
     NSLog(@"date of reminder: %@", reminderDate);
-    [reminder release];
     
+    if ([reminderDate isEqual:[now earlierDate:reminderDate]]) {
+        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+        NSDateComponents *comps = [calendar components:unitFlags fromDate:now];
+
+        Reminder *soloReminder = [[Reminder alloc] init];
+        [soloReminder scheduleReminder:soloReminder action:action startTime:comps.hour endTime:endTime repeat:NO];
+    }
+    
+    NSNumber *start = [NSNumber numberWithInt:startTime];
+    NSNumber *end = [NSNumber numberWithInt:endTime];
+        
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:startTime forKey:@"start_time"];
-    [defaults setInteger:endTime forKey:@"end_time"];
+    [defaults setObject:start forKey:@"start_time"];
+    [defaults setObject:end forKey:@"end_time"];
     [defaults setObject:action forKey:@"remindful_action"];
     [defaults synchronize];
 
     // show Reminder
     [self showReminder:action];
+    
+    [reminder release];
+
 }
 
 - (IBAction)showReminder:(NSString *)reminderText {

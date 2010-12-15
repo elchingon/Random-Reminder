@@ -17,18 +17,20 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor]; 
     [self refreshButtons];
-    
-    //set font on card
-    //[reminderAction setFont:[UIFont fontWithName:@"Helvetica" size:48]];
+   
 }
 
 
 - (IBAction)done:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *start = [defaults objectForKey:@"start_time"];
+    NSNumber *end = [defaults objectForKey:@"end_time"];
 
     Reminder *reminder = [[Reminder alloc] init];
     
-    NSDate *reminderDate = [reminder scheduleReminder:reminder action:reminderAction.text startTime:[defaults integerForKey:@"start_time"] endTime:[defaults integerForKey:@"end_time"]];
+    [reminder cancelAllReminders];
+    
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:reminderAction.text startTime:[start intValue] endTime:[end intValue] repeat:YES];
     
     NSLog(@"date of reminder: %@", reminderDate);
     
