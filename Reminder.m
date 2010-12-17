@@ -76,9 +76,9 @@
     unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSDate *date = [NSDate date];
     NSDateComponents *comps = [calendar components:unitFlags fromDate:date];
-    [comps setHour:myHour];
-    [comps setMinute:myMinute];
-    //[comps setMinute:comps.minute + 1];
+    //[comps setHour:myHour];
+    //[comps setMinute:myMinute];
+    [comps setMinute:comps.minute + 1];
     [comps setSecond:mySecond];
     [comps setTimeZone:[NSTimeZone systemTimeZone]];
     

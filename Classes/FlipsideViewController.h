@@ -22,14 +22,21 @@
     // twitter
     IBOutlet UIButton *twitterButton;
     SA_OAuthTwitterEngine *_engine;
+    
+    BOOL sendFacebook;
+    BOOL sendTwitter;
 }
-
-- (void)refreshButtons;
 
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
 @property (nonatomic, retain) UILabel *reminderAction;
+
+
 - (IBAction)done:(id)sender;
 - (IBAction)shareReminder:(id)sender;
+- (void)refreshButtons;
+- (IBAction)toggleTwitter:(id)sender;
+- (IBAction)toggleFacebook:(id)sender;
+
 @end
 
 
