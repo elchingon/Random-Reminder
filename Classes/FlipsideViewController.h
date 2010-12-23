@@ -29,6 +29,8 @@
 
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
 @property (nonatomic, retain) UILabel *reminderAction;
+@property (nonatomic, retain) UIButton *facebookButton;
+@property (nonatomic, retain) UIButton *twitterButton;
 
 
 - (IBAction)done:(id)sender;

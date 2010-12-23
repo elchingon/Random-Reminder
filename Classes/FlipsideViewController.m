@@ -10,7 +10,7 @@
 
 @implementation FlipsideViewController
 
-@synthesize delegate, reminderAction;
+@synthesize delegate, reminderAction, facebookButton, twitterButton;
 
 
 - (void)viewDidLoad {
