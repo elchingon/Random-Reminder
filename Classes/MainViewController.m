@@ -23,7 +23,7 @@ static NSString* kAppId = @"173331372680031";
     [super viewDidLoad];
     //////////////////////////////////////////////////////////////////////////////////////
     // pickerView Data
-    reminderTypes = [[NSArray alloc] initWithObjects:@"breathe", @"smile", @"be Grateful", @"laugh", @"dream", @"eat healthy", nil];
+    reminderTypes = [[NSArray alloc] initWithObjects:@"Stretch", @"Relax", @"Notice the present moment", @"Breathe", @"Smile", @"Feel the force", @"Let the tension go", @"Be kind to yourself", @"Notice the absurd", @"Rest your eyes", nil];
     
     reminderStart = [[NSArray alloc] initWithObjects:@"12am",@"1am", @"2am", @"3am", @"4am", @"5am", @"6am", @"7am", @"8am",@"9am", @"10am", @"11am", @"12pm", @"1pm", @"2pm", @"3pm", @"4pm", @"5pm", @"6pm", @"7pm", @"8pm",@"9pm", @"10pm", @"11pm",  nil];
     
@@ -144,7 +144,7 @@ static NSString* kAppId = @"173331372680031";
     }
 
     
-       [self performSelector:@selector(presentIntroduction) withObject:nil afterDelay:0.8];
+       //[self performSelector:@selector(presentIntroduction) withObject:nil afterDelay:0.8];
     
 }
 
@@ -280,13 +280,32 @@ static NSString* kAppId = @"173331372680031";
 	[controller release];
 }
 
+- (IBAction)showIntro {
+    BOOL visible = [self.modalViewController isViewLoaded];
+    NSLog(@"visible: %d", visible );
+    NSLog(@"current modal view: %@", self.modalViewController);
+    
+    
+    IntroViewController *controller = [[IntroViewController alloc] initWithNibName:@"IntroViewController" bundle:nil];
+	controller.delegate = self;
+	
+	controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+	[self presentModalViewController:controller animated:NO];
+    [controller release];
+}
 
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
     
 	[self dismissModalViewControllerAnimated:YES];
+    
 }
 
+
+- (void)introViewControllerDidFinish:(IntroViewController *)controller {
+    
+	[self dismissModalViewControllerAnimated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -7,37 +7,23 @@
 //
 
 #import "Reminder.h"
-#import "FBConnect.h"
-#import "SA_OAuthTwitterEngine.h"
+#import "ShareViewController.h"
 #import <UIKit/UIKit.h>
 
 @protocol FlipsideViewControllerDelegate;
 
-@interface FlipsideViewController : UIViewController <FBRequestDelegate, SA_OAuthTwitterEngineDelegate> {
+@interface FlipsideViewController : UIViewController <ShareViewControllerDelegate> {
 	id <FlipsideViewControllerDelegate> delegate;
     IBOutlet UILabel *reminderAction;
-    // Facebook
-    IBOutlet UIButton *facebookButton;
-    Facebook *facebook;
-    // twitter
-    IBOutlet UIButton *twitterButton;
-    SA_OAuthTwitterEngine *_engine;
-    
-    BOOL sendFacebook;
-    BOOL sendTwitter;
 }
 
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
 @property (nonatomic, retain) UILabel *reminderAction;
-@property (nonatomic, retain) UIButton *facebookButton;
-@property (nonatomic, retain) UIButton *twitterButton;
 
 
 - (IBAction)done:(id)sender;
-- (IBAction)shareReminder:(id)sender;
-- (void)refreshButtons;
-- (IBAction)toggleTwitter:(id)sender;
-- (IBAction)toggleFacebook:(id)sender;
+- (IBAction)share:(id)sender;
+
 
 @end
 

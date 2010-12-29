@@ -7,13 +7,14 @@
 //
 
 #import "FlipsideViewController.h"
+#import "IntroViewController.h"
 #import "Reminder.h"
 #import "FBConnect.h"
 #import "PopOverView.h"
 #import "SA_OAuthTwitterEngine.h"
 #import "SA_OAuthTwitterController.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate, FBSessionDelegate, SA_OAuthTwitterEngineDelegate, SA_OAuthTwitterControllerDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, IntroViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate, FBSessionDelegate, SA_OAuthTwitterEngineDelegate, SA_OAuthTwitterControllerDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
@@ -47,6 +48,7 @@
 // reminders
 - (IBAction)showReminder:(NSString *)reminderText;
 - (IBAction)setReminder:(id)sender;
+- (IBAction)showIntro;
 
 // picker actions
 - (IBAction)togglePicker:(id)sender;

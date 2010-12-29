@@ -10,6 +10,7 @@
 
 @class MainViewController;
 
+
 @interface remindful_baseAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     NSManagedObjectContext *managedObjectContext;
@@ -19,7 +20,6 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;

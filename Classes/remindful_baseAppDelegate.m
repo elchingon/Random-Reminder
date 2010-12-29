@@ -38,6 +38,8 @@
                                   objectForKey:@"action"];
         [mainViewController showReminder:reminderText];
         
+    } else {
+        [mainViewController showIntro];
     }
 
     return YES;

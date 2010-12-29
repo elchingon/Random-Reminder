@@ -68,12 +68,12 @@
 						<float key="IBUIMinimumFontSize">38</float>
 						<int key="IBUITextAlignment">1</int>
 					</object>
-					<object class="IBUIButton" id="78783472">
+					<object class="IBUIButton" id="478175003">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{160, 409}, {39, 37}}</string>
+						<string key="NSFrame">{{20, 359}, {140, 42}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
-						<reference key="NSNextKeyView" ref="91835019"/>
+						<reference key="NSNextKeyView" ref="895193484"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -99,54 +99,6 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">facebook.png</string>
-						</object>
-					</object>
-					<object class="IBUIButton" id="91835019">
-						<reference key="NSNextResponder" ref="249263867"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{207, 409}, {41, 37}}</string>
-						<reference key="NSSuperview" ref="249263867"/>
-						<reference key="NSNextKeyView"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="895009529"/>
-						<int key="IBUIButtonType">1</int>
-						<bool key="IBUIShowsTouchWhenHighlighted">YES</bool>
-						<reference key="IBUIHighlightedTitleColor" ref="1042607262"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="354592559"/>
-						<object class="NSCustomResource" key="IBUINormalImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">twitter.png</string>
-						</object>
-					</object>
-					<object class="IBUIButton" id="478175003">
-						<reference key="NSNextResponder" ref="249263867"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{9, 359}, {140, 42}}</string>
-						<reference key="NSSuperview" ref="249263867"/>
-						<reference key="NSNextKeyView" ref="895193484"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="895009529"/>
-						<int key="IBUIButtonType">1</int>
-						<bool key="IBUIShowsTouchWhenHighlighted">YES</bool>
-						<reference key="IBUIHighlightedTitleColor" ref="1042607262"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="354592559"/>
-						<object class="NSCustomResource" key="IBUINormalImage">
-							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">thanks_button.png</string>
 						</object>
 					</object>
@@ -155,7 +107,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{160, 359}, {140, 42}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
-						<reference key="NSNextKeyView" ref="78783472"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -235,40 +186,6 @@ cyB0aGUgb25seSBvbmUgeW91IGtub3cgeW91IGhhdmUgZm9yIHN1cmUuIH5PcHJhaCBXaW5mcmV5A</s
 					<int key="connectionID">49</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">facebookButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="78783472"/>
-					</object>
-					<int key="connectionID">63</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">twitterButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="91835019"/>
-					</object>
-					<int key="connectionID">64</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">toggleFacebook:</string>
-						<reference key="source" ref="78783472"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">65</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">toggleTwitter:</string>
-						<reference key="source" ref="91835019"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">66</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">done:</string>
 						<reference key="source" ref="478175003"/>
@@ -279,12 +196,12 @@ cyB0aGUgb25seSBvbmUgeW91IGtub3cgeW91IGhhdmUgZm9yIHN1cmUuIH5PcHJhaCBXaW5mcmV5A</s
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">shareReminder:</string>
+						<string key="label">share:</string>
 						<reference key="source" ref="895193484"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">73</int>
+					<int key="connectionID">74</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -313,10 +230,8 @@ cyB0aGUgb25seSBvbmUgeW91IGtub3cgeW91IGhhdmUgZm9yIHN1cmUuIH5PcHJhaCBXaW5mcmV5A</s
 							<reference ref="298116911"/>
 							<reference ref="127005215"/>
 							<reference ref="413731948"/>
-							<reference ref="895193484"/>
 							<reference ref="478175003"/>
-							<reference ref="78783472"/>
-							<reference ref="91835019"/>
+							<reference ref="895193484"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -328,16 +243,6 @@ cyB0aGUgb25seSBvbmUgeW91IGtub3cgeW91IGhhdmUgZm9yIHN1cmUuIH5PcHJhaCBXaW5mcmV5A</s
 					<object class="IBObjectRecord">
 						<int key="objectID">48</int>
 						<reference key="object" ref="413731948"/>
-						<reference key="parent" ref="249263867"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">61</int>
-						<reference key="object" ref="78783472"/>
-						<reference key="parent" ref="249263867"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">62</int>
-						<reference key="object" ref="91835019"/>
 						<reference key="parent" ref="249263867"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -364,8 +269,6 @@ cyB0aGUgb25seSBvbmUgeW91IGtub3cgeW91IGhhdmUgZm9yIHN1cmUuIH5PcHJhaCBXaW5mcmV5A</s
 				<string key="40.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="47.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="48.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="61.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="62.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="69.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="70.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="71.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -374,7 +277,7 @@ cyB0aGUgb25seSBvbmUgeW91IGtub3cgeW91IGhhdmUgZm9yIHN1cmUuIH5PcHJhaCBXaW5mcmV5A</s
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">73</int>
+			<int key="maxID">74</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -383,15 +286,12 @@ cyB0aGUgb25seSBvbmUgeW91IGtub3cgeW91IGhhdmUgZm9yIHN1cmUuIH5PcHJhaCBXaW5mcmV5A</s
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="done:">id</string>
-						<string key="shareReminder:">id</string>
-						<string key="toggleFacebook:">id</string>
-						<string key="toggleTwitter:">id</string>
+						<string key="share:">id</string>
 					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="facebookButton">id</string>
-						<string key="reminderAction">id</string>
-						<string key="twitterButton">id</string>
-					</dictionary>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">reminderAction</string>
+						<string key="NS.object.0">id</string>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./classes-xjh84/FlipsideViewController.h</string>
@@ -405,11 +305,9 @@ cyB0aGUgb25seSBvbmUgeW91IGtub3cgeW91IGhhdmUgZm9yIHN1cmUuIH5PcHJhaCBXaW5mcmV5A</s
 		<string key="IBDocument.LastKnownRelativeProjectPath">remindful-base.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="facebook.png">{36, 36}</string>
 			<string key="remindful_clean.png">{320, 480}</string>
 			<string key="share_button.png">{139, 46}</string>
 			<string key="thanks_button.png">{139, 46}</string>
-			<string key="twitter.png">{36, 36}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">106</string>
 	</data>
