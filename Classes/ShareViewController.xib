@@ -45,7 +45,7 @@
 					<object class="IBUIButton" id="1042566480">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 347}, {72, 37}}</string>
+						<string key="NSFrame">{{124, 335}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="27422245"/>
@@ -79,7 +79,7 @@
 					<object class="IBUIButton" id="27422245">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 392}, {72, 37}}</string>
+						<string key="NSFrame">{{124, 380}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -103,7 +103,7 @@
 					<object class="IBUIButton" id="677087847">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 302}, {72, 37}}</string>
+						<string key="NSFrame">{{228, 403}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1042566480"/>
@@ -113,7 +113,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="990161705"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Share</string>
+						<string key="IBUINormalTitle">Close</string>
 						<reference key="IBUIHighlightedTitleColor" ref="627093692"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -158,15 +158,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">toggleTwitter:</string>
-						<reference key="source" ref="27422245"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">8</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">shareReminder:</string>
 						<reference key="source" ref="677087847"/>
 						<reference key="destination" ref="372490531"/>
@@ -183,12 +174,21 @@
 					<int key="connectionID">11</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleTwitter:</string>
+						<reference key="source" ref="27422245"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">13</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">twitterButton</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="27422245"/>
 					</object>
-					<int key="connectionID">12</int>
+					<int key="connectionID">14</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -204,9 +204,9 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="5549520"/>
+							<reference ref="677087847"/>
 							<reference ref="1042566480"/>
 							<reference ref="27422245"/>
-							<reference ref="677087847"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -257,7 +257,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">12</int>
+			<int key="maxID">14</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

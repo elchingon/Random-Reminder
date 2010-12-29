@@ -13,16 +13,49 @@
 
 @synthesize facebookButton, twitterButton, delegate;
 
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    // init facebook
+    facebook = [[Facebook alloc] init];
+    facebook.accessToken = [defaults objectForKey:@"FBAccessToken"];
+    facebook.expirationDate = [defaults objectForKey:@"FBSessionExpires"];
+    // intit twitter
+    _engine = [[SA_OAuthTwitterEngine OAuthTwitterEngineWithDelegate:self] retain];
+    _engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
+    _engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
+    [self refreshButtons];
+}
+
+
 - (IBAction)shareReminder:(id)sender {
+        
+    [self.delegate shareViewControllerDidFinish:self];
+}
+
+- (IBAction)toggleTwitter:(id)sender {
+    if([_engine isAuthorized]) {
+        NSLog(@"twitter is authorized");
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        NSString *message = [NSString stringWithFormat:@"The message is: %@", [defaults objectForKey:@"remindful_action"]];
+        [_engine sendUpdate:message];
+
+    }else{
+        NSLog(@"twitter is NOT authorized");
+        
+    }
+
+}
+
+- (IBAction)toggleFacebook:(id)sender{
     //share facebook
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     NSString *message = [NSString stringWithFormat:@"The message is: %@", [defaults objectForKey:@"remindful_action"]];
-    if (sendFacebook) {
-        
-        facebook = [[Facebook alloc] init];
-        facebook.accessToken = [defaults objectForKey:@"FBAccessToken"];
-        facebook.expirationDate = [defaults objectForKey:@"FBSessionExpires"];
         
         if ([facebook isSessionValid]) {
             NSLog(@"session was valid");
@@ -49,57 +82,14 @@
              */
         }
         
-    }
-    
-    if(sendTwitter) {
-        
-        // share twitter
-        _engine = [SA_OAuthTwitterEngine OAuthTwitterEngineWithDelegate:self];
-        _engine.consumerKey = @"hHkdIPMUKDO594ZndN7feg";
-        _engine.consumerSecret = @"zp0QQv2F4aPeAmam0L1xFuOw6YTKlyo4ZGs3NO5YQ";
-        if([_engine isAuthorized]) {
-            NSLog(@"authorized");
-            [_engine sendUpdate:message];
-        }else{
-            NSLog(@"not authed");
-        }
-        
-        
-    }
-    
-    [self.delegate shareViewControllerDidFinish:self];
-}
-
-- (void)toggleTwitter:(id)sender {
-    if(sendTwitter) {
-        sendTwitter = NO;
-        [twitterButton setImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal];
-    }else{
-        sendTwitter = YES;
-        [twitterButton setImage:[UIImage imageNamed:@"twitter_alt.png"] forState:UIControlStateNormal];
-    }
-}
-
-- (void)toggleFacebook:(id)sender{
-    if(sendFacebook) {
-        sendFacebook = NO;
-        [facebookButton setImage:[UIImage imageNamed:@"facebook.png"] forState:UIControlStateNormal];
-    }else{
-        sendFacebook = YES;
-        [facebookButton setImage:[UIImage imageNamed:@"facebook_alt.png"] forState:UIControlStateNormal];
-    }
 }
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)refreshButtons {
     ////////////////////////////////////////////////////////////////////////////////////////
-    // get user defaults
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    ////////////////////////////////////////////////////////////////////////////////////////
     // facebook status
-    if ([defaults objectForKey:@"FBAccessToken"]) {
+    if ([facebook isSessionValid]) {
         NSLog(@"facebook is authorized");
         sendFacebook = YES;
         [facebookButton setImage:[UIImage imageNamed:@"facebook_alt.png"] forState:UIControlStateNormal];
@@ -111,7 +101,7 @@
     }
     /////////////////////////////////////////////////////////////////////////////////////////
     // twitter status
-    if([defaults objectForKey:@"authData"]) {
+    if([_engine isAuthorized]) {
         NSLog(@"twitter is authorized");
         sendTwitter = YES;
         [twitterButton setImage:[UIImage imageNamed:@"twitter_alt.png"] forState:UIControlStateNormal];
@@ -134,11 +124,6 @@
 }
 */
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self refreshButtons];
-}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
