@@ -11,7 +11,7 @@
 
 @implementation ShareViewController
 
-@synthesize facebookButton, twitterButton, delegate;
+@synthesize facebookButton, twitterButton, facebookMessage, twitterMessage, delegate;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -43,6 +43,7 @@
         
         NSString *message = [NSString stringWithFormat:@"The message is: %@", [defaults objectForKey:@"remindful_action"]];
         [_engine sendUpdate:message];
+        [twitterButton setEnabled:NO];
 
     }else{
         NSLog(@"twitter is NOT authorized");
@@ -73,6 +74,7 @@
                                  andParams:params
                              andHttpMethod:@"POST"
                                andDelegate:self];
+            [facebookButton setEnabled:NO];
         }else {
             NSLog(@"session was NOT valid");
             //[facebook authorize:kAppId permissions:permissions delegate:self];
@@ -184,6 +186,7 @@
 - (void)request:(FBRequest*)request didLoad:(id)result {
     NSLog(@"posted to wall");
     NSLog(@"did load %@", result);
+    [facebookMessage setText:@"You have shared to facebook!"];
 }
 
 /**
@@ -224,6 +227,7 @@
 - (void)requestSucceeded:(NSString *)connectionIdentifier {
     
 	NSLog(@"Request Suceeded: %@", connectionIdentifier);
+    [twitterMessage setText:@"You have tweeted!"];
 }
 
 - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier {
