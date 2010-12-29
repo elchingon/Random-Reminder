@@ -97,7 +97,7 @@
         NSLog(@"facebook is NOT authorized");
         sendFacebook = NO;
         [facebookButton setImage:[UIImage imageNamed:@"facebook.png"] forState:UIControlStateNormal];
-        //[facebookButton setEnabled:NO];
+        [facebookButton setEnabled:NO];
     }
     /////////////////////////////////////////////////////////////////////////////////////////
     // twitter status
@@ -109,7 +109,7 @@
         NSLog(@"twitter is NOT authorized");
         sendTwitter = NO;
         [twitterButton setImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal];
-        //[twitterButton setEnabled:NO];
+        [twitterButton setEnabled:NO];
     }
 }
 

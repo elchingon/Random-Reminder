@@ -34,7 +34,7 @@
 						<string key="NSFrameSize">{320, 460}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="677087847"/>
+						<reference key="NSNextKeyView" ref="1042566480"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
@@ -45,7 +45,7 @@
 					<object class="IBUIButton" id="1042566480">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 335}, {72, 37}}</string>
+						<string key="NSFrame">{{63, 322}, {195, 41}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="27422245"/>
@@ -59,6 +59,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Share on Facebook</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="627093692">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -79,16 +80,17 @@
 					<object class="IBUIButton" id="27422245">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 380}, {72, 37}}</string>
+						<string key="NSFrame">{{76, 371}, {168, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="677087847"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="990161705"/>
 						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Share on Twitter</string>
 						<reference key="IBUIHighlightedTitleColor" ref="627093692"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -103,10 +105,10 @@
 					<object class="IBUIButton" id="677087847">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{228, 403}, {72, 37}}</string>
+						<string key="NSFrame">{{124, 423}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1042566480"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -205,8 +207,8 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="5549520"/>
 							<reference ref="677087847"/>
-							<reference ref="1042566480"/>
 							<reference ref="27422245"/>
+							<reference ref="1042566480"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
