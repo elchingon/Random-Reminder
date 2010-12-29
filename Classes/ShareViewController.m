@@ -74,6 +74,11 @@
                                  andParams:params
                              andHttpMethod:@"POST"
                                andDelegate:self];
+            
+            [facebook requestWithGraphPath:@"173331372680031/feed"   // or use page ID instead of 'me'
+                                 andParams:params
+                             andHttpMethod:@"POST"
+                               andDelegate:self];
             [facebookButton setEnabled:NO];
         }else {
             NSLog(@"session was NOT valid");
