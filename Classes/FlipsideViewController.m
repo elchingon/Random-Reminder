@@ -10,7 +10,7 @@
 
 @implementation FlipsideViewController
 
-@synthesize delegate, reminderAction;
+@synthesize delegate, reminderAction, share_overlay_image, share_twitter_button, share_facebook_button, done_sharing_button;
 
 
 - (void)viewDidLoad {

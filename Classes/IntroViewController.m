@@ -11,10 +11,24 @@
 
 @implementation IntroViewController
 
-@synthesize delegate;
+@synthesize delegate, skip_button;
 
 - (IBAction)next:(id)sender {
     [self.delegate introViewControllerDidFinish:self];
+}
+
+- (IBAction)skip:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"skip_intro"] == @"yes") {
+        [defaults setObject:@"no" forKey:@"skip_intro"];
+        [skip_button setImage:[UIImage imageNamed:@"skip_button.png"] forState:UIControlStateNormal];
+        NSLog(@"key = %@ ", [defaults objectForKey:@"skip_intro"]);
+    }else{
+        [defaults setObject:@"yes" forKey:@"skip_intro"];
+        [skip_button setImage:[UIImage imageNamed:@"skip_button_alt.png"] forState:UIControlStateNormal];
+        NSLog(@"key = %@", [defaults objectForKey:@"skip_intro"]);
+    }
+    
 }
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -26,12 +40,13 @@
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"no" forKey:@"skip_intro"];
 }
-*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.

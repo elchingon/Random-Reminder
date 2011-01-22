@@ -12,10 +12,13 @@
 
 @interface IntroViewController : UIViewController {
     id <IntroViewControllerDelegate> delegate;
+    IBOutlet UIButton *skip_button;
 }
 @property (nonatomic, assign) id <IntroViewControllerDelegate> delegate;
+@property (nonatomic, retain) UIButton *skip_button;
 
 - (IBAction)next:(id)sender;
+- (IBAction)skip:(id)sender;
 
 @end
 

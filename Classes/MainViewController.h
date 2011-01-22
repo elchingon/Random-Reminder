@@ -7,14 +7,13 @@
 //
 
 #import "FlipsideViewController.h"
+#import "SocialViewController.h"
 #import "IntroViewController.h"
-#import "Reminder.h"
-#import "FBConnect.h"
 #import "PopOverView.h"
-#import "SA_OAuthTwitterEngine.h"
-#import "SA_OAuthTwitterController.h"
+#import "Facebook.h"
+#import "Reminder.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, IntroViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate, FBSessionDelegate, SA_OAuthTwitterEngineDelegate, SA_OAuthTwitterControllerDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, SocialViewControllerDelegate, IntroViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
@@ -26,24 +25,12 @@
     NSManagedObjectContext *managedObjectContext;
     IBOutlet UIPickerView *reminderPicker;
     IBOutlet UILabel *remindfulAction;
-    // Facebook
-    IBOutlet UIButton *facebookButton;
-    Facebook *facebook;
-    NSArray *permissions;
-    // twitter
-    IBOutlet UIButton *twitterButton;
-    SA_OAuthTwitterEngine *_engine;
-	NSMutableArray *tweets;
-
+    
 }
 
-- (void)refreshButtons;
 
-//login to Facebook
-- (IBAction)login:(id)sender;
+- (IBAction)showSocialViewController;
 
-// login to twitter
-- (IBAction)loginTwitter:(id)sender;
 
 // reminders
 - (IBAction)showReminder:(NSString *)reminderText;
@@ -58,8 +45,6 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) UIPickerView *reminderPicker;
 @property (nonatomic, retain) UILabel *remindfulAction;
-@property (nonatomic, retain) UIButton *facebookButton;
-@property (nonatomic, retain) UIButton *twitterButton;
 @property (nonatomic, retain) NSString *fromTime;
 @property (nonatomic, retain) NSString *toTime;
 @property (nonatomic, retain) NSString *verb;

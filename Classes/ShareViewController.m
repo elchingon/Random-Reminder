@@ -99,11 +99,11 @@
     if ([facebook isSessionValid]) {
         NSLog(@"facebook is authorized");
         sendFacebook = YES;
-        [facebookButton setImage:[UIImage imageNamed:@"facebook_alt.png"] forState:UIControlStateNormal];
+        [facebookButton setImage:[UIImage imageNamed:@"share_facebook_button_alt.png"] forState:UIControlStateNormal];
     } else {
         NSLog(@"facebook is NOT authorized");
         sendFacebook = NO;
-        [facebookButton setImage:[UIImage imageNamed:@"facebook.png"] forState:UIControlStateNormal];
+        [facebookButton setImage:[UIImage imageNamed:@"share_facebook_button.png"] forState:UIControlStateNormal];
         [facebookButton setEnabled:NO];
     }
     /////////////////////////////////////////////////////////////////////////////////////////
@@ -111,11 +111,11 @@
     if([_engine isAuthorized]) {
         NSLog(@"twitter is authorized");
         sendTwitter = YES;
-        [twitterButton setImage:[UIImage imageNamed:@"twitter_alt.png"] forState:UIControlStateNormal];
+        [twitterButton setImage:[UIImage imageNamed:@"share_twitter_button_alt.png"] forState:UIControlStateNormal];
     }else{
         NSLog(@"twitter is NOT authorized");
         sendTwitter = NO;
-        [twitterButton setImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal];
+        [twitterButton setImage:[UIImage imageNamed:@"share_twitter_button.png"] forState:UIControlStateNormal];
         [twitterButton setEnabled:NO];
     }
 }
