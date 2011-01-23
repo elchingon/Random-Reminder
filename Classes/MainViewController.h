@@ -9,11 +9,12 @@
 #import "FlipsideViewController.h"
 #import "SocialViewController.h"
 #import "IntroViewController.h"
+#import "PreviewViewController.h"
 #import "PopOverView.h"
 #import "Facebook.h"
 #import "Reminder.h"
 #import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, SocialViewControllerDelegate, IntroViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, SocialViewControllerDelegate, IntroViewControllerDelegate, PreviewViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate> {
     
     NSArray *reminderTypes;
     NSArray *reminderStart;
@@ -25,6 +26,7 @@
     NSManagedObjectContext *managedObjectContext;
     IBOutlet UIPickerView *reminderPicker;
     IBOutlet UILabel *remindfulAction;
+    IBOutlet UIButton *enable_sharing_button;
     
 }
 
@@ -33,18 +35,23 @@
 
 
 // reminders
-- (IBAction)showReminder:(NSString *)reminderText;
+- (void)showReminder:(NSString *)reminderText;
+- (void)showPreview:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author;
 - (IBAction)setReminder:(id)sender;
-- (IBAction)showIntro;
+- (IBAction)showPreview:(id)sender;
+- (void)showIntro;
 
 // picker actions
 - (IBAction)togglePicker:(id)sender;
 - (void)setUpPicker;
 
+- (void)refreshButtons;
+
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) UIPickerView *reminderPicker;
 @property (nonatomic, retain) UILabel *remindfulAction;
+@property (nonatomic, retain) UIButton *enable_sharing_button;
 @property (nonatomic, retain) NSString *fromTime;
 @property (nonatomic, retain) NSString *toTime;
 @property (nonatomic, retain) NSString *verb;

@@ -38,19 +38,12 @@
                                   objectForKey:@"action"];
         [mainViewController showReminder:reminderText];
         
-    } else {
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        if ([defaults objectForKey:@"skip_intro"] == @"yes") {
-             NSLog(@"key = %@ ", [defaults objectForKey:@"skip_intro"]);
-            //[defaults setObject:@"no" forKey:@"skip_intro"];
-            //NSLog(@"key = %@ ", [defaults objectForKey:@"skip_intro"]);
-        }else{
-            [mainViewController showIntro];
-            NSLog(@"key = %@", [defaults objectForKey:@"skip_intro"]);
-        }
-        
     }
+    
+           
+    [mainViewController showIntro];
         
+    
     return YES;
 }
 

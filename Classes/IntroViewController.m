@@ -14,6 +14,14 @@
 @synthesize delegate, skip_button;
 
 - (IBAction)next:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    if ([defaults objectForKey:@"skip_intro"] == @"yes") {
+        [defaults removeObjectForKey:@"skip_intro"];
+        [defaults synchronize];
+        NSLog(@"key = %@ ", [defaults objectForKey:@"skip_intro"]);
+    }
+    
     [self.delegate introViewControllerDidFinish:self];
 }
 
@@ -22,11 +30,13 @@
     if ([defaults objectForKey:@"skip_intro"] == @"yes") {
         [defaults setObject:@"no" forKey:@"skip_intro"];
         [skip_button setImage:[UIImage imageNamed:@"skip_button.png"] forState:UIControlStateNormal];
+        [defaults synchronize];
         NSLog(@"key = %@ ", [defaults objectForKey:@"skip_intro"]);
     }else{
         [defaults setObject:@"yes" forKey:@"skip_intro"];
         [skip_button setImage:[UIImage imageNamed:@"skip_button_alt.png"] forState:UIControlStateNormal];
         NSLog(@"key = %@", [defaults objectForKey:@"skip_intro"]);
+        [defaults synchronize];
     }
     
 }
@@ -46,6 +56,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@"no" forKey:@"skip_intro"];
+    [defaults synchronize];
 }
 
 /*

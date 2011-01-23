@@ -10,7 +10,7 @@
 
 @implementation MainViewController
 
-@synthesize managedObjectContext, reminderPicker, remindfulAction, fromTime, toTime, verb;
+@synthesize managedObjectContext, reminderPicker, remindfulAction, enable_sharing_button, fromTime, toTime, verb;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -59,6 +59,8 @@
     
     NSString *sentence = [NSString stringWithFormat:@"%@ from %@ to %@", action, fromTime, toTime];
     [remindfulAction setText:sentence];
+    
+    [self refreshButtons];
 }
 
 - (void)presentIntroduction {
@@ -101,9 +103,6 @@
         [reminderPicker selectRow:17 inComponent:2 animated:YES];
     }
 
-    
-       //[self performSelector:@selector(presentIntroduction) withObject:nil afterDelay:0.8];
-    
 }
 
 // set nimber of rows per component
@@ -223,7 +222,7 @@
 
 }
 
-- (IBAction)showReminder:(NSString *)reminderText {
+- (void)showReminder:(NSString *)reminderText {
     BOOL visible = [self.modalViewController isViewLoaded];
     NSLog(@"visible: %d", visible );
     NSLog(@"current modal view: %@", self.modalViewController);
@@ -237,6 +236,30 @@
 	[controller.reminderAction setText:reminderText];
 	[controller release];
 }
+
+- (IBAction)showPreview:(id)sender {
+    NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    NSString *quote = @"We do not quite forgive a giver. The hand that feeds us is in some danger of being bitten.";
+    NSString *author = @"Ralph Waldo Emerson";
+    
+    [self showPreview:action withQuote:quote andAuthor:author];
+}
+
+
+- (void)showPreview:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author {
+    
+    
+    PreviewViewController *controller = [[PreviewViewController alloc] initWithNibName:@"PreviewViewController" bundle:nil];
+	controller.delegate = self;
+	
+	controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+	[self presentModalViewController:controller animated:YES];
+	[controller.reminderAction setText:reminderText];
+    [controller.quote setText:quote];
+    [controller.author setText:author];
+	[controller release];
+}
+
 
 - (IBAction)showSocialViewController {
         
@@ -252,16 +275,40 @@
 - (void)socialViewControllerDidFinish:(SocialViewController *)controller {
     
 	[self dismissModalViewControllerAnimated:YES];
+    [self refreshButtons];
     
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)refreshButtons {
+    ////////////////////////////////////////////////////////////////////////////////////////
+    // get user defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[defaults removeObjectForKey:@"remindful_action"];
+    //[defaults removeObjectForKey:@"start_time"];
+    //[defaults removeObjectForKey:@"end_time"];
+    //[defaults synchronize];
+    
+    ////////////////////////////////////////////////////////////////////////////////////////
+    // facebook status
+    if ([defaults objectForKey:@"FBAccessToken"] && [defaults objectForKey:@"authData"]) {
+        NSLog(@"facebook and twitter are authorized");
+        [enable_sharing_button setImage:[UIImage imageNamed:@"enable_sharing_button_all.png"] forState:UIControlStateNormal];
+        //[facebookButton setEnabled:NO];
+    } else if ([defaults objectForKey:@"authData"]){
+       
+        NSLog(@"twitter is authorized");
+        [enable_sharing_button setImage:[UIImage imageNamed:@"enable_sharing_button_twitter.png"] forState:UIControlStateNormal];
+    } else if ([defaults objectForKey:@"FBAccessToken"]) {
+        [enable_sharing_button setImage:[UIImage imageNamed:@"enable_sharing_button_facebook.png"] forState:UIControlStateNormal];
+    } else {
+        [enable_sharing_button setImage:[UIImage imageNamed:@"enable_sharing_button.png"] forState:UIControlStateNormal];
+    }
+          
+}
 
-- (IBAction)showIntro {
-    BOOL visible = [self.modalViewController isViewLoaded];
-    NSLog(@"visible: %d", visible );
-    NSLog(@"current modal view: %@", self.modalViewController);
-    
-    
+- (void)showIntro {
+       
     IntroViewController *controller = [[IntroViewController alloc] initWithNibName:@"IntroViewController" bundle:nil];
 	controller.delegate = self;
 	
@@ -272,6 +319,12 @@
 
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
+    
+	[self dismissModalViewControllerAnimated:YES];
+    
+}
+
+- (void)previewViewControllerDidFinish:(PreviewViewController *)controller {
     
 	[self dismissModalViewControllerAnimated:YES];
     

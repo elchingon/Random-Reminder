@@ -15,10 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor]; 
-    
-    
-    
+    self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
       
 }
 
