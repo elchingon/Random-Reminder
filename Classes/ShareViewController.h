@@ -9,14 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
 #import "SA_OAuthTwitterEngine.h"
+#import "SA_OAuthTwitterController.h"
 
 @protocol ShareViewControllerDelegate;
 
-@interface ShareViewController : UIViewController <FBRequestDelegate, SA_OAuthTwitterEngineDelegate> {
+@interface ShareViewController : UIViewController <FBDialogDelegate, FBSessionDelegate, FBRequestDelegate, SA_OAuthTwitterEngineDelegate, SA_OAuthTwitterControllerDelegate> {
     id <ShareViewControllerDelegate> delegate;
     // Facebook
     IBOutlet UIButton *facebookButton;
     Facebook *facebook;
+    NSArray *permissions;
     // twitter
     IBOutlet UIButton *twitterButton;
     SA_OAuthTwitterEngine *_engine;

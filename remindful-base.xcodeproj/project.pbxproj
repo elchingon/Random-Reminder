@@ -33,6 +33,9 @@
 		C6463F9012EC986E00F445A2 /* preview_card_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463F8E12EC986E00F445A2 /* preview_card_placeholder.png */; };
 		C6463F9112EC986E00F445A2 /* preview_card.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463F8F12EC986E00F445A2 /* preview_card.png */; };
 		C6463F9312ECA49600F445A2 /* preview_back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463F9212ECA49600F445A2 /* preview_back_button.png */; };
+		C6463F9712ECFBEC00F445A2 /* ShareSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6463F9512ECFBEC00F445A2 /* ShareSuccessViewController.m */; };
+		C6463F9812ECFBEC00F445A2 /* ShareSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6463F9612ECFBEC00F445A2 /* ShareSuccessViewController.xib */; };
+		C6463F9B12ECFC7800F445A2 /* share_success_card.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463F9A12ECFC7800F445A2 /* share_success_card.png */; };
 		C6574FFC12B4332E000A0916 /* jQueryInject.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6574FC212B4332E000A0916 /* jQueryInject.txt */; };
 		C6574FFD12B4332E000A0916 /* jQueryInjectLandscape.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6574FC312B4332E000A0916 /* jQueryInjectLandscape.txt */; };
 		C6574FFE12B4332E000A0916 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6574FC412B4332E000A0916 /* libOAuth.a */; };
@@ -121,6 +124,10 @@
 		C6463F8E12EC986E00F445A2 /* preview_card_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview_card_placeholder.png; sourceTree = "<group>"; };
 		C6463F8F12EC986E00F445A2 /* preview_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview_card.png; sourceTree = "<group>"; };
 		C6463F9212ECA49600F445A2 /* preview_back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview_back_button.png; sourceTree = "<group>"; };
+		C6463F9412ECFBEC00F445A2 /* ShareSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSuccessViewController.h; sourceTree = "<group>"; };
+		C6463F9512ECFBEC00F445A2 /* ShareSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSuccessViewController.m; sourceTree = "<group>"; };
+		C6463F9612ECFBEC00F445A2 /* ShareSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShareSuccessViewController.xib; path = Classes/ShareSuccessViewController.xib; sourceTree = "<group>"; };
+		C6463F9A12ECFC7800F445A2 /* share_success_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_success_card.png; sourceTree = "<group>"; };
 		C6574FC212B4332E000A0916 /* jQueryInject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInject.txt; sourceTree = "<group>"; };
 		C6574FC312B4332E000A0916 /* jQueryInjectLandscape.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInjectLandscape.txt; sourceTree = "<group>"; };
 		C6574FC412B4332E000A0916 /* libOAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOAuth.a; sourceTree = "<group>"; };
@@ -304,6 +311,14 @@
 			name = "Preview Card";
 			sourceTree = "<group>";
 		};
+		C6463F9912ECFC5D00F445A2 /* Share Success Card */ = {
+			isa = PBXGroup;
+			children = (
+				C6463F9A12ECFC7800F445A2 /* share_success_card.png */,
+			);
+			name = "Share Success Card";
+			sourceTree = "<group>";
+		};
 		C6574FC012B4332E000A0916 /* Twitter+OAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +454,8 @@
 				C619B55C12CAC0CC00960E58 /* ShareViewController.m */,
 				C6F2DA2412CA4F70005E3827 /* IntroViewController.h */,
 				C6F2DA2512CA4F70005E3827 /* IntroViewController.m */,
+				C6463F9412ECFBEC00F445A2 /* ShareSuccessViewController.h */,
+				C6463F9512ECFBEC00F445A2 /* ShareSuccessViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -457,12 +474,14 @@
 		C68F5B871285C406006F4528 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6463F9912ECFC5D00F445A2 /* Share Success Card */,
 				C6463F8D12EC96DF00F445A2 /* Preview Card */,
 				C6463F8112EC886D00F445A2 /* App Icons */,
 				C6463F7C12EA893600F445A2 /* Settings Card */,
 				C6463F5912E7CC5D00F445A2 /* Reminder Card */,
 				C69E839D12E67A0F00B28E88 /* Welcome Card */,
 				C6463F7912EA602F00F445A2 /* SocialViewController.xib */,
+				C6463F9612ECFBEC00F445A2 /* ShareSuccessViewController.xib */,
 				C619B55D12CAC0CC00960E58 /* ShareViewController.xib */,
 				C6F2DA2612CA4F70005E3827 /* IntroViewController.xib */,
 				C68F5BAF1285C406006F4528 /* FlipsideView.xib */,
@@ -630,6 +649,8 @@
 				C6463F9012EC986E00F445A2 /* preview_card_placeholder.png in Resources */,
 				C6463F9112EC986E00F445A2 /* preview_card.png in Resources */,
 				C6463F9312ECA49600F445A2 /* preview_back_button.png in Resources */,
+				C6463F9812ECFBEC00F445A2 /* ShareSuccessViewController.xib in Resources */,
+				C6463F9B12ECFC7800F445A2 /* share_success_card.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +698,7 @@
 				C619B55E12CAC0CC00960E58 /* ShareViewController.m in Sources */,
 				C6463F7A12EA602F00F445A2 /* SocialViewController.m in Sources */,
 				C6463F8B12EC96C700F445A2 /* PreviewViewController.m in Sources */,
+				C6463F9712ECFBEC00F445A2 /* ShareSuccessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

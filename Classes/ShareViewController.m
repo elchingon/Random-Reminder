@@ -11,6 +11,10 @@
 
 @implementation ShareViewController
 
+// Your Facebook App Id must be set before running this example
+// See http://www.facebook.com/developers/createapp.php
+static NSString* kAppId = @"173331372680031";
+
 @synthesize facebookButton, twitterButton, facebookMessage, twitterMessage, delegate;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -18,6 +22,8 @@
     [super viewDidLoad];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    permissions =  [[NSArray arrayWithObjects: 
+                              @"publish_stream",@"read_stream", @"offline_access", @"publish_checkins",nil] retain];
 
     // init facebook
     facebook = [[Facebook alloc] init];
@@ -32,63 +38,94 @@
 
 
 - (IBAction)shareReminder:(id)sender {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *message = [NSString stringWithFormat:@"The message is: %@", [defaults objectForKey:@"remindful_action"]];
+
+    
+    if(sendTwitter == YES) {
+        
+                [_engine sendUpdate:message];
+        
+    }
+    
+    //share facebook
+    
+    
+        
+    if (sendFacebook == YES) {
+        NSLog(@"session was valid");
+        //[facebook logout:self];
+        NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                       message,@"message",
+                                       @"Remindful",@"name",
+                                       @"http://www.randomappsofkindness/", @"link",
+                                       @"this is the link caption", @"caption",
+                                       @"this is the description, which is also related to the link", @"description",
+                                       @"[{\"name\":\"Get Remindful!\",\"link\":\"http://www.randomappsofkindness/\"}]",@"actions",
+                                       nil];
+        
+        [facebook requestWithGraphPath:@"me/feed"   // or use page ID instead of 'me'
+                             andParams:params
+                         andHttpMethod:@"POST"
+                           andDelegate:self];
+        
+        [facebook requestWithGraphPath:@"173331372680031/feed"   // or use page ID instead of 'me'
+                             andParams:params
+                         andHttpMethod:@"POST"
+                           andDelegate:self];
+        [facebookButton setEnabled:NO];
+    }
         
     [self.delegate shareViewControllerDidFinish:self];
 }
 
 - (IBAction)toggleTwitter:(id)sender {
+    
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // twitter status
     if([_engine isAuthorized]) {
-        NSLog(@"twitter is authorized");
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        
-        NSString *message = [NSString stringWithFormat:@"The message is: %@", [defaults objectForKey:@"remindful_action"]];
-        [_engine sendUpdate:message];
-        [twitterButton setEnabled:NO];
+        if (sendTwitter == YES) {
+            sendTwitter = NO;
+            [twitterButton setImage:[UIImage imageNamed:@"share_twitter_button.png"] forState:UIControlStateNormal];
+        } else {
+            sendTwitter = YES;
+            [twitterButton setImage:[UIImage imageNamed:@"share_twitter_button_alt.png"] forState:UIControlStateNormal];
 
-    }else{
-        NSLog(@"twitter is NOT authorized");
+        }
+      
+    } else {
         
+        // login
+               
+        UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
+        
+        [self presentModalViewController: controller animated: YES];
     }
 
+    
 }
 
 - (IBAction)toggleFacebook:(id)sender{
-    //share facebook
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSString *message = [NSString stringWithFormat:@"The message is: %@", [defaults objectForKey:@"remindful_action"]];
+    ////////////////////////////////////////////////////////////////////////////////////////
+    // facebook status
+    if ([facebook isSessionValid]) {
         
-        if ([facebook isSessionValid]) {
-            NSLog(@"session was valid");
-            //[facebook logout:self];
-            NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                           message,@"message",
-                                           @"Remindful",@"name",
-                                           @"http://www.randomappsofkindness/", @"link",
-                                           @"this is the link caption", @"caption",
-                                           @"this is the description, which is also related to the link", @"description",
-                                           @"[{\"name\":\"Get Remindful!\",\"link\":\"http://www.randomappsofkindness/\"}]",@"actions",
-                                           nil];
+        if (sendFacebook == YES) {
+            sendFacebook = NO;
+            [facebookButton setImage:[UIImage imageNamed:@"share_facebook_button.png"] forState:UIControlStateNormal];
+        } else {
             
-            [facebook requestWithGraphPath:@"me/feed"   // or use page ID instead of 'me'
-                                 andParams:params
-                             andHttpMethod:@"POST"
-                               andDelegate:self];
-            
-            [facebook requestWithGraphPath:@"173331372680031/feed"   // or use page ID instead of 'me'
-                                 andParams:params
-                             andHttpMethod:@"POST"
-                               andDelegate:self];
-            [facebookButton setEnabled:NO];
-        }else {
-            NSLog(@"session was NOT valid");
-            //[facebook authorize:kAppId permissions:permissions delegate:self];
-            /*
-             What do we do if user is not logged in?
-             ?set flag and reprocess call if not logged in?
-             */
+            sendFacebook = YES;
+            [facebookButton setImage:[UIImage imageNamed:@"share_facebook_button_alt.png"] forState:UIControlStateNormal];
         }
+       
+    } else {
         
+        [facebook authorize:kAppId permissions:permissions delegate:self];
+    }
+
+            
 }
 
 
@@ -104,7 +141,6 @@
         NSLog(@"facebook is NOT authorized");
         sendFacebook = NO;
         [facebookButton setImage:[UIImage imageNamed:@"share_facebook_button.png"] forState:UIControlStateNormal];
-        [facebookButton setEnabled:NO];
     }
     /////////////////////////////////////////////////////////////////////////////////////////
     // twitter status
@@ -116,7 +152,6 @@
         NSLog(@"twitter is NOT authorized");
         sendTwitter = NO;
         [twitterButton setImage:[UIImage imageNamed:@"share_twitter_button.png"] forState:UIControlStateNormal];
-        [twitterButton setEnabled:NO];
     }
 }
 
@@ -157,6 +192,78 @@
 - (void)dealloc {
     [super dealloc];
 }
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Facebook login
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Facebook Session Delegates
+
+/**
+ * Called when the dialog successful log in the user
+ */
+- (void)fbDidLogin {
+    NSLog(@"user did login");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *access_token = facebook.accessToken;
+    if ((access_token != (NSString *) [NSNull null]) && (access_token.length > 0)) {
+        [defaults setObject:access_token forKey:@"FBAccessToken"];
+    } else {
+        [defaults removeObjectForKey:@"FBAccessToken"];
+    }
+    
+    NSDate *expirationDate = facebook.expirationDate;  
+    if (expirationDate) {
+        [defaults setObject:expirationDate forKey:@"FBSessionExpires"];
+    } else {
+        [defaults removeObjectForKey:@"FBSessionExpires"];
+    }
+    
+    [defaults synchronize];
+    
+    [self refreshButtons];
+    
+    NSLog(@"userDefaults: %@", [defaults objectForKey:@"FBAccessToken"]);
+    NSLog(@"userDefaults: %@", [defaults objectForKey:@"FBSessionExpires"]);
+    
+    //[facebook requestWithGraphPath:@"me" andDelegate:self];
+    
+}
+
+/**
+ * Called when the user dismiss the dialog without login
+ */
+- (void)fbDidNotLogin:(BOOL)cancelled {
+    NSLog(@"user CANCELLED login");
+    
+}
+
+/**
+ * Called when the user is logged out
+ */
+- (void)fbDidLogout {
+    NSLog(@"user did LOGOUT");
+    // does not fire? is session still valid on view did load?
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults removeObjectForKey:@"FBAccessToken"];
+    [defaults removeObjectForKey:@"FBSessionExpires"];
+    
+    [defaults synchronize]; 
+    [self refreshButtons];
+}
+
+
+
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // Facebook Request Delegates
@@ -223,6 +330,22 @@
 
 //if you don't do this, the user will have to re-authenticate every time they run
 - (void) twitterOAuthConnectionFailedWithData: (NSData *) data {
+    
+}
+
+// controller delegates
+- (void) OAuthTwitterController: (SA_OAuthTwitterController *) controller authenticatedWithUsername: (NSString *) username {
+    NSLog(@"Authenticated with user %@", username);
+    [self refreshButtons];
+}
+
+- (void) OAuthTwitterControllerFailed: (SA_OAuthTwitterController *) controller {
+    NSLog(@"Authentication Failure");
+    [self refreshButtons];
+}
+
+- (void) OAuthTwitterControllerCanceled: (SA_OAuthTwitterController *) controller {
+    NSLog(@"Authentication Canceled");
     
 }
 

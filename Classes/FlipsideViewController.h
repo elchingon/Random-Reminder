@@ -8,11 +8,12 @@
 
 #import "Reminder.h"
 #import "ShareViewController.h"
+#import "ShareSuccessViewController.h"
 #import <UIKit/UIKit.h>
 
 @protocol FlipsideViewControllerDelegate;
 
-@interface FlipsideViewController : UIViewController <ShareViewControllerDelegate> {
+@interface FlipsideViewController : UIViewController <ShareViewControllerDelegate, ShareSuccessViewControllerDelegate> {
 	id <FlipsideViewControllerDelegate> delegate;
     IBOutlet UILabel *reminderAction;
     IBOutlet UIImage *share_overlay_image;
