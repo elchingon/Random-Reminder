@@ -38,6 +38,7 @@
 - (void)showReminder:(NSString *)reminderText;
 - (void)showPreview:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author;
 - (void)setReminder;
+- (void)setReminder:(id)sender;
 - (IBAction)showPreview:(id)sender;
 - (void)showIntro;
 

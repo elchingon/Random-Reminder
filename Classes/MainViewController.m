@@ -186,6 +186,43 @@
 
 
 // set reminders
+- (void)setReminder:(id)sender {
+    NSDate *now = [NSDate date];
+    //set up vars for notification from reminderPicker
+    int startTime = [reminderPicker selectedRowInComponent:1];
+    int endTime = [reminderPicker selectedRowInComponent:2];
+    NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    Reminder *reminder = [[Reminder alloc] init];
+    [reminder cancelAllReminders];
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:action startTime:startTime endTime:endTime repeat:YES];
+    NSLog(@"date of reminder: %@", reminderDate);
+    
+    if ([reminderDate isEqual:[now earlierDate:reminderDate]]) {
+        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+        NSDateComponents *comps = [calendar components:unitFlags fromDate:now];
+        
+        Reminder *soloReminder = [[Reminder alloc] init];
+        [soloReminder scheduleReminder:soloReminder action:action startTime:comps.hour endTime:endTime repeat:NO];
+    }
+    
+    NSNumber *start = [NSNumber numberWithInt:startTime];
+    NSNumber *end = [NSNumber numberWithInt:endTime];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:start forKey:@"start_time"];
+    [defaults setObject:end forKey:@"end_time"];
+    [defaults setObject:action forKey:@"remindful_action"];
+    [defaults synchronize];
+    
+    // show Reminder
+    [self showReminder:action];
+    
+    [reminder release];
+    
+}
+
+
 - (void)setReminder {
     NSDate *now = [NSDate date];
     //set up vars for notification from reminderPicker
@@ -215,6 +252,7 @@
     [defaults setObject:action forKey:@"remindful_action"];
     [defaults synchronize];
 
+      
     [reminder release];
 
 }
