@@ -36,6 +36,9 @@
 		C6463F9712ECFBEC00F445A2 /* ShareSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6463F9512ECFBEC00F445A2 /* ShareSuccessViewController.m */; };
 		C6463F9812ECFBEC00F445A2 /* ShareSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6463F9612ECFBEC00F445A2 /* ShareSuccessViewController.xib */; };
 		C6463F9B12ECFC7800F445A2 /* share_success_card.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463F9A12ECFC7800F445A2 /* share_success_card.png */; };
+		C6463F9F12ED173800F445A2 /* circle-1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463F9C12ED173800F445A2 /* circle-1.png */; };
+		C6463FA012ED173800F445A2 /* circle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463F9D12ED173800F445A2 /* circle-2.png */; };
+		C6463FA112ED173800F445A2 /* circle-3.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463F9E12ED173800F445A2 /* circle-3.png */; };
 		C6574FFC12B4332E000A0916 /* jQueryInject.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6574FC212B4332E000A0916 /* jQueryInject.txt */; };
 		C6574FFD12B4332E000A0916 /* jQueryInjectLandscape.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6574FC312B4332E000A0916 /* jQueryInjectLandscape.txt */; };
 		C6574FFE12B4332E000A0916 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6574FC412B4332E000A0916 /* libOAuth.a */; };
@@ -128,6 +131,9 @@
 		C6463F9512ECFBEC00F445A2 /* ShareSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSuccessViewController.m; sourceTree = "<group>"; };
 		C6463F9612ECFBEC00F445A2 /* ShareSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShareSuccessViewController.xib; path = Classes/ShareSuccessViewController.xib; sourceTree = "<group>"; };
 		C6463F9A12ECFC7800F445A2 /* share_success_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_success_card.png; sourceTree = "<group>"; };
+		C6463F9C12ED173800F445A2 /* circle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "circle-1.png"; path = "../Desktop/remindful_content/settings card/circle-1.png"; sourceTree = "<group>"; };
+		C6463F9D12ED173800F445A2 /* circle-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "circle-2.png"; path = "../Desktop/remindful_content/settings card/circle-2.png"; sourceTree = "<group>"; };
+		C6463F9E12ED173800F445A2 /* circle-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "circle-3.png"; path = "../Desktop/remindful_content/settings card/circle-3.png"; sourceTree = "<group>"; };
 		C6574FC212B4332E000A0916 /* jQueryInject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInject.txt; sourceTree = "<group>"; };
 		C6574FC312B4332E000A0916 /* jQueryInjectLandscape.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInjectLandscape.txt; sourceTree = "<group>"; };
 		C6574FC412B4332E000A0916 /* libOAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOAuth.a; sourceTree = "<group>"; };
@@ -281,6 +287,9 @@
 		C6463F7C12EA893600F445A2 /* Settings Card */ = {
 			isa = PBXGroup;
 			children = (
+				C6463F9C12ED173800F445A2 /* circle-1.png */,
+				C6463F9D12ED173800F445A2 /* circle-2.png */,
+				C6463F9E12ED173800F445A2 /* circle-3.png */,
 				C6463F8212EC8B9D00F445A2 /* enable_sharing_button_all.png */,
 				C6463F8312EC8B9D00F445A2 /* enable_sharing_button_facebook.png */,
 				C6463F8412EC8B9D00F445A2 /* enable_sharing_button_twitter.png */,
@@ -651,6 +660,9 @@
 				C6463F9312ECA49600F445A2 /* preview_back_button.png in Resources */,
 				C6463F9812ECFBEC00F445A2 /* ShareSuccessViewController.xib in Resources */,
 				C6463F9B12ECFC7800F445A2 /* share_success_card.png in Resources */,
+				C6463F9F12ED173800F445A2 /* circle-1.png in Resources */,
+				C6463FA012ED173800F445A2 /* circle-2.png in Resources */,
+				C6463FA112ED173800F445A2 /* circle-3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

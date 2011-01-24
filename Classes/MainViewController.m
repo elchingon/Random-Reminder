@@ -186,7 +186,7 @@
 
 
 // set reminders
-- (IBAction)setReminder:(id)sender {
+- (void)setReminder {
     NSDate *now = [NSDate date];
     //set up vars for notification from reminderPicker
     int startTime = [reminderPicker selectedRowInComponent:1];
@@ -215,9 +215,6 @@
     [defaults setObject:action forKey:@"remindful_action"];
     [defaults synchronize];
 
-    // show Reminder
-    [self showReminder:action];
-    
     [reminder release];
 
 }
@@ -226,6 +223,12 @@
     BOOL visible = [self.modalViewController isViewLoaded];
     NSLog(@"visible: %d", visible );
     NSLog(@"current modal view: %@", self.modalViewController);
+    
+    if (visible) {
+        //self.modalViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self.modalViewController dismissModalViewControllerAnimated:YES];
+
+    }
         
     
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
@@ -241,6 +244,8 @@
     NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
     NSString *quote = @"We do not quite forgive a giver. The hand that feeds us is in some danger of being bitten.";
     NSString *author = @"Ralph Waldo Emerson";
+    
+    [self setReminder];
     
     [self showPreview:action withQuote:quote andAuthor:author];
 }

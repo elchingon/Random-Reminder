@@ -37,7 +37,7 @@
 // reminders
 - (void)showReminder:(NSString *)reminderText;
 - (void)showPreview:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author;
-- (IBAction)setReminder:(id)sender;
+- (void)setReminder;
 - (IBAction)showPreview:(id)sender;
 - (void)showIntro;
 

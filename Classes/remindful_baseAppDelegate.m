@@ -49,7 +49,7 @@
 
 - (void)application:(UIApplication *)application 
 didReceiveLocalNotification:(UILocalNotification *)notification {
-	
+    	
     UIApplicationState state = [application applicationState];
     if (state == UIApplicationStateInactive) {
         
@@ -68,7 +68,7 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
        
         NSString *reminderText = [notification.userInfo 
                                   objectForKey:@"action"];
-                [mainViewController showReminder:reminderText];
+        [mainViewController showReminder:reminderText];
     }
 }
 

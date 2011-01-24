@@ -77,7 +77,18 @@ static NSString* kAppId = @"173331372680031";
         [facebookButton setEnabled:NO];
     }
         
-    [self.delegate shareViewControllerDidFinish:self];
+    //[self.delegate shareViewControllerDidFinish:self];
+       
+    ShareSuccessViewController *controller = [[ShareSuccessViewController alloc] initWithNibName:@"ShareSuccessViewController" bundle:nil];
+    controller.delegate = self;
+    controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentModalViewController:controller animated:YES];
+    [controller release];
+        
+}
+
+- (void)shareSuccessViewControllerDidFinish:(ShareSuccessViewController *)controller {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (IBAction)toggleTwitter:(id)sender {
