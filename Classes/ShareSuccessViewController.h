@@ -11,10 +11,12 @@
 @protocol ShareSuccessViewControllerDelegate;
 @interface ShareSuccessViewController : UIViewController {
 id <ShareSuccessViewControllerDelegate> delegate;
+    IBOutlet UIImageView *success_message;
     
     
 }
 @property (nonatomic, assign) id <ShareSuccessViewControllerDelegate> delegate;
+@property (nonatomic, retain) IBOutlet UIImageView *success_message;
 @end
 
 @protocol ShareSuccessViewControllerDelegate

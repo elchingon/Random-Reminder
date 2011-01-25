@@ -39,6 +39,9 @@
 		C6463FA512ED337000F445A2 /* circle-1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463FA212ED337000F445A2 /* circle-1.png */; };
 		C6463FA612ED337000F445A2 /* circle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463FA312ED337000F445A2 /* circle-2.png */; };
 		C6463FA712ED337000F445A2 /* circle-3.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463FA412ED337000F445A2 /* circle-3.png */; };
+		C6463FAB12EE602900F445A2 /* success_all.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463FA812EE602900F445A2 /* success_all.png */; };
+		C6463FAC12EE602900F445A2 /* success_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463FA912EE602900F445A2 /* success_facebook.png */; };
+		C6463FAD12EE602900F445A2 /* success_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = C6463FAA12EE602900F445A2 /* success_twitter.png */; };
 		C6574FFC12B4332E000A0916 /* jQueryInject.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6574FC212B4332E000A0916 /* jQueryInject.txt */; };
 		C6574FFD12B4332E000A0916 /* jQueryInjectLandscape.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6574FC312B4332E000A0916 /* jQueryInjectLandscape.txt */; };
 		C6574FFE12B4332E000A0916 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6574FC412B4332E000A0916 /* libOAuth.a */; };
@@ -134,6 +137,9 @@
 		C6463FA212ED337000F445A2 /* circle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-1.png"; sourceTree = "<group>"; };
 		C6463FA312ED337000F445A2 /* circle-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-2.png"; sourceTree = "<group>"; };
 		C6463FA412ED337000F445A2 /* circle-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-3.png"; sourceTree = "<group>"; };
+		C6463FA812EE602900F445A2 /* success_all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success_all.png; sourceTree = "<group>"; };
+		C6463FA912EE602900F445A2 /* success_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success_facebook.png; sourceTree = "<group>"; };
+		C6463FAA12EE602900F445A2 /* success_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success_twitter.png; sourceTree = "<group>"; };
 		C6574FC212B4332E000A0916 /* jQueryInject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInject.txt; sourceTree = "<group>"; };
 		C6574FC312B4332E000A0916 /* jQueryInjectLandscape.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInjectLandscape.txt; sourceTree = "<group>"; };
 		C6574FC412B4332E000A0916 /* libOAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOAuth.a; sourceTree = "<group>"; };
@@ -323,6 +329,9 @@
 		C6463F9912ECFC5D00F445A2 /* Share Success Card */ = {
 			isa = PBXGroup;
 			children = (
+				C6463FA812EE602900F445A2 /* success_all.png */,
+				C6463FA912EE602900F445A2 /* success_facebook.png */,
+				C6463FAA12EE602900F445A2 /* success_twitter.png */,
 				C6463F9A12ECFC7800F445A2 /* share_success_card.png */,
 			);
 			name = "Share Success Card";
@@ -663,6 +672,9 @@
 				C6463FA512ED337000F445A2 /* circle-1.png in Resources */,
 				C6463FA612ED337000F445A2 /* circle-2.png in Resources */,
 				C6463FA712ED337000F445A2 /* circle-3.png in Resources */,
+				C6463FAB12EE602900F445A2 /* success_all.png in Resources */,
+				C6463FAC12EE602900F445A2 /* success_facebook.png in Resources */,
+				C6463FAD12EE602900F445A2 /* success_twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

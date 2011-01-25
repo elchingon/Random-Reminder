@@ -77,12 +77,27 @@ static NSString* kAppId = @"173331372680031";
         [facebookButton setEnabled:NO];
     }
         
-    //[self.delegate shareViewControllerDidFinish:self];
-       
+    // present success card   
     ShareSuccessViewController *controller = [[ShareSuccessViewController alloc] initWithNibName:@"ShareSuccessViewController" bundle:nil];
+    
     controller.delegate = self;
+    
     controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
     [self presentModalViewController:controller animated:YES];
+    
+    // check which message we are sending and setImage of UIImageView on success card
+    if (sendTwitter == YES && sendFacebook == YES) {
+        [controller.success_message setImage:[UIImage imageNamed:@"success_all.png"]];
+    }else if (sendTwitter == YES){
+        [controller.success_message setImage:[UIImage imageNamed:@"success_twitter.png"]];
+    }else if (sendFacebook == YES){
+        [controller.success_message setImage:[UIImage imageNamed:@"success_facebook.png"]];
+    }else {
+        NSLog(@"nothing shared");
+    }
+
+    
     [controller release];
         
 }
@@ -111,7 +126,7 @@ static NSString* kAppId = @"173331372680031";
                
         UIViewController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
         
-        [self presentModalViewController: controller animated: YES];
+        [self presentModalViewController:controller animated: YES];
     }
 
     
