@@ -17,6 +17,9 @@ id <ShareSuccessViewControllerDelegate> delegate;
 }
 @property (nonatomic, assign) id <ShareSuccessViewControllerDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UIImageView *success_message;
+
+- (IBAction)openWebsite;
+
 @end
 
 @protocol ShareSuccessViewControllerDelegate

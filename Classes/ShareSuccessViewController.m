@@ -13,6 +13,10 @@
 
 @synthesize delegate, success_message;
 
+- (IBAction)openWebsite {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://randomappsofkindness.com"]];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
