@@ -3852,7 +3852,7 @@
 				<integer>344</integer>
 			</dict>
 		</dict>
-		<string>MainViewController.m</string>
+		<string>ShareViewController.m</string>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -3912,7 +3912,7 @@
 				<integer>173</integer>
 			</dict>
 			<key>NS.string</key>
-			<string>file://localhost/Users/sunfast/remindful-base/Classes/MainViewController.m</string>
+			<string>file://localhost/Users/sunfast/remindful-base/Classes/ShareViewController.m</string>
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -3963,9 +3963,9 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>318376350.00730801</real>
-		<string>{0, 2856}</string>
-		<string>{17321, 0}</string>
+		<real>318377958.72667801</real>
+		<string>{3749, 1614}</string>
+		<string>{7989, 18}</string>
 		<string>-dealloc</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
@@ -3985,7 +3985,7 @@
 				<integer>363</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sunfast/remindful-base/Classes/MainViewController.m</string>
+		<string>file://localhost/Users/sunfast/remindful-base/Classes/ShareViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4000,7 +4000,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {859, 694}}</string>
+		<string>{{0, 0}, {859, 716}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4553,32 +4553,32 @@
 			EBlJbmRleE9mRG9jdW1lbnRJZGVudGlmaWVygA+ABYAEgBOADl8Q
 			L1hjb2RlLklERU5hdmlnYWJsZUl0ZW1Eb21haW4uV29ya3NwYWNl
 			U3RydWN0dXJl0gspKitaTlMub2JqZWN0c4ANoywtLoAGgAmAC9IL
-			MDEyWklkZW50aWZpZXKACIAHXxAUTWFpblZpZXdDb250cm9sbGVy
-			Lm3SNTY3OFokY2xhc3NuYW1lWCRjbGFzc2VzXxAcSURFQXJjaGl2
-			YWJsZVN0cmluZ0luZGV4UGFpcqI5Ol8QHElERUFyY2hpdmFibGVT
-			dHJpbmdJbmRleFBhaXJYTlNPYmplY3TSCzAxPYAIgApXQ2xhc3Nl
-			c9ILMDFBgAiADF5yZW1pbmRmdWwtYmFzZdI1NkRFV05TQXJyYXmi
-			RDrTRwtIDkpLWXRpbWVzdGFtcFtkb2N1bWVudFVSTIAAgBKAENIL
-			TU5PWU5TLnN0cmluZ4ARXxBKZmlsZTovL2xvY2FsaG9zdC9Vc2Vy
-			cy9zdW5mYXN0L3JlbWluZGZ1bC1iYXNlL0NsYXNzZXMvTWFpblZp
-			ZXdDb250cm9sbGVyLm3SNTZRUl8QD05TTXV0YWJsZVN0cmluZ6NR
-			UzpYTlNTdHJpbmfSNTZVVl8QE0RWVERvY3VtZW50TG9jYXRpb26i
-			VzpfEBNEVlREb2N1bWVudExvY2F0aW9u0jU2WVpfEChJREVOYXZp
-			Z2FibGVJdGVtQXJjaGl2YWJsZVJlcHJlc2VudGF0aW9uols6XxAo
-			SURFTmF2aWdhYmxlSXRlbUFyY2hpdmFibGVSZXByZXNlbnRhdGlv
-			btYSExQVCxYOGA4YG2CAAIAAgBaAFdILKSpjgA2hDYAC0jU2Zmdf
-			ECdJREVXb3Jrc3BhY2VUYWJDb250cm9sbGVyTGF5b3V0VHJlZU5v
-			ZGWiaDpfECdJREVXb3Jrc3BhY2VUYWJDb250cm9sbGVyTGF5b3V0
-			VHJlZU5vZGXSNTZqa18QI0lERVdvcmtzcGFjZVRhYkNvbnRyb2xs
-			ZXJMYXlvdXRUcmVlomw6XxAjSURFV29ya3NwYWNlVGFiQ29udHJv
-			bGxlckxheW91dFRyZWVfEA9OU0tleWVkQXJjaGl2ZXLRb3BUcm9v
-			dIABAAgAEQAaACMALQAyADcAUgBYAGEAfACWAJ0AsgC0ALYAuAC6
-			AMcA6gD2AP0BCQESARQBFgEYARoBHAEeASkBPAFLAV4BegF8AX4B
-			gAGCAYQBtgG7AcYByAHMAc4B0AHSAdcB4gHkAeYB/QICAg0CFgI1
-			AjgCVwJgAmUCZwJpAnECdgJ4AnoCiQKOApYCmQKgAqoCtgK4AroC
-			vALBAssCzQMaAx8DMQM1Az4DQwNZA1wDcgN3A6IDpQPQA90D3wPh
-			A+MD5QPqA+wD7gPwA/UEHwQiBEwEUQR3BHoEoASyBLUEugAAAAAA
-			AAIBAAAAAAAAAHEAAAAAAAAAAAAAAAAAAAS8
+			MDEyWklkZW50aWZpZXKACIAHXxAVU2hhcmVWaWV3Q29udHJvbGxl
+			ci5t0jU2NzhaJGNsYXNzbmFtZVgkY2xhc3Nlc18QHElERUFyY2hp
+			dmFibGVTdHJpbmdJbmRleFBhaXKiOTpfEBxJREVBcmNoaXZhYmxl
+			U3RyaW5nSW5kZXhQYWlyWE5TT2JqZWN00gswMT2ACIAKV0NsYXNz
+			ZXPSCzAxQYAIgAxecmVtaW5kZnVsLWJhc2XSNTZERVdOU0FycmF5
+			okQ600cLSA5KS1l0aW1lc3RhbXBbZG9jdW1lbnRVUkyAAIASgBDS
+			C01OT1lOUy5zdHJpbmeAEV8QS2ZpbGU6Ly9sb2NhbGhvc3QvVXNl
+			cnMvc3VuZmFzdC9yZW1pbmRmdWwtYmFzZS9DbGFzc2VzL1NoYXJl
+			Vmlld0NvbnRyb2xsZXIubdI1NlFSXxAPTlNNdXRhYmxlU3RyaW5n
+			o1FTOlhOU1N0cmluZ9I1NlVWXxATRFZURG9jdW1lbnRMb2NhdGlv
+			bqJXOl8QE0RWVERvY3VtZW50TG9jYXRpb27SNTZZWl8QKElERU5h
+			dmlnYWJsZUl0ZW1BcmNoaXZhYmxlUmVwcmVzZW50YXRpb26iWzpf
+			EChJREVOYXZpZ2FibGVJdGVtQXJjaGl2YWJsZVJlcHJlc2VudGF0
+			aW9u1hITFBULFg4YDhgbYIAAgACAFoAV0gspKmOADaENgALSNTZm
+			Z18QJ0lERVdvcmtzcGFjZVRhYkNvbnRyb2xsZXJMYXlvdXRUcmVl
+			Tm9kZaJoOl8QJ0lERVdvcmtzcGFjZVRhYkNvbnRyb2xsZXJMYXlv
+			dXRUcmVlTm9kZdI1NmprXxAjSURFV29ya3NwYWNlVGFiQ29udHJv
+			bGxlckxheW91dFRyZWWibDpfECNJREVXb3Jrc3BhY2VUYWJDb250
+			cm9sbGVyTGF5b3V0VHJlZV8QD05TS2V5ZWRBcmNoaXZlctFvcFRy
+			b290gAEACAARABoAIwAtADIANwBSAFgAYQB8AJYAnQCyALQAtgC4
+			ALoAxwDqAPYA/QEJARIBFAEWARgBGgEcAR4BKQE8AUsBXgF6AXwB
+			fgGAAYIBhAG2AbsBxgHIAcwBzgHQAdIB1wHiAeQB5gH+AgMCDgIX
+			AjYCOQJYAmECZgJoAmoCcgJ3AnkCewKKAo8ClwKaAqECqwK3ArkC
+			uwK9AsICzALOAxwDIQMzAzcDQANFA1sDXgN0A3kDpAOnA9ID3wPh
+			A+MD5QPnA+wD7gPwA/ID9wQhBCQETgRTBHkEfASiBLQEtwS8AAAA
+			AAAAAgEAAAAAAAAAcQAAAAAAAAAAAAAAAAAABL4=
 			</data>
 		</dict>
 		<dict>
@@ -6085,7 +6085,7 @@
 		</dict>
 		<string>file://localhost/Users/sunfast/remindful-base/Classes/FlipsideViewController.m</string>
 		<real>0.49941793084144592</real>
-		<string>MainViewController.m</string>
+		<string>ShareViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6913,7 +6913,7 @@
 		<string>IDERecentDocumentFilteringEnabled</string>
 		<string>IDENavigatorExpandedItemsBeforeFilteringSet</string>
 		<string>IDEExpandedItemsSet</string>
-		<string>{{0, 80}, {254, 672}}</string>
+		<string>{{0, 0}, {254, 672}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -34688,9 +34688,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>318375543.92303199</real>
-		<string>{933, 2274}</string>
-		<string>{187, 0}</string>
+		<real>318377958.72242099</real>
+		<string>{3749, 1614}</string>
+		<string>{7989, 18}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -34736,9 +34736,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>318375224.67130297</real>
-		<string>{5408, 1587}</string>
-		<string>{3595, 10}</string>
+		<real>318377953.68043298</real>
+		<string>{0, 1148}</string>
+		<string>{796, 46}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -38739,8 +38739,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>318376350.002644</real>
-		<string>{0, 2856}</string>
+		<real>318376883.37657499</real>
+		<string>{0, 2887}</string>
 		<string>{17321, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -45145,7 +45145,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>318375435.66399002</real>
+		<real>318376976.83628899</real>
 		<string>{0, 1500}</string>
 		<string>{760, 0}</string>
 		<dict>
@@ -65026,7 +65026,7 @@
 				<integer>4373</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>318376345.00215399</real>
+			<real>318377855.85920298</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -65037,7 +65037,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 2:52 PM</string>
+		<string>Today at 3:17 PM</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
@@ -65120,7 +65120,7 @@
 				<integer>4379</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sunfast/remindful-base/Classes/MainViewController.m</string>
+		<string>file://localhost/Users/sunfast/remindful-base/Classes/ShareViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -65138,7 +65138,7 @@
 				<integer>4381</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sunfast/remindful-base/Classes/MainViewController.h</string>
+		<string>file://localhost/Users/sunfast/remindful-base/Classes/SocialViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -65156,7 +65156,7 @@
 				<integer>4383</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sunfast/remindful-base/Classes/ShareViewController.m</string>
+		<string>file://localhost/Users/sunfast/remindful-base/Classes/ShareViewController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -65174,7 +65174,7 @@
 				<integer>4385</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sunfast/remindful-base/Classes/ShareViewController.xib</string>
+		<string>file://localhost/Users/sunfast/remindful-base/Classes/MainViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -65192,7 +65192,7 @@
 				<integer>4387</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sunfast/remindful-base/Classes/ShareViewController.h</string>
+		<string>file://localhost/Users/sunfast/remindful-base/Classes/MainViewController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -65210,7 +65210,7 @@
 				<integer>4389</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sunfast/remindful-base/Classes/SocialViewController.m</string>
+		<string>file://localhost/Users/sunfast/remindful-base/Classes/ShareViewController.xib</string>
 		<dict>
 			<key>$class</key>
 			<dict>

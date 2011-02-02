@@ -215,6 +215,9 @@ static NSString* kAppId = @"173331372680031";
 
 
 - (void)dealloc {
+    [facebook release];
+    [permissions release];
+    [_engine release];
     [super dealloc];
 }
 
