@@ -113,7 +113,7 @@ static NSString* kAppId = @"173331372680031";
  */ 
 - (IBAction)login:(id)sender {
     permissions =  [[NSArray arrayWithObjects: 
-                     @"publish_stream",@"read_stream", @"offline_access", @"publish_checkins",nil] retain];
+                     @"publish_stream",@"read_stream", @"offline_access", @"publish_checkins", @"email",nil] retain];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     facebook = [[Facebook alloc] init];
     facebook.accessToken = [defaults objectForKey:@"FBAccessToken"];

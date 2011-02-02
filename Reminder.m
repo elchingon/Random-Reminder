@@ -28,7 +28,7 @@
        
     /////////////////////////////////////////////////////////////////
     // Calculate random time
-    int myHour;
+    int myHour = (arc4random() % 24);
     int myMinute = (arc4random() % 60);
     int mySecond = (arc4random() % 60);
     int range = endTime - startTime;
@@ -134,6 +134,7 @@
     
     
     [newNotification release];
+    [calendar release];
     
     return date;
 

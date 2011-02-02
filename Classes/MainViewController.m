@@ -107,7 +107,7 @@
 
 // set nimber of rows per component
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    int rows;
+    int rows = 10;
     if (component == 0) {
         rows = reminderTypes.count;
     }else if (component == 1) {
@@ -134,23 +134,26 @@
         
         NSString *sentence = [[NSString alloc] initWithFormat:@"%@ from %@ to %@",[reminderTypes objectAtIndex:row], fromTime, toTime];
         [remindfulAction setText:sentence];
+        [sentence release];
         
     }else if (component == 1) {
         
         NSString *sentence = [[NSString alloc] initWithFormat:@"%@ from %@ to %@", verb, [reminderStart objectAtIndex:row], toTime];
         [remindfulAction setText:sentence];
+        [sentence release];
         
     }else if (component == 2) {
         
         NSString *sentence = [[NSString alloc] initWithFormat:@"%@ from %@ to %@", verb, fromTime, [reminderFinish objectAtIndex:row]];
         [remindfulAction setText:sentence];
+        [sentence release];
         
     }
 }
 
 // get row data from array
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    NSString *title;
+    NSString *title = @"title";
     if (component == 0) {
         title = [reminderTypes objectAtIndex:row];
     }else if (component == 1) {
@@ -163,7 +166,7 @@
 
 // set row size
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
-    int width;
+    int width = 80;
     if (component == 0) {
         width = 140;
     }else if (component == 1) {
@@ -199,6 +202,9 @@
         
         Reminder *soloReminder = [[Reminder alloc] init];
         [soloReminder scheduleReminder:soloReminder action:action quote:quote author:author startTime:comps.hour endTime:endTime repeat:NO];
+        
+        [soloReminder release];
+        [calendar release];
     }
     
     NSNumber *start = [NSNumber numberWithInt:startTime];
@@ -238,7 +244,10 @@
         NSDateComponents *comps = [calendar components:unitFlags fromDate:now];
 
         Reminder *soloReminder = [[Reminder alloc] init];
-        [soloReminder scheduleReminder:soloReminder action:action quote:quote author:author startTime:comps.hour endTime:endTime repeat:NO];    }
+        [soloReminder scheduleReminder:soloReminder action:action quote:quote author:author startTime:comps.hour endTime:endTime repeat:NO];
+        [soloReminder release];
+        [calendar release];
+    }
     
     NSNumber *start = [NSNumber numberWithInt:startTime];
     NSNumber *end = [NSNumber numberWithInt:endTime];
