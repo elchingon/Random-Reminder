@@ -40,7 +40,7 @@
 						<string key="NSFrameSize">{320, 460}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="413731948"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
@@ -51,19 +51,19 @@
 					<object class="IBUILabel" id="413731948">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{29, 100}, {240, 89}}</string>
+						<string key="NSFrame">{{20, 91}, {249, 89}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="127005215"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">be KIND to yourself</string>
+						<string key="IBUIText">smile</string>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">37</double>
+							<string key="NSName">TrebuchetMS-Bold</string>
+							<double key="NSSize">48</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<object class="NSColor" key="IBUITextColor">
@@ -72,7 +72,7 @@
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">36</float>
+						<float key="IBUIMinimumFontSize">28</float>
 						<int key="IBUINumberOfLines">2</int>
 					</object>
 					<object class="IBUIButton" id="478175003">
@@ -134,31 +134,31 @@
 					<object class="IBUILabel" id="127005215">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 232}, {280, 71}}</string>
+						<string key="NSFrame">{{20, 217}, {280, 82}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="289753378"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">"Kindness is a language which the deaf can hear and the blind can see"</string>
-						<object class="NSFont" key="IBUIFont" id="56170537">
-							<string key="NSName">Helvetica</string>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">TrebuchetMS</string>
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<reference key="IBUITextColor" ref="1042607262"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">17</float>
+						<float key="IBUIMinimumFontSize">8</float>
 						<int key="IBUINumberOfLines">3</int>
 					</object>
 					<object class="IBUIButton" id="952840501">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{203, 303}, {79, 13}}</string>
+						<string key="NSFrame">{{203, 307}, {79, 13}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="478175003"/>
@@ -181,17 +181,21 @@
 					<object class="IBUILabel" id="289753378">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{59, 297}, {89, 21}}</string>
+						<string key="NSFrame">{{20, 303}, {175, 21}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="952840501"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Mark Twain</string>
-						<reference key="IBUIFont" ref="56170537"/>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -199,6 +203,7 @@
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -254,6 +259,22 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">74</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">reminderQuote</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="127005215"/>
+					</object>
+					<int key="connectionID">81</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">reminderAuthor</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="289753378"/>
+					</object>
+					<int key="connectionID">82</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -343,7 +364,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">80</int>
+			<int key="maxID">82</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -367,8 +388,9 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="done_sharing_button">UIButton</string>
 						<string key="reminderAction">UILabel</string>
+						<string key="reminderAuthor">UILabel</string>
+						<string key="reminderQuote">UILabel</string>
 						<string key="share_facebook_button">UIButton</string>
-						<string key="share_overlay_image">UIImage</string>
 						<string key="share_twitter_button">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -380,13 +402,17 @@
 							<string key="name">reminderAction</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="reminderAuthor">
+							<string key="name">reminderAuthor</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="reminderQuote">
+							<string key="name">reminderQuote</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="share_facebook_button">
 							<string key="name">share_facebook_button</string>
 							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="share_overlay_image">
-							<string key="name">share_overlay_image</string>
-							<string key="candidateClassName">UIImage</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="share_twitter_button">
 							<string key="name">share_twitter_button</string>

@@ -184,9 +184,12 @@
     int startTime = [reminderPicker selectedRowInComponent:1];
     int endTime = [reminderPicker selectedRowInComponent:2];
     NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    NSString *quote = [reminderQuotes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    NSString *author = [reminderAuthors objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    // create reminder
     Reminder *reminder = [[Reminder alloc] init];
     [reminder cancelAllReminders];
-    NSDate *reminderDate = [reminder scheduleReminder:reminder action:action startTime:startTime endTime:endTime repeat:YES];
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:action quote:quote author:author startTime:startTime endTime:endTime repeat:YES];
     NSLog(@"date of reminder: %@", reminderDate);
     
     if ([reminderDate isEqual:[now earlierDate:reminderDate]]) {
@@ -195,7 +198,7 @@
         NSDateComponents *comps = [calendar components:unitFlags fromDate:now];
         
         Reminder *soloReminder = [[Reminder alloc] init];
-        [soloReminder scheduleReminder:soloReminder action:action startTime:comps.hour endTime:endTime repeat:NO];
+        [soloReminder scheduleReminder:soloReminder action:action quote:quote author:author startTime:comps.hour endTime:endTime repeat:NO];
     }
     
     NSNumber *start = [NSNumber numberWithInt:startTime];
@@ -208,7 +211,7 @@
     [defaults synchronize];
     
     // show Reminder
-    [self showReminder:action];
+    [self showReminder:action withQuote:quote andAuthor:author];
     
     [reminder release];
     
@@ -221,9 +224,12 @@
     int startTime = [reminderPicker selectedRowInComponent:1];
     int endTime = [reminderPicker selectedRowInComponent:2];
     NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    NSString *quote = [reminderQuotes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    NSString *author = [reminderAuthors objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    // create reminder
     Reminder *reminder = [[Reminder alloc] init];
     [reminder cancelAllReminders];
-    NSDate *reminderDate = [reminder scheduleReminder:reminder action:action startTime:startTime endTime:endTime repeat:YES];
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:action quote:quote author:author startTime:startTime endTime:endTime repeat:YES];
     NSLog(@"date of reminder: %@", reminderDate);
     
     if ([reminderDate isEqual:[now earlierDate:reminderDate]]) {
@@ -232,8 +238,7 @@
         NSDateComponents *comps = [calendar components:unitFlags fromDate:now];
 
         Reminder *soloReminder = [[Reminder alloc] init];
-        [soloReminder scheduleReminder:soloReminder action:action startTime:comps.hour endTime:endTime repeat:NO];
-    }
+        [soloReminder scheduleReminder:soloReminder action:action quote:quote author:author startTime:comps.hour endTime:endTime repeat:NO];    }
     
     NSNumber *start = [NSNumber numberWithInt:startTime];
     NSNumber *end = [NSNumber numberWithInt:endTime];
@@ -250,13 +255,12 @@
 }
 /////////////REMOVE
 // show reminder preview
-- (void)showReminder:(NSString *)reminderText {
+- (void)showReminder:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author {
     BOOL visible = [self.modalViewController isViewLoaded];
     NSLog(@"visible: %d", visible );
     NSLog(@"current modal view: %@", self.modalViewController);
     
     if (visible) {
-        //self.modalViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self.modalViewController dismissModalViewControllerAnimated:YES];
 
     }
@@ -265,9 +269,11 @@
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
 	controller.delegate = self;
 	
-	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 	[self presentModalViewController:controller animated:YES];
 	[controller.reminderAction setText:reminderText];
+    [controller.reminderQuote setText:quote];
+    [controller.reminderAuthor setText:author];
 	[controller release];
 }
 // close reminder view.

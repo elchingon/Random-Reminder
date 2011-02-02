@@ -36,7 +36,11 @@
         
         NSString *reminderText = [notification.userInfo 
                                   objectForKey:@"action"];
-        [mainViewController showReminder:reminderText];
+        NSString *quote = [notification.userInfo 
+                                  objectForKey:@"quote"];
+        NSString *author = [notification.userInfo 
+                                  objectForKey:@"author"];
+        [mainViewController showReminder:reminderText withQuote:quote andAuthor:author];
         
     }
     
@@ -51,24 +55,26 @@
 didReceiveLocalNotification:(UILocalNotification *)notification {
     	
     UIApplicationState state = [application applicationState];
+    application.applicationIconBadgeNumber = 0;
+    NSString *reminderText = [notification.userInfo 
+                              objectForKey:@"action"];
+    NSString *quote = [notification.userInfo 
+                       objectForKey:@"quote"];
+    NSString *author = [notification.userInfo 
+                        objectForKey:@"author"];
+    
     if (state == UIApplicationStateInactive) {
         
         // Application was in the background when notification
         // was delivered.
         NSLog(@"Recieved Notification while in background... %@",notification);
         
-        
-       
-        NSString *reminderText = [notification.userInfo 
-                                  objectForKey:@"action"];
-        [mainViewController showReminder:reminderText];
+        [mainViewController showReminder:reminderText withQuote:quote andAuthor:author];
                
     }else{
         NSLog(@"Recieved Notification while Active! %@",notification);
-       
-        NSString *reminderText = [notification.userInfo 
-                                  objectForKey:@"action"];
-        [mainViewController showReminder:reminderText];
+    
+        [mainViewController showReminder:reminderText withQuote:quote andAuthor:author];
     }
 }
 

@@ -10,7 +10,7 @@
 
 @implementation FlipsideViewController
 
-@synthesize delegate, reminderAction, share_twitter_button, share_facebook_button, done_sharing_button;
+@synthesize delegate, reminderAction, reminderQuote, reminderAuthor, share_twitter_button, share_facebook_button, done_sharing_button;
 
 
 - (void)viewDidLoad {
@@ -19,15 +19,7 @@
       
 }
 
-
-- (void)shareViewControllerDidFinish:(ShareViewController *)controller {
-    [self dismissModalViewControllerAnimated:YES];
-       
-}
-
-
-
-
+// close reminder and reset notification for new random time.
 - (IBAction)done:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSNumber *start = [defaults objectForKey:@"start_time"];
@@ -37,7 +29,7 @@
     
     [reminder cancelAllReminders];
     
-    NSDate *reminderDate = [reminder scheduleReminder:reminder action:reminderAction.text startTime:[start intValue] endTime:[end intValue] repeat:YES];
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:reminderAction.text quote:reminderQuote.text author:reminderAuthor.text startTime:[start intValue] endTime:[end intValue] repeat:YES];
     
     NSLog(@"date of reminder: %@", reminderDate);
     
@@ -46,6 +38,7 @@
 	[self.delegate flipsideViewControllerDidFinish:self];	
 }
 
+// open share reminder view.
 - (IBAction)share:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSNumber *start = [defaults objectForKey:@"start_time"];
@@ -55,7 +48,7 @@
     
     [reminder cancelAllReminders];
     
-    NSDate *reminderDate = [reminder scheduleReminder:reminder action:reminderAction.text startTime:[start intValue] endTime:[end intValue] repeat:YES];
+    NSDate *reminderDate = [reminder scheduleReminder:reminder action:reminderAction.text quote:reminderQuote.text author:reminderAuthor.text startTime:[start intValue] endTime:[end intValue] repeat:YES];
     
     NSLog(@"date of reminder: %@", reminderDate);
     
@@ -70,6 +63,13 @@
     [controller release];
 
 }
+
+// close share reminder view
+- (void)shareViewControllerDidFinish:(ShareViewController *)controller {
+    [self dismissModalViewControllerAnimated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

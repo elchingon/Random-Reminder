@@ -21,7 +21,7 @@
     NSLog(@"current reminders: %@", reminders);
 }
 
-- (NSDate *)scheduleReminder:(Reminder *)reminder action:(NSString *)action startTime:(int)startTime endTime:(int)endTime repeat:(BOOL)repeat {
+- (NSDate *)scheduleReminder:(Reminder *)reminder action:(NSString *)action quote:(NSString *)quote author:(NSString *)author startTime:(int)startTime endTime:(int)endTime repeat:(BOOL)repeat {
     
     
         
@@ -117,7 +117,9 @@
     newNotification.applicationIconBadgeNumber = 1;
     
     // Specify custom data for the notification
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:newNotification.alertBody forKey:@"action"];
+    NSArray *objects = [NSArray arrayWithObjects:action, quote, author, nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"action", @"quote", @"author", nil];
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     newNotification.userInfo = infoDict;
     NSLog(@"userInfo equals %@", newNotification.userInfo);
     

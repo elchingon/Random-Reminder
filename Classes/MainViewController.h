@@ -26,13 +26,18 @@
     IBOutlet UIButton *enable_sharing_button;
     
 }
+@property (nonatomic, retain) IBOutlet UIPickerView *reminderPicker;
+@property (nonatomic, retain) IBOutlet UILabel *remindfulAction;
+@property (nonatomic, retain) IBOutlet UIButton *enable_sharing_button;
+@property (nonatomic, retain) NSString *fromTime;
+@property (nonatomic, retain) NSString *toTime;
+@property (nonatomic, retain) NSString *verb;
 
 // login to facebook and twitter
 - (IBAction)showSocialViewController;
 
-
 // set reminders
-- (void)showReminder:(NSString *)reminderText;
+- (void)showReminder:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author;
 - (void)showPreview:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author;
 - (void)setReminder;
 - (void)setReminder:(id)sender;
@@ -42,12 +47,5 @@
 // set up interface.
 - (void)setUpPicker;
 - (void)refreshButtons;
-
-@property (nonatomic, retain) UIPickerView *reminderPicker;
-@property (nonatomic, retain) UILabel *remindfulAction;
-@property (nonatomic, retain) UIButton *enable_sharing_button;
-@property (nonatomic, retain) NSString *fromTime;
-@property (nonatomic, retain) NSString *toTime;
-@property (nonatomic, retain) NSString *verb;
 
 @end
