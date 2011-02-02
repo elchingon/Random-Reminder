@@ -64,18 +64,17 @@ static NSString* kAppId = @"173331372680031";
                                        @"this is the description, which is also related to the link", @"description",
                                        @"[{\"name\":\"Get Remindful!\",\"link\":\"http://www.randomappsofkindness/\"}]",@"actions",
                                        nil];
-        
+        // post to users wall
         [facebook requestWithGraphPath:@"me/feed"   // or use page ID instead of 'me'
                              andParams:params
                          andHttpMethod:@"POST"
                            andDelegate:self];
-        
+        // post to app wall
         [facebook requestWithGraphPath:@"173331372680031/feed"   // or use page ID instead of 'me'
                              andParams:params
                          andHttpMethod:@"POST"
                            andDelegate:self];
-        [facebookButton setEnabled:NO];
-    }
+        }
         
     // present success card   
     ShareSuccessViewController *controller = [[ShareSuccessViewController alloc] initWithNibName:@"ShareSuccessViewController" bundle:nil];

@@ -153,7 +153,7 @@
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">8</float>
-						<int key="IBUINumberOfLines">3</int>
+						<int key="IBUINumberOfLines">4</int>
 					</object>
 					<object class="IBUIButton" id="952840501">
 						<reference key="NSNextResponder" ref="249263867"/>

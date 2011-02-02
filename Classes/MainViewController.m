@@ -20,7 +20,7 @@
     // pickerView Data
     reminderTypes = [[NSArray alloc] initWithObjects:@"smile", @"breathe", @"stretch", @"listen", @"love", @"let go", @"open up", @"have fun", @"feel the force", @"observe",  nil];
     
-    reminderQuotes = [[NSArray alloc] initWithObjects:@"Allowing yourself to smile takes 99% of the effort.", @"Whenever I feel blue, I start breathing again.", @"As any jazz musician knows, it takes flexibility and adaptability for improvisation to create beauty.", @"Much silence makes a powerful noise.", @"Kindness is a language which the deaf can hear and the blind can see.", @"If the person you are talking to doesn't appear to be listening, be patient. It may simply be that he has a small piece of fluff in his ear.", @"There are two ways to live your life - one is as though nothing is a miracle, the other is as though everything is a miracle.", @"You can discover more about a person in an hour of play than in a year of conversation.", @"What the world needs is people who have come alive.", @"With an eye made quiet by the power of harmony, and the deep power of joy, we see into the life of things.", nil];
+    reminderQuotes = [[NSArray alloc] initWithObjects:@"\"Allowing yourself to smile takes 99% of the effort.\"", @"\"Whenever I feel blue, I start breathing again.\"", @"\"As any jazz musician knows, it takes flexibility and adaptability for improvisation to create beauty.\"", @"\"Much silence makes a powerful noise.\"", @"\"Kindness is a language which the deaf can hear and the blind can see.\"", @"\"If the person you are talking to doesn't appear to be listening, be patient. It may simply be that he has a small piece of fluff in his ear.\"", @"\"There are two ways to live your life - one is as though nothing is a miracle, the other is as though everything is a miracle.\"", @"\"You can discover more about a person in an hour of play than in a year of conversation.\"", @"\"What the world needs is people who have come alive.\"", @"\"With an eye made quiet by the power of harmony, and the deep power of joy, we see into the life of things.\"", nil];
     
     reminderAuthors = [[NSArray alloc] initWithObjects:@"Simon Travaglia", @"L. Frank Baum", @"Doc Childre and Bruce Cryer", @"African proverb", @"Mark Twain", @"A. A. Milne", @"Albert Einstein", @"Plato", @"Robert Thurman", @"William Wordsworth", nil];
     
@@ -411,6 +411,8 @@
     [reminderStart release];
     [reminderFinish release];
     [reminderTypes release];
+    [reminderQuotes release];
+    [reminderAuthors release];
     [fromTime release];
     [toTime release];
     [verb release];
