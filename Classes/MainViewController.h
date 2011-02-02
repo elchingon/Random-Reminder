@@ -10,31 +10,28 @@
 #import "SocialViewController.h"
 #import "IntroViewController.h"
 #import "PreviewViewController.h"
-#import "PopOverView.h"
-#import "Facebook.h"
 #import "Reminder.h"
-#import <CoreData/CoreData.h>
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, SocialViewControllerDelegate, IntroViewControllerDelegate, PreviewViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, FBDialogDelegate> {
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, SocialViewControllerDelegate, IntroViewControllerDelegate, PreviewViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
     
     NSArray *reminderTypes;
+    NSArray *reminderQuotes;
+    NSArray *reminderAuthors;
     NSArray *reminderStart;
     NSArray *reminderFinish;
-    NSArray *reminders;
     NSString *fromTime;
     NSString *toTime;
     NSString *verb;
-    NSManagedObjectContext *managedObjectContext;
     IBOutlet UIPickerView *reminderPicker;
     IBOutlet UILabel *remindfulAction;
     IBOutlet UIButton *enable_sharing_button;
     
 }
 
-
+// login to facebook and twitter
 - (IBAction)showSocialViewController;
 
 
-// reminders
+// set reminders
 - (void)showReminder:(NSString *)reminderText;
 - (void)showPreview:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author;
 - (void)setReminder;
@@ -42,14 +39,10 @@
 - (IBAction)showPreview:(id)sender;
 - (void)showIntro;
 
-// picker actions
-- (IBAction)togglePicker:(id)sender;
+// set up interface.
 - (void)setUpPicker;
-
 - (void)refreshButtons;
 
-
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) UIPickerView *reminderPicker;
 @property (nonatomic, retain) UILabel *remindfulAction;
 @property (nonatomic, retain) UIButton *enable_sharing_button;

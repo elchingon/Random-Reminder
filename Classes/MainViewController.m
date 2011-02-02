@@ -10,7 +10,7 @@
 
 @implementation MainViewController
 
-@synthesize managedObjectContext, reminderPicker, remindfulAction, enable_sharing_button, fromTime, toTime, verb;
+@synthesize reminderPicker, remindfulAction, enable_sharing_button, fromTime, toTime, verb;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -18,11 +18,16 @@
     [super viewDidLoad];
     //////////////////////////////////////////////////////////////////////////////////////
     // pickerView Data
-    reminderTypes = [[NSArray alloc] initWithObjects:@"Stretch", @"Relax", @"Notice the present moment", @"Breathe", @"Smile", @"Feel the force", @"Let the tension go", @"Be kind to yourself", @"Notice the absurd", @"Rest your eyes", nil];
+    reminderTypes = [[NSArray alloc] initWithObjects:@"smile", @"breathe", @"stretch", @"listen", @"love", @"let go", @"open up", @"have fun", @"feel the force", @"observe",  nil];
+    
+    reminderQuotes = [[NSArray alloc] initWithObjects:@"Allowing yourself to smile takes 99% of the effort.", @"Whenever I feel blue, I start breathing again.", @"As any jazz musician knows, it takes flexibility and adaptability for improvisation to create beauty.", @"Much silence makes a powerful noise.", @"Kindness is a language which the deaf can hear and the blind can see.", @"If the person you are talking to doesn't appear to be listening, be patient. It may simply be that he has a small piece of fluff in his ear.", @"There are two ways to live your life - one is as though nothing is a miracle, the other is as though everything is a miracle.", @"You can discover more about a person in an hour of play than in a year of conversation.", @"What the world needs is people who have come alive.", @"With an eye made quiet by the power of harmony, and the deep power of joy, we see into the life of things.", nil];
+    
+    reminderAuthors = [[NSArray alloc] initWithObjects:@"Simon Travaglia", @"L. Frank Baum", @"Doc Childre and Bruce Cryer", @"African proverb", @"Mark Twain", @"A. A. Milne", @"Albert Einstein", @"Plato", @"Robert Thurman", @"William Wordsworth", nil];
     
     reminderStart = [[NSArray alloc] initWithObjects:@"12am",@"1am", @"2am", @"3am", @"4am", @"5am", @"6am", @"7am", @"8am",@"9am", @"10am", @"11am", @"12pm", @"1pm", @"2pm", @"3pm", @"4pm", @"5pm", @"6pm", @"7pm", @"8pm",@"9pm", @"10pm", @"11pm",  nil];
     
     reminderFinish = [[NSArray alloc] initWithObjects:@"12am",@"1am", @"2am", @"3am", @"4am", @"5am", @"6am", @"7am", @"8am",@"9am", @"10am", @"11am", @"12pm", @"1pm", @"2pm", @"3pm", @"4pm", @"5pm", @"6pm", @"7pm", @"8pm",@"9pm", @"10pm", @"11pm",  nil];
+    
     ////////////////////////////////////////////////////////////////////////////////////////
     // get user defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -63,22 +68,17 @@
     [self refreshButtons];
 }
 
-- (void)presentIntroduction {
-    
-    PopOverView *introView = [[PopOverView alloc] initWithURL:@"http://randomappsofkindness.com" params:nil delegate:self]; 
-    [introView show];
 
-}
-
-//
+////////////////////////////////////////////////////////////////////////////////////////////
 // pickerView datasource methods
 //
 
-// set number of components
+// set number of components.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 3;
 }
 
+// set up picker view with default or saved settings.
 - (void)setUpPicker {
     // get user defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -120,7 +120,7 @@
     return rows;
 }
 
-//
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 // pickerView delegate methods
 //
 
@@ -174,18 +174,10 @@
     return width;
 }
 
-// pickerView control
-
-- (IBAction)togglePicker:(id)sender {
-    if (reminderPicker.hidden == YES) {
-        [reminderPicker setHidden:NO];
-    }else {
-        [reminderPicker setHidden:YES];    }
-}
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 // set reminders
+
+// set reminder notification
 - (void)setReminder:(id)sender {
     NSDate *now = [NSDate date];
     //set up vars for notification from reminderPicker
@@ -222,7 +214,7 @@
     
 }
 
-
+// set reminder notification
 - (void)setReminder {
     NSDate *now = [NSDate date];
     //set up vars for notification from reminderPicker
@@ -256,7 +248,8 @@
     [reminder release];
 
 }
-
+/////////////REMOVE
+// show reminder preview
 - (void)showReminder:(NSString *)reminderText {
     BOOL visible = [self.modalViewController isViewLoaded];
     NSLog(@"visible: %d", visible );
@@ -277,24 +270,28 @@
 	[controller.reminderAction setText:reminderText];
 	[controller release];
 }
-
-- (IBAction)showPreview:(id)sender {
-    NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
-    NSString *quote = @"We do not quite forgive a giver. The hand that feeds us is in some danger of being bitten.";
-    NSString *author = @"Ralph Waldo Emerson";
+// close reminder view.
+- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
     
-    [self setReminder];
+	[self dismissModalViewControllerAnimated:YES];
     
-    [self showPreview:action withQuote:quote andAuthor:author];
 }
 
 
+////////////////////////////////////////
+// show reninder preview action.
+- (IBAction)showPreview:(id)sender {
+    NSString *action = [reminderTypes objectAtIndex:[reminderPicker selectedRowInComponent:0]];
+    NSString *quote = [reminderQuotes objectAtIndex:[reminderPicker selectedRowInComponent:0]];;
+    NSString *author = [reminderAuthors objectAtIndex:[reminderPicker selectedRowInComponent:0]];;
+    [self setReminder];
+    [self showPreview:action withQuote:quote andAuthor:author];
+}
+
+// show peminder preview view.
 - (void)showPreview:(NSString *)reminderText withQuote:(NSString *)quote andAuthor:(NSString *)author {
-    
-    
     PreviewViewController *controller = [[PreviewViewController alloc] initWithNibName:@"PreviewViewController" bundle:nil];
 	controller.delegate = self;
-	
 	controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 	[self presentModalViewController:controller animated:YES];
 	[controller.reminderAction setText:reminderText];
@@ -303,24 +300,46 @@
 	[controller release];
 }
 
-
-- (IBAction)showSocialViewController {
-        
+// close preview view
+- (void)previewViewControllerDidFinish:(PreviewViewController *)controller {
     
+	[self dismissModalViewControllerAnimated:YES];
+    
+}
+
+// show facebook and twitter login page.
+- (IBAction)showSocialViewController {
     SocialViewController *controller = [[SocialViewController alloc] initWithNibName:@"SocialViewController" bundle:nil];
 	controller.delegate = self;
-	
 	controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 	[self presentModalViewController:controller animated:YES];
     [controller release];
 }
 
 - (void)socialViewControllerDidFinish:(SocialViewController *)controller {
-    
-	[self dismissModalViewControllerAnimated:YES];
+    [self dismissModalViewControllerAnimated:YES];
     [self refreshButtons];
     
 }
+
+
+//////////////////////////////////////////////////////////////////////////
+// intro page
+- (void)showIntro {
+    
+    IntroViewController *controller = [[IntroViewController alloc] initWithNibName:@"IntroViewController" bundle:nil];
+	controller.delegate = self;
+	
+	controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+	[self presentModalViewController:controller animated:NO];
+    [controller release];
+}
+
+- (void)introViewControllerDidFinish:(IntroViewController *)controller {
+    
+	[self dismissModalViewControllerAnimated:YES];
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)refreshButtons {
@@ -350,35 +369,6 @@
           
 }
 
-- (void)showIntro {
-       
-    IntroViewController *controller = [[IntroViewController alloc] initWithNibName:@"IntroViewController" bundle:nil];
-	controller.delegate = self;
-	
-	controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-	[self presentModalViewController:controller animated:NO];
-    [controller release];
-}
-
-
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
-    
-	[self dismissModalViewControllerAnimated:YES];
-    
-}
-
-- (void)previewViewControllerDidFinish:(PreviewViewController *)controller {
-    
-	[self dismissModalViewControllerAnimated:YES];
-    
-}
-
-
-- (void)introViewControllerDidFinish:(IntroViewController *)controller {
-    
-	[self dismissModalViewControllerAnimated:YES];
-}
-
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -406,7 +396,9 @@
     [reminderStart release];
     [reminderFinish release];
     [reminderTypes release];
-    [managedObjectContext release];
+    [fromTime release];
+    [toTime release];
+    [verb release];
     [super dealloc];
 }
 
