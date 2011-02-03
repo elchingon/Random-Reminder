@@ -40,29 +40,29 @@ static NSString* kAppId = @"173331372680031";
 - (IBAction)shareReminder:(id)sender {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *message = [NSString stringWithFormat:@"The message is: %@", [defaults objectForKey:@"remindful_action"]];
-
+    NSString *FBusername = [NSString stringWithFormat:@"%@", [defaults objectForKey:@"FBname"]];
+    NSString *FBmessage = [NSString stringWithFormat:@"%@ was reminded to %@", FBusername, [defaults objectForKey:@"remindful_action"]];
+    NSString *TWusername = [NSString stringWithFormat:@"%@", [defaults objectForKey:@"TWusername"]];
+    NSString *TWmessage = [NSString stringWithFormat:@"%@ was reminded to %@: http://re-mindful.com", TWusername, [defaults objectForKey:@"remindful_action"]];
     
+    // share twitter
     if(sendTwitter == YES) {
         
-                [_engine sendUpdate:message];
+                [_engine sendUpdate:TWmessage];
         
     }
     
     //share facebook
-    
-    
-        
     if (sendFacebook == YES) {
         NSLog(@"session was valid");
         //[facebook logout:self];
         NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                       message,@"message",
+                                       FBmessage,@"message",
                                        @"Remindful",@"name",
                                        @"http://www.randomappsofkindness/", @"link",
                                        @"this is the link caption", @"caption",
                                        @"this is the description, which is also related to the link", @"description",
-                                       @"[{\"name\":\"Get Remindful!\",\"link\":\"http://www.randomappsofkindness/\"}]",@"actions",
+                                       @"[{\"name\":\"Get Remindful!\",\"link\":\"http://www.re-mindful.com/\"}]",@"actions",
                                        nil];
         // post to users wall
         [facebook requestWithGraphPath:@"me/feed"   // or use page ID instead of 'me'

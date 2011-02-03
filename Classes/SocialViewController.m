@@ -160,7 +160,7 @@ static NSString* kAppId = @"173331372680031";
     NSLog(@"userDefaults: %@", [defaults objectForKey:@"FBAccessToken"]);
     NSLog(@"userDefaults: %@", [defaults objectForKey:@"FBSessionExpires"]);
     
-    //[facebook requestWithGraphPath:@"me" andDelegate:self];
+    [facebook requestWithGraphPath:@"me" andDelegate:self];
     
 }
 
@@ -186,6 +186,58 @@ static NSString* kAppId = @"173331372680031";
     
     [defaults synchronize]; 
     [self refreshButtons];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Facebook Request Delegates
+
+/**
+ * Called just before the request is sent to the server.
+ */
+- (void)requestLoading:(FBRequest*)request {
+    NSLog(@"request loading %@", request);
+}
+
+/**
+ * Called when the server responds and begins to send back data.
+ */
+- (void)request:(FBRequest*)request didReceiveResponse:(NSURLResponse*)response {
+    NSLog(@"did recieve response %@", response);
+}
+
+/**
+ * Called when an error prevents the request from completing successfully.
+ */
+- (void)request:(FBRequest*)request didFailWithError:(NSError*)error {
+    NSLog(@"did fail with error %@", error);
+}
+
+/**
+ * Called when a request returns and its response has been parsed into an object.
+ *
+ * The resulting object may be a dictionary, an array, a string, or a number, depending
+ * on thee format of the API response.
+ */
+- (void)request:(FBRequest*)request didLoad:(id)result {
+    NSLog(@"did load %@", result);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[result objectForKey:@"name"] forKey:@"FBname"];
+    [defaults setObject:[result objectForKey:@"first_name"] forKey:@"FBfirst_name"];
+    [defaults setObject:[result objectForKey:@"last_name"] forKey:@"FBlast_name"];
+    [defaults setObject:[result objectForKey:@"id"] forKey:@"FBid"];
+    [defaults setObject:[result objectForKey:@"link"] forKey:@"FBlink"];
+    [defaults setObject:[result objectForKey:@"locale"] forKey:@"FBlocale"];
+    [defaults setObject:[result objectForKey:@"timezone"] forKey:@"FBtimezone"];
+    [defaults synchronize];
+}
+
+/**
+ * Called when a request returns a response.
+ *
+ * The result object is the raw response from the server of type NSData
+ */
+- (void)request:(FBRequest*)request didLoadRawResponse:(NSData*)data {
+    NSLog(@"did load raw respose %@", data);
 }
 
 
@@ -228,7 +280,8 @@ static NSString* kAppId = @"173331372680031";
     
     NSUserDefaults	*defaults = [NSUserDefaults standardUserDefaults];
     
-	[defaults setObject: data forKey: @"authData"];
+	[defaults setObject:data forKey: @"authData"];
+    [defaults setObject:username forKey: @"TWusername"];
     NSLog(@"auth Data: %@", [defaults objectForKey:@"authData"]);
 	[defaults synchronize];
 }

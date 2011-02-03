@@ -47,5 +47,6 @@
 // set up interface.
 - (void)setUpPicker;
 - (void)refreshButtons;
+- (IBAction)openWebsite;
 
 @end

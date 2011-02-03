@@ -15,7 +15,7 @@
 
 @protocol SocialViewControllerDelegate;
 
-@interface SocialViewController : UIViewController <FBDialogDelegate, FBSessionDelegate, SA_OAuthTwitterEngineDelegate, SA_OAuthTwitterControllerDelegate> {
+@interface SocialViewController : UIViewController <FBDialogDelegate, FBSessionDelegate, FBRequestDelegate, SA_OAuthTwitterEngineDelegate, SA_OAuthTwitterControllerDelegate> {
     id <SocialViewControllerDelegate> delegate;
     
     // Facebook

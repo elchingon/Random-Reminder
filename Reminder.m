@@ -105,7 +105,7 @@
     newNotification.timeZone = [NSTimeZone defaultTimeZone];
     
     // Notification details
-    newNotification.alertBody = action;
+    newNotification.alertBody = @"You have a reminder.";
     
     // Set the action button
     newNotification.alertAction = @"View";
