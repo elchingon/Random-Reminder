@@ -25,9 +25,6 @@
     IBOutlet UIButton *twitterButton;
     SA_OAuthTwitterEngine *_engine;
     
-    IBOutlet UILabel *facebookMessage;
-    IBOutlet UILabel *twitterMessage;
-    
     BOOL sendFacebook;
     BOOL sendTwitter;
 
@@ -35,11 +32,6 @@
 @property (nonatomic, assign) id <ShareViewControllerDelegate> delegate;
 @property (nonatomic, retain) UIButton *facebookButton;
 @property (nonatomic, retain) UIButton *twitterButton;
-
-@property (nonatomic, retain) UILabel *facebookMessage;
-@property (nonatomic, retain) UILabel *twitterMessage;
-
-
 
 - (IBAction)shareReminder:(id)sender;
 - (void)refreshButtons;

@@ -180,7 +180,7 @@
 //////////////////////////////////////////////////////////////
 // open website.
 - (IBAction)openWebsite {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://remindful.com"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://re-mindful.com"]];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

@@ -15,7 +15,7 @@
 // See http://www.facebook.com/developers/createapp.php
 static NSString* kAppId = @"173331372680031";
 
-@synthesize facebookButton, twitterButton, facebookMessage, twitterMessage, delegate;
+@synthesize facebookButton, twitterButton, delegate;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -58,11 +58,9 @@ static NSString* kAppId = @"173331372680031";
         //[facebook logout:self];
         NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        FBmessage,@"message",
-                                       @"Remindful",@"name",
-                                       @"http://www.randomappsofkindness/", @"link",
-                                       @"this is the link caption", @"caption",
-                                       @"this is the description, which is also related to the link", @"description",
-                                       @"[{\"name\":\"Get Remindful!\",\"link\":\"http://www.re-mindful.com/\"}]",@"actions",
+                                       @"get re-mindful",@"name",
+                                       @"http://www.re-mindful.com/", @"link",
+                                       @"[{\"name\":\"get re-mindful\",\"link\":\"http://www.re-mindful.com/\"}]",@"actions",
                                        nil];
         // post to users wall
         [facebook requestWithGraphPath:@"me/feed"   // or use page ID instead of 'me'
@@ -326,7 +324,7 @@ static NSString* kAppId = @"173331372680031";
 - (void)request:(FBRequest*)request didLoad:(id)result {
     NSLog(@"posted to wall");
     NSLog(@"did load %@", result);
-    [facebookMessage setText:@"You have shared to facebook!"];
+    //[facebookMessage setText:@"You have shared to facebook!"];
 }
 
 /**
@@ -383,7 +381,7 @@ static NSString* kAppId = @"173331372680031";
 - (void)requestSucceeded:(NSString *)connectionIdentifier {
     
 	NSLog(@"Request Suceeded: %@", connectionIdentifier);
-    [twitterMessage setText:@"You have tweeted!"];
+    //[twitterMessage setText:@"You have tweeted!"];
 }
 
 - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier {

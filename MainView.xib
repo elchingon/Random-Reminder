@@ -40,6 +40,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 460}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="430062549"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -53,6 +54,7 @@
 						<int key="NSvFlags">290</int>
 						<string key="NSFrame">{{0, 120}, {320, 216}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="783162646"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">2</int>
@@ -67,6 +69,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{47, 84}, {273, 36}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="988940499"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -93,7 +96,8 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{47, 390}, {266, 41}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
-						<reference key="NSNextKeyView" ref="466558230"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="530878458"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -126,6 +130,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{47, 341}, {266, 41}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="416879884"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -148,6 +153,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{99, 20}, {214, 56}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="853953457"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -166,6 +172,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{9, 87}, {30, 30}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="826437002"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -179,6 +186,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{9, 347}, {30, 30}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="223583280"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -192,6 +200,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{9, 396}, {30, 30}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="335724280"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -200,11 +209,12 @@
 							<string key="NSResourceName">circle-3.png</string>
 						</object>
 					</object>
-					<object class="IBUIButton" id="466558230">
+					<object class="IBUIButton" id="530878458">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{141, 438}, {84, 17}}</string>
+						<string key="NSFrame">{{136, 439}, {88, 17}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -215,7 +225,7 @@
 							<double key="NSSize">12</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<string key="IBUINormalTitle">remindful.com</string>
+						<string key="IBUINormalTitle">re-mindful.com</string>
 						<reference key="IBUIHighlightedTitleColor" ref="758333490"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -226,6 +236,7 @@
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="481718363"/>
 				<reference key="IBUIBackgroundColor" ref="758333490"/>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -313,7 +324,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">openWebsite</string>
-						<reference key="source" ref="466558230"/>
+						<reference key="source" ref="530878458"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -352,7 +363,7 @@
 							<reference ref="416879884"/>
 							<reference ref="826437002"/>
 							<reference ref="988940499"/>
-							<reference ref="466558230"/>
+							<reference ref="530878458"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -403,7 +414,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">162</int>
-						<reference key="object" ref="466558230"/>
+						<reference key="object" ref="530878458"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
 				</array>
@@ -436,10 +447,15 @@
 					<string key="className">MainViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="openWebsite">id</string>
 						<string key="showPreview:">id</string>
 						<string key="showSocialViewController">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="openWebsite">
+							<string key="name">openWebsite</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="showPreview:">
 							<string key="name">showPreview:</string>
 							<string key="candidateClassName">id</string>
