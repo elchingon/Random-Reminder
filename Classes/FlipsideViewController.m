@@ -2,7 +2,7 @@
 //  FlipsideViewController.m
 //  remindful-base
 //
-//  Created by David Lowman on 11/6/10.
+//  Created by e7systems on 11/6/10.
 //  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
 //
 

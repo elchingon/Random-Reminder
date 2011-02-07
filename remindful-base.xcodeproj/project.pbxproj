@@ -67,7 +67,6 @@
 		C65C07A512BD65B80052FE4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65C07A412BD65B80052FE4D /* Foundation.framework */; };
 		C65C07A712BD65C10052FE4D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65C07A612BD65C10052FE4D /* CoreData.framework */; };
 		C65C07A912BD65CD0052FE4D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C65C07A812BD65CD0052FE4D /* libxml2.dylib */; };
-		C67039AB12AF2E29009CF842 /* PopOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C67039AA12AF2E29009CF842 /* PopOverView.m */; };
 		C68F5B9C1285C406006F4528 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C68F5B9A1285C406006F4528 /* InfoPlist.strings */; };
 		C68F5B9E1285C406006F4528 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C68F5B9D1285C406006F4528 /* main.m */; };
 		C68F5BA11285C406006F4528 /* remindful_baseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C68F5BA01285C406006F4528 /* remindful_baseAppDelegate.m */; };
@@ -101,8 +100,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C619B55B12CAC0CC00960E58 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
-		C619B55C12CAC0CC00960E58 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		C619B55B12CAC0CC00960E58 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ShareViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C619B55C12CAC0CC00960E58 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ShareViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C619B55D12CAC0CC00960E58 /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShareViewController.xib; path = Classes/ShareViewController.xib; sourceTree = "<group>"; };
 		C6463F5A12E7CC7E00F445A2 /* reminder_card_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminder_card_placeholder.png; sourceTree = "<group>"; };
 		C6463F5C12E7CEE900F445A2 /* more_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_button.png; sourceTree = "<group>"; };
@@ -116,22 +115,22 @@
 		C6463F6812E92EF700F445A2 /* share_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_overlay.png; sourceTree = "<group>"; };
 		C6463F6912E92EF700F445A2 /* share_twitter_button_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_twitter_button_alt.png; sourceTree = "<group>"; };
 		C6463F6A12E92EF700F445A2 /* share_twitter_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_twitter_button.png; sourceTree = "<group>"; };
-		C6463F7712EA602F00F445A2 /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
-		C6463F7812EA602F00F445A2 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
+		C6463F7712EA602F00F445A2 /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SocialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C6463F7812EA602F00F445A2 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SocialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C6463F7912EA602F00F445A2 /* SocialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SocialViewController.xib; path = Classes/SocialViewController.xib; sourceTree = "<group>"; };
 		C6463F7D12EA896800F445A2 /* settings_share_overlay_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_share_overlay_placeholder.png; sourceTree = "<group>"; };
 		C6463F7E12EA896800F445A2 /* settings_share_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_share_overlay.png; sourceTree = "<group>"; };
 		C6463F8212EC8B9D00F445A2 /* enable_sharing_button_all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enable_sharing_button_all.png; sourceTree = "<group>"; };
 		C6463F8312EC8B9D00F445A2 /* enable_sharing_button_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enable_sharing_button_facebook.png; sourceTree = "<group>"; };
 		C6463F8412EC8B9D00F445A2 /* enable_sharing_button_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enable_sharing_button_twitter.png; sourceTree = "<group>"; };
-		C6463F8812EC96C700F445A2 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
-		C6463F8912EC96C700F445A2 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		C6463F8812EC96C700F445A2 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PreviewViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C6463F8912EC96C700F445A2 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PreviewViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C6463F8A12EC96C700F445A2 /* PreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreviewViewController.xib; path = Classes/PreviewViewController.xib; sourceTree = "<group>"; };
 		C6463F8E12EC986E00F445A2 /* preview_card_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview_card_placeholder.png; sourceTree = "<group>"; };
 		C6463F8F12EC986E00F445A2 /* preview_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview_card.png; sourceTree = "<group>"; };
 		C6463F9212ECA49600F445A2 /* preview_back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview_back_button.png; sourceTree = "<group>"; };
-		C6463F9412ECFBEC00F445A2 /* ShareSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSuccessViewController.h; sourceTree = "<group>"; };
-		C6463F9512ECFBEC00F445A2 /* ShareSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSuccessViewController.m; sourceTree = "<group>"; };
+		C6463F9412ECFBEC00F445A2 /* ShareSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ShareSuccessViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C6463F9512ECFBEC00F445A2 /* ShareSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ShareSuccessViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C6463F9612ECFBEC00F445A2 /* ShareSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShareSuccessViewController.xib; path = Classes/ShareSuccessViewController.xib; sourceTree = "<group>"; };
 		C6463F9A12ECFC7800F445A2 /* share_success_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_success_card.png; sourceTree = "<group>"; };
 		C6463FA212ED337000F445A2 /* circle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-1.png"; sourceTree = "<group>"; };
@@ -200,22 +199,20 @@
 		C65C07A412BD65B80052FE4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Xcode4/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C65C07A612BD65C10052FE4D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Xcode4/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C65C07A812BD65CD0052FE4D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Xcode4/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		C67039A912AF2E29009CF842 /* PopOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopOverView.h; path = ../PopOverView.h; sourceTree = "<group>"; };
-		C67039AA12AF2E29009CF842 /* PopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopOverView.m; path = ../PopOverView.m; sourceTree = "<group>"; };
 		C68F5B8D1285C406006F4528 /* remindful-base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "remindful-base.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68F5B981285C406006F4528 /* remindful_base-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "remindful_base-Info.plist"; sourceTree = "<group>"; };
 		C68F5B991285C406006F4528 /* remindful_base_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remindful_base_Prefix.pch; sourceTree = "<group>"; };
 		C68F5B9B1285C406006F4528 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C68F5B9D1285C406006F4528 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C68F5B9F1285C406006F4528 /* remindful_baseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remindful_baseAppDelegate.h; sourceTree = "<group>"; };
-		C68F5BA01285C406006F4528 /* remindful_baseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remindful_baseAppDelegate.m; sourceTree = "<group>"; };
+		C68F5B9D1285C406006F4528 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		C68F5B9F1285C406006F4528 /* remindful_baseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = remindful_baseAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C68F5BA01285C406006F4528 /* remindful_baseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = remindful_baseAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C68F5BA21285C406006F4528 /* remindful_base.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = remindful_base.xcdatamodel; sourceTree = "<group>"; };
 		C68F5BA51285C406006F4528 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		C68F5BA71285C406006F4528 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		C68F5BA81285C406006F4528 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C68F5BA71285C406006F4528 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MainViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C68F5BA81285C406006F4528 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MainViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C68F5BAA1285C406006F4528 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		C68F5BAC1285C406006F4528 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
-		C68F5BAD1285C406006F4528 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		C68F5BAC1285C406006F4528 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FlipsideViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C68F5BAD1285C406006F4528 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FlipsideViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C68F5BAF1285C406006F4528 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
 		C69B010B1288DC8F007A5549 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		C69B010C1288DC8F007A5549 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
@@ -246,10 +243,10 @@
 		C6A95DDF12E65E3B00ED98B3 /* enable_sharing_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enable_sharing_button.png; sourceTree = "<group>"; };
 		C6A95DE112E6692D00ED98B3 /* welcome_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome_card.png; sourceTree = "<group>"; };
 		C6A95DE312E66FE700ED98B3 /* skip_button_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skip_button_alt.png; sourceTree = "<group>"; };
-		C6EDD93F12A220F3001002DB /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reminder.h; path = ../Reminder.h; sourceTree = "<group>"; };
-		C6EDD94012A220F3001002DB /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reminder.m; path = ../Reminder.m; sourceTree = "<group>"; };
-		C6F2DA2412CA4F70005E3827 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
-		C6F2DA2512CA4F70005E3827 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		C6EDD93F12A220F3001002DB /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Reminder.h; path = ../Reminder.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C6EDD94012A220F3001002DB /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Reminder.m; path = ../Reminder.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		C6F2DA2412CA4F70005E3827 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = IntroViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C6F2DA2512CA4F70005E3827 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = IntroViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C6F2DA2612CA4F70005E3827 /* IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IntroViewController.xib; path = Classes/IntroViewController.xib; sourceTree = "<group>"; };
 		C6F2DA2D12CA574C005E3827 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -454,8 +451,6 @@
 		C68F5B851285C406006F4528 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C67039A912AF2E29009CF842 /* PopOverView.h */,
-				C67039AA12AF2E29009CF842 /* PopOverView.m */,
 				C6EDD93F12A220F3001002DB /* Reminder.h */,
 				C6EDD94012A220F3001002DB /* Reminder.m */,
 				C68F5B9F1285C406006F4528 /* remindful_baseAppDelegate.h */,
@@ -701,7 +696,6 @@
 				C69B012D1288DC8F007A5549 /* SBJsonParser.m in Sources */,
 				C69B012E1288DC8F007A5549 /* SBJsonWriter.m in Sources */,
 				C6EDD94112A220F3001002DB /* Reminder.m in Sources */,
-				C67039AB12AF2E29009CF842 /* PopOverView.m in Sources */,
 				C6574FFF12B4332F000A0916 /* MGTwitterEngine.m in Sources */,
 				C657500012B4332F000A0916 /* MGTwitterHTTPURLConnection.m in Sources */,
 				C657500112B4332F000A0916 /* MGTwitterLibXMLParser.m in Sources */,

@@ -2,7 +2,7 @@
 //  SocialViewController.m
 //  remindful-base
 //
-//  Created by David Lowman on 1/21/11.
+//  Created by e7systems on 1/21/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 

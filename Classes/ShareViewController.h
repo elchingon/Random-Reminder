@@ -2,7 +2,7 @@
 //  ShareViewController.h
 //  remindful-base
 //
-//  Created by David Lowman on 12/28/10.
+//  Created by e7systems on 12/28/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 

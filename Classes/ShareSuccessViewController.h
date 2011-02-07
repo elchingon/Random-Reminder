@@ -2,7 +2,7 @@
 //  ShareSuccessViewController.h
 //  remindful-base
 //
-//  Created by David Lowman on 1/23/11.
+//  Created by e7systems on 1/23/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
